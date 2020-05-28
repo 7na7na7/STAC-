@@ -63,7 +63,7 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         
         value = value.normalized; //속도값은 빠지고 방향값만 남게 됨
         //(50, 0, 30) -> (0.5, 0.3)
-        movePosition=new Vector3(value.x*moveSpeed*distance*Time.deltaTime,value.y*moveSpeed*distance*Time.deltaTime,value.y*moveSpeed*distance*Time.deltaTime);
+        movePosition=new Vector3(value.x*moveSpeed*distance*Time.deltaTime,value.y*moveSpeed*distance*Time.deltaTime,0);
         //이동할 값을 정함. 위로는 이동하지 않으니 y는 0. 그리고 distance를 곱해줌. 최대 속도에서는 distance 0
     }
 }
