@@ -13,7 +13,10 @@ public class CameraManager : MonoBehaviour
     }
     void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, AT.position, speed * Time.deltaTime); //Vector3.Lerp()를 쓰면 부드럽게 움직인다.
+        if (speed == 0)
+            transform.position = AT.position;
+        else
+            transform.position = Vector3.Lerp(transform.position, AT.position, speed * Time.deltaTime); //Vector3.Lerp()를 쓰면 부드럽게 움직인다.
         transform.position=new Vector3(transform.position.x, transform.position.y, -10); //카메라를 원래 z축으로 이동
         transform.position=new Vector3(transform.position.x, transform.position.y, -10); //카메라를 원래 z축으로 이동
     }

@@ -38,6 +38,7 @@
           <e p="CameraShake.cs" t="Include" />
           <e p="Dynamic.cs" t="Include" />
           <e p="Joystick.cs" t="Include" />
+          <e p="MovingBG.cs" t="Include" />
           <e p="Pause.cs" t="Include" />
           <e p="Rotate.cs" t="Include" />
           <e p="SceneMgr.cs" t="Include" />
