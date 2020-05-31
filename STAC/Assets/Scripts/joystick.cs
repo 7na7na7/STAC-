@@ -18,7 +18,7 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     
     public GameObject go_Player; //움직일 플레이어
     public float moveSpeed; //이동 속도
-    
+  
     void Start()
     {
         radius = rect_Background.rect.width * 0.5f; //반지름을 구함
