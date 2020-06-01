@@ -5,16 +5,18 @@ using UnityEngine;
 public class MovingBG : MonoBehaviour
 {
     public float speed;
-    private bool isDown = true;
+    public bool isDown = true;
+    public float minY, maxY;
     void Update()
     {
-        if (transform.localPosition.y <= -15)
+        if (transform.localPosition.y <= minY)
         {
+            print("A");
             isDown = false;
         }
-
-        if (transform.localPosition.y >= 17)
+        if (transform.localPosition.y >= maxY)
         {
+            print("B");
             isDown = true;
         }
         if(isDown)
