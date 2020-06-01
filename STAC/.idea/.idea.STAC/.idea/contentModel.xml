@@ -42,6 +42,7 @@
           <e p="Pause.cs" t="Include" />
           <e p="Rotate.cs" t="Include" />
           <e p="SceneMgr.cs" t="Include" />
+          <e p="ScoreMgr.cs" t="Include" />
           <e p="SetColor.cs" t="Include" />
           <e p="Setting.cs" t="Include" />
         </e>
