@@ -54,13 +54,18 @@
           <e p="Dissolve.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="Bullet.cs" t="Include" />
           <e p="CameraManager.cs" t="Include" />
           <e p="CameraShake.cs" t="Include" />
           <e p="ColorPick.cs" t="Include" />
+          <e p="delayDestroy.cs" t="Include" />
           <e p="Dynamic.cs" t="Include" />
+          <e p="Edge.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="Joystick.cs" t="Include" />
           <e p="MovingBG.cs" t="Include" />
           <e p="Pause.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
           <e p="Rotate.cs" t="Include" />
           <e p="SceneMgr.cs" t="Include" />
           <e p="ScoreMgr.cs" t="Include" />
