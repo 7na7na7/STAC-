@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Color1
   - Color2
+  - Edge1
+  - Edge2
   layers:
   - Default
   - TransparentFX

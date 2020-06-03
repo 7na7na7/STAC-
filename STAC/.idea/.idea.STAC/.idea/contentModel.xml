@@ -61,6 +61,7 @@
           <e p="delayDestroy.cs" t="Include" />
           <e p="Dynamic.cs" t="Include" />
           <e p="Edge.cs" t="Include" />
+          <e p="Fade.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Joystick.cs" t="Include" />
           <e p="MovingBG.cs" t="Include" />
@@ -69,8 +70,10 @@
           <e p="Rotate.cs" t="Include" />
           <e p="SceneMgr.cs" t="Include" />
           <e p="ScoreMgr.cs" t="Include" />
+          <e p="ScoreText.cs" t="Include" />
           <e p="SetColor.cs" t="Include" />
           <e p="Setting.cs" t="Include" />
+          <e p="Spawner.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

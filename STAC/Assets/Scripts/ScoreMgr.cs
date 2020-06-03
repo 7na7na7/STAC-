@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreMgr : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class ScoreMgr : MonoBehaviour
     public int highScore = 0;
     public int score = 0;
     public bool isHighScore = false;
-    void Start()
+    void Awake()
     {
         //싱글톤
         if (instance == null)
@@ -26,10 +27,10 @@ public class ScoreMgr : MonoBehaviour
         highScore = PlayerPrefs.GetInt(highscoreKey, 0); //저장된 값 받아옴
         
     }
-    
-    void Update()
+
+    public void ScoreUp(int v)
     {
-        
+        score += v;
     }
 
     public void GameStart() //게임 시작 시 초기화
