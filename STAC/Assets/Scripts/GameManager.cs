@@ -7,9 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
-    public float collision = 0.5f;
-    public float delay = 0f;
+    public int scoreUpValue = 1000;
+   
 
     private void Awake()
     {
@@ -32,9 +31,5 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
             Restart();
-
-        if (delay < collision)
-            delay += Time.deltaTime;
-        print(delay);
     }
 }

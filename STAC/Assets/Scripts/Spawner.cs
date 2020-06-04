@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
             int r = Random.Range(0, 4);
             if (r == 0) //3사분면
             {
-                Instantiate(bullets[Random.Range(0, bullets.Length)], new Vector2(
+                 Instantiate(bullets[Random.Range(0, bullets.Length)], new Vector2(
                     Random.Range(transform.position.x-radMinX,transform.position.x-radMaxX), 
                     Random.Range(transform.position.y-radMinY,transform.position.y-radMaxY)), Quaternion.identity);
             }

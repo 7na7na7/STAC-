@@ -24,6 +24,7 @@ public class Fade : MonoBehaviour
     }
     IEnumerator fadeCor()
     {
+        GetComponent<Image>().raycastTarget = true;
         while (color.a<0.5)
         {
             yield return new WaitForSecondsRealtime(delay);

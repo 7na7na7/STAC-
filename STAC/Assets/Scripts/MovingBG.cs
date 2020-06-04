@@ -11,12 +11,10 @@ public class MovingBG : MonoBehaviour
     {
         if (transform.localPosition.y <= minY)
         {
-            print("A");
             isDown = false;
         }
         if (transform.localPosition.y >= maxY)
         {
-            print("B");
             isDown = true;
         }
         if(isDown)

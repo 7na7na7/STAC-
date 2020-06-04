@@ -5,11 +5,22 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
+    public bool AutoRotate = false;
+    public RectTransform rotate;
+    public float autoRotateDelay;
+    public bool isRight = true;
+    
     private bool canRotate = true;
     
     public float delay;
     public int value;
     public ParticleSystem[] rotateParticles;
+
+    private void Start()
+    {
+        if(AutoRotate) 
+            StartCoroutine(autoRotate());
+    }
 
     private void Update()
     {
@@ -85,6 +96,23 @@ public class Rotate : MonoBehaviour
        Emission();
     }
 
+    public void ChangeRotate()
+    {
+        rotate.localScale=new Vector3(rotate.localScale.x*-1,rotate.localScale.y,rotate.localScale.z);
+        isRight = !isRight;
+        //이미지 좌우반전시키기
+    }
+    IEnumerator autoRotate()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(autoRotateDelay);
+            if (isRight)
+                Right();
+            else
+                Left();
+        }
+    }
     public void Emission()
     {
         foreach (ParticleSystem p in rotateParticles)

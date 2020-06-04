@@ -16,7 +16,6 @@ public class Dynamic : MonoBehaviour,IPointerDownHandler, IPointerUpHandler,IDra
     public void OnPointerUp(PointerEventData eventData)
     {
         joystick.GetComponent<joystick>().OnPointerUp(eventData);
-        joystick.transform.position=new Vector3(-100,-100,0);
     }
 
     public void OnDrag(PointerEventData eventData)

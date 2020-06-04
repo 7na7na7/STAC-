@@ -28,8 +28,8 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     {
         if (isTouch) //터치 중일 때만
         {
-            //go_Player.transform.position += movePosition; //이동
-            go_Player.transform.position += movePosition*Time.deltaTime;
+           if(go_Player!=null) 
+               go_Player.transform.position += movePosition*Time.deltaTime;
         }
     }
 
@@ -43,6 +43,7 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         isTouch = false;
         rect_Joysick.localPosition = Vector3.zero; //제자리로 돌아감
         movePosition=Vector3.zero;
+        transform.position=new Vector3(-100,-100,0);
     }
 
     public void OnDrag(PointerEventData eventData) //드래그할 때 조이스틱이 움직이도록
