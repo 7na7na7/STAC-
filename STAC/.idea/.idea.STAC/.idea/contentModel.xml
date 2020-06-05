@@ -57,7 +57,6 @@
           <e p="Bullet.cs" t="Include" />
           <e p="BulletData.cs" t="Include" />
           <e p="CameraManager.cs" t="Include" />
-          <e p="CameraShake.cs" t="Include" />
           <e p="ColorPick.cs" t="Include" />
           <e p="delayDestroy.cs" t="Include" />
           <e p="Dynamic.cs" t="Include" />

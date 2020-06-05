@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Revival : MonoBehaviour
 {
     public GameObject gameOverPanel;
-    int maxTime;
+    float maxTime;
     public float time;
     public Text text;
     public Image clock;
@@ -29,13 +29,11 @@ public class Revival : MonoBehaviour
                 }
                 else
                 {
-                    time--;
-                    clock.fillAmount -= 1;
+                    time-=1;
+                    clock.fillAmount -= 1/maxTime;
                 }
             }
         }
-        
-        
         time -= Time.deltaTime;
         clock.fillAmount -=  Time.deltaTime/maxTime;
         text.text = Mathf.CeilToInt(time).ToString();

@@ -12,12 +12,19 @@ public class Bullet : MonoBehaviour
     public int BulletIndex = 0;
     private Vector2 dir=Vector2.zero;
     private bool canDetect = true;
-
     private float speed;
     void Start()
     {
+        if (isColor1)
+            gameObject.tag = "Color1";
+        else
+            gameObject.tag = "Color2";
+
         speed = Random.Range(BulletData.instance.minSpeed, BulletData.instance.maxSpeed);
-        transform.localScale = new Vector3(1/speed, 1/speed, transform.localScale.z);
+        if(BulletIndex==0) 
+            transform.localScale = new Vector3(1/speed, 1/speed, transform.localScale.z);
+        else if(BulletIndex==1)
+            transform.localScale = new Vector3(1/speed/3f, 1/speed/3f, transform.localScale.z);
         trail.startWidth *= 1/speed;
         trail.time += 1/Mathf.Pow(speed,2);
         switch (BulletIndex)
@@ -25,12 +32,16 @@ public class Bullet : MonoBehaviour
             case 0:
                 straight();
                 break;
+            case 1:
+                guide();
+                break;
         }
     }
 
     private void Update()
     {
-        transform.Translate(dir * speed * Time.deltaTime);
+        transform.Translate(dir * speed * Time.deltaTime);   
+        
     }
 
     public void straight()
@@ -39,6 +50,23 @@ public class Bullet : MonoBehaviour
         dir.Normalize();
     }
 
+    public void guide()
+    {
+        StartCoroutine(guided());
+    }
+
+    IEnumerator guided()
+    {
+        while (true)
+        {
+            if (Player.instance != null)
+            {
+                dir = Player.instance.transform.position - transform.position;
+                dir.Normalize();
+            }
+            yield return new WaitForSeconds(.1f);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (!col.CompareTag("Color1") && !col.CompareTag("Color2")) //충돌체가 총알이 아니었을 경우

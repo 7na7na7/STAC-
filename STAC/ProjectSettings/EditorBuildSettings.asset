@@ -8,9 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: b3004b65a09be4f41a3b094749d06eba
-  - enabled: 1
-    path: Assets/Scenes/Play.unity
-    guid: 7c68fe4cae8ad5e4da26307ffd40ae07
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Select.unity
     guid: 5d966b741a5d7294983a8c7f01871a22
@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 8ed344a6623bdf149affb31eb62faebb
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Play.unity
+    guid: 4052a4921bdb47743aca569f2a2561c7
   m_configObjects: {}
