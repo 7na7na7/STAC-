@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
     private Vector2 dir=Vector2.zero;
     private bool canDetect = true;
     private float speed;
+    private bool canDestroy = false;
     void Start()
     {
         if (isColor1)
@@ -40,8 +41,16 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(dir * speed * Time.deltaTime);   
-        
+        if (!CheckCamera.instance.CheckObjectIsInCamera(gameObject))
+        {
+            if (!canDestroy)
+            {
+                canDestroy = true;
+                StartCoroutine(Destroy());
+            }
+        }
+
+        transform.Translate(dir * speed * Time.deltaTime);
     }
 
     public void straight()
@@ -112,5 +121,19 @@ public class Bullet : MonoBehaviour
     {
         canDetect = false;
         Player.instance.Die();
+    }
+
+    IEnumerator Destroy() //10초동안 보이지 않으면 파괴
+    {
+        for(int i=0;i<60;i++)
+        {
+            yield return new WaitForSeconds(0.5f);
+            if (CheckCamera.instance.CheckObjectIsInCamera(gameObject))
+            {
+                canDestroy = false;
+                yield break;
+            }
+        }
+        Destroy(gameObject);
     }
 }

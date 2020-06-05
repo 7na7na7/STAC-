@@ -57,12 +57,14 @@
           <e p="Bullet.cs" t="Include" />
           <e p="BulletData.cs" t="Include" />
           <e p="CameraManager.cs" t="Include" />
+          <e p="CheckCamera.cs" t="Include" />
           <e p="ColorPick.cs" t="Include" />
           <e p="delayDestroy.cs" t="Include" />
           <e p="Dynamic.cs" t="Include" />
           <e p="Fade.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="GameOverPanel.cs" t="Include" />
+          <e p="GetSize.cs" t="Include" />
           <e p="Joystick.cs" t="Include" />
           <e p="MovingBG.cs" t="Include" />
           <e p="Pause.cs" t="Include" />
@@ -75,6 +77,7 @@
           <e p="SetColor.cs" t="Include" />
           <e p="Setting.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
+          <e p="Tile.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
