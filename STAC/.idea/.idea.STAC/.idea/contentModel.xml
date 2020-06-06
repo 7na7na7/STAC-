@@ -79,6 +79,11 @@
           <e p="Spawner.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
         </e>
+        <e p="ScrollView" t="Include">
+          <e p="ScrollManager.cs" t="Include" />
+          <e p="ScrollScript.cs" t="Include" />
+          <e p="tabManager.cs" t="Include" />
+        </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
