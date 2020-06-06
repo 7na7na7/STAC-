@@ -18,7 +18,7 @@ public class Rotate : MonoBehaviour
 
     private void Start()
     {
-        if(AutoRotate) 
+        if (AutoRotate)
             StartCoroutine(autoRotate());
     }
 
@@ -104,6 +104,7 @@ public class Rotate : MonoBehaviour
     }
     IEnumerator autoRotate()
     {
+        Screen.SetResolution(1080,1920,true);
         while (true)
         {
             yield return new WaitForSeconds(autoRotateDelay);

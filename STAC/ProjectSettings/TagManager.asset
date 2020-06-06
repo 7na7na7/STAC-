@@ -8,6 +8,7 @@ TagManager:
   - Color2
   - Edge1
   - Edge2
+  - Cluster
   layers:
   - Default
   - TransparentFX
