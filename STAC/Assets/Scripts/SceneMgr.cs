@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneMgr : MonoBehaviour
 {
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void ChangeScene(string SceneName)
     {
         if (SceneName == "this")
