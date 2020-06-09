@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2048562986226166144}
   - component: {fileID: 2048562986226166158}
   - component: {fileID: 2048562986226166159}
-  - component: {fileID: 7370518820410193322}
+  - component: {fileID: 8675707143953953176}
   m_Layer: 0
-  m_Name: Cluster2
+  m_Name: Green2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a1edf7c1092864dbdb6f5d304054a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ColorIndex: 0
   RD: {fileID: 2048562986226166144}
-  color: {r: 0.4912281, g: 1, b: 0, a: 0}
+  color: {r: 0.45882356, g: 1, b: 0.03137255, a: 0}
 --- !u!114 &2048562986226166159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,12 +117,12 @@ MonoBehaviour:
   isColor1: 1
   dieParticle: {fileID: 1838152322236505922, guid: c850fc6c98a264e4fae43e692812f49a,
     type: 3}
-  BulletIndex: 3
+  BulletIndex: 1
   dir: {x: 0, y: 0}
-  minSpeed: 0
-  maxSpeed: 0
+  minSpeed: 2
+  maxSpeed: 5
   speed: 0
---- !u!60 &7370518820410193322
+--- !u!60 &8675707143953953176
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,9 +147,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0057566594, y: 3.359848}
-      - {x: -4.0266075, y: -3.3672683}
-      - {x: 4.045173, y: -3.3622966}
+    - - {x: 4.032919, y: -3.3450937}
+      - {x: 3.12565, y: -3.363516}
+      - {x: -4.027221, y: -3.3543801}
+      - {x: -0.001474063, y: 3.365022}
 --- !u!1001 &6282401726341868606
 PrefabInstance:
   m_ObjectHideFlags: 0

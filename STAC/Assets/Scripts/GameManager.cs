@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     {
         if (instance == null)
             instance=this;
+        Time.timeScale = 1;
     }
 
     void Start()

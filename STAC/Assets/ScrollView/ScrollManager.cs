@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndDragHandler
 {
+    public float scrollSpeed;
     private bool isFirst = false;
     
     public Scrollbar scrollbar;
@@ -14,7 +15,7 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
     private float[] pos = new float[SIZE];
     private float distance, curPos, targetPos;
     private bool isDrag;
-    private int targetIndex;
+    public int targetIndex;
     void Start()
     {
         //거리에 따라 0~1인 pos 대입
@@ -31,22 +32,6 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
 
         targetPos = SetPos();
         
-        //절반거리를 넘지 않아도 마우스를 빠르게 이동하려면
-        if (curPos == targetPos) //처음드래그시작한 위치와 드래그 끝난 위치가 같다면
-        {
-            //스크롤이 왼쪽으로 빠르게 이동시 목표가 하나 감소
-            if (eventData.delta.x > 18 && curPos - distance >= 0)
-            {
-                --targetIndex;
-                targetPos = curPos - distance;
-            }
-            //스크롤이 오른쪽으로 빠르게 이동시 목표가 하나 증가
-            else if (eventData.delta.x < -18 && curPos - distance <=1f)
-            {
-                ++targetIndex;
-                targetPos = curPos + distance;
-            }
-        }
         //목표가 수직스크롤이고, 옆에서 옮겨왔다면 수직스크롤을 맨 위로 옹림
         for(int i=0;i<SIZE;i++)
             if (contentTr.GetChild(i).GetComponent<ScrollScript>() && curPos != pos[i] && targetPos == pos[i])
@@ -67,11 +52,25 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
 
             if (!isDrag)
             {
-                scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, 0.1f);
+                scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, scrollSpeed);
             }
         }
     }
 
+    public void Right()
+    {
+        targetPos = 1;
+    }
+
+    public void Left()
+    {
+        targetPos = 0;
+    }
+
+    public void Middle()
+    {
+        targetPos = 0.5f;
+    }
     public float SetPos()
     {
         //절반거리를 기준으로 가까운 위치를 반환

@@ -28,8 +28,8 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     {
         if (isTouch) //터치 중일 때만
         {
-           if(go_Player!=null) 
-               go_Player.transform.position += movePosition*Time.deltaTime;
+            if (go_Player != null)
+                go_Player.transform.position += movePosition * Time.deltaTime * 0.5f;
         }
     }
 

@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class BulletData : MonoBehaviour
 {
+    public Color[] colors;
     public static BulletData instance;
-    public float playerAroundValue;
-    void Start()
+    public float playerAroundValue; //플레이어 방향으로 직선 이동하는 동그라미가 인식하는 부분
+    void Awake()
     {
         if (instance == null)
             instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public Color SetColor(int index)
     {
-        
+        return colors[index];
     }
 }

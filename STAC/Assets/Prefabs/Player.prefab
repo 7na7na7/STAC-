@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 135303015}
   - component: {fileID: 135303016}
   - component: {fileID: 135303017}
-  - component: {fileID: 135303019}
+  - component: {fileID: 6110419205371801213}
   m_Layer: 0
   m_Name: Edge_Side1
   m_TagString: Edge1
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RD: {fileID: 135303016}
   color: {r: 0.4901961, g: 1, b: 0, a: 0}
---- !u!68 &135303019
-EdgeCollider2D:
+--- !u!60 &6110419205371801213
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -111,15 +111,26 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4877946, y: 0.3506807}
+    oldSize: {x: 8.06, y: 6.72}
+    newSize: {x: 8.06, y: 6.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: 3.85966, y: -2.2091954}
-  - {x: 0.12834547, y: 0.024118869}
-  - {x: 0.1031718, y: 4.3600235}
-  - {x: 0.10578353, y: 0.0075783315}
-  - {x: 3.5497694, y: -2.0324976}
-  - {x: 4.1178784, y: -2.3543458}
-  - {x: 0.10318056, y: 4.36}
+    m_Paths:
+    - - {x: 0.12548754, y: 4.3327327}
+      - {x: 0.12330392, y: 4.3280025}
+      - {x: 0.12421239, y: 4.3306727}
+      - {x: 0.1355614, y: 4.314371}
+      - {x: 0.14771888, y: 4.2945094}
+      - {x: 1.1691859, y: 2.5844064}
+      - {x: 4.1288347, y: -2.3562365}
+      - {x: 0.13862598, y: 0.32897946}
+      - {x: 0.1073409, y: 4.370651}
 --- !u!1 &912489960
 GameObject:
   m_ObjectHideFlags: 0
@@ -14665,7 +14676,7 @@ GameObject:
   - component: {fileID: 5707508266899193445}
   - component: {fileID: 5707508266899193446}
   - component: {fileID: 804294115}
-  - component: {fileID: 804294116}
+  - component: {fileID: 7904058615696427811}
   m_Layer: 0
   m_Name: Edge_Side2
   m_TagString: Edge2
@@ -14751,8 +14762,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RD: {fileID: 5707508266899193446}
   color: {r: 0, g: 1, b: 0.5116279, a: 0}
---- !u!68 &804294116
-EdgeCollider2D:
+--- !u!60 &7904058615696427811
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -14765,14 +14776,23 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4877946, y: 0.3506807}
+    oldSize: {x: 8.06, y: 6.72}
+    newSize: {x: 8.06, y: 6.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -3.9305127, y: -2.3568764}
-  - {x: 0.1031718, y: 4.3600235}
-  - {x: 0.10578353, y: 0.0075783315}
-  - {x: 3.5497694, y: -2.0324976}
-  - {x: 4.1178784, y: -2.3543458}
-  - {x: -3.9303315, y: -2.3565753}
+    m_Paths:
+    - - {x: 4.128705, y: -2.3565416}
+      - {x: -3.9138622, y: -2.3564146}
+      - {x: 0.079710975, y: 4.3240604}
+      - {x: 0.10547816, y: 4.3640895}
+      - {x: 0.10540832, y: 4.3568163}
+      - {x: 0.15812992, y: 0.22079466}
 --- !u!1 &6885763691734771526
 GameObject:
   m_ObjectHideFlags: 0
@@ -14937,34 +14957,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f65f064e7613604295df525a5ec86ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullets:
-  - {fileID: 2048562986226166147, guid: 75d55a1b31ab6ac4fbb5931286dfdb15, type: 3}
-  - {fileID: 2048562986226166147, guid: 75d55a1b31ab6ac4fbb5931286dfdb15, type: 3}
-  - {fileID: 2048562986226166147, guid: 75d55a1b31ab6ac4fbb5931286dfdb15, type: 3}
-  - {fileID: 2048562986226166147, guid: 75d55a1b31ab6ac4fbb5931286dfdb15, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 8279076980268649182, guid: 0e628c21c51ff7043ad5339b16df5fa8, type: 3}
-  - {fileID: 2048562986226166147, guid: d633a795e0f6b3645ab9c9e68743bcbe, type: 3}
-  - {fileID: 8279076980268649182, guid: da4a96b020a37a7468a30b4aeea1eea9, type: 3}
-  - {fileID: 8279076980268649182, guid: da4a96b020a37a7468a30b4aeea1eea9, type: 3}
-  - {fileID: 8279076980268649182, guid: da4a96b020a37a7468a30b4aeea1eea9, type: 3}
-  - {fileID: 2048562986226166147, guid: a2a3541fa7ea9c94a84093d9d374a607, type: 3}
-  - {fileID: 2048562986226166147, guid: ebe1ada366d4d5844bd47bf98c0f3ef8, type: 3}
-  radMinX: 13
-  radMaxX: 24
-  radMinY: 13
-  radMaxY: 24
-  minDelay: 0.5
-  maxDelay: 1
+  bulletKind: []
+  percents: []
+  radMinX: 14
+  radMaxX: 26
+  radMinY: 8
+  radMaxY: 16
+  minDelay: 0.2
+  maxDelay: 0.5
 --- !u!1 &7030556994850647116
 GameObject:
   m_ObjectHideFlags: 0

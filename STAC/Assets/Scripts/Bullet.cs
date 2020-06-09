@@ -42,7 +42,18 @@ public class Bullet : MonoBehaviour
             case 2:
                 straight();
                 break;
+            case 3:
+                break;
+            case 4:
+                randomStraight();
+                break;
         }
+    }
+
+    public void randomStraight()
+    {
+        dir = new Vector3(Random.Range(-1f,1f),Random.Range(-1f,1f),0);
+        dir.Normalize();
     }
     public void delayGuide()
     {
@@ -51,7 +62,7 @@ public class Bullet : MonoBehaviour
 
     IEnumerator delayGuideCor()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         guide();
     }
     public void Set()
@@ -59,7 +70,7 @@ public class Bullet : MonoBehaviour
         if(BulletIndex==1)
             transform.localScale = new Vector3(1/speed/3f, 1/speed/3f, transform.localScale.z);
         else if(BulletIndex==2)
-            transform.localScale = new Vector3(1/speed/2f, 1/speed/2f, transform.localScale.z);
+            transform.localScale = new Vector3(1/speed/3f, 1/speed/3f, transform.localScale.z);
         else if(BulletIndex==3)
             transform.localScale = new Vector3(1/speed/2f, 1/speed/2f, transform.localScale.z);
         else
@@ -82,7 +93,8 @@ public class Bullet : MonoBehaviour
 
     public void straight()
     {
-        dir = Player.instance.transform.position-transform.position+new Vector3(Random.Range(BulletData.instance.playerAroundValue*-1,BulletData.instance.playerAroundValue),Random.Range(BulletData.instance.playerAroundValue*-1,BulletData.instance.playerAroundValue),0);
+        dir = Player.instance.transform.position - transform.position;
+        //+new Vector3(Random.Range(BulletData.instance.playerAroundValue*-1,BulletData.instance.playerAroundValue),Random.Range(BulletData.instance.playerAroundValue*-1,BulletData.instance.playerAroundValue),0);
         dir.Normalize();
     }
 
@@ -179,7 +191,7 @@ public class Bullet : MonoBehaviour
 
     IEnumerator Destroy() //10초동안 보이지 않으면 파괴
     {
-        for(int i=0;i<20;i++)
+        for(int i=0;i<6;i++)
         {
             yield return new WaitForSeconds(0.5f);
             if (CheckCamera.instance.CheckObjectIsInCamera(gameObject))

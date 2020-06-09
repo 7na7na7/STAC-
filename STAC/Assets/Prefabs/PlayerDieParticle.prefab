@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7885151814575444282}
   - component: {fileID: 7885151814575444284}
   m_Layer: 0
-  m_Name: DieParticle
+  m_Name: PlayerDieParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,7 +286,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.5
-      minScalar: 0.2
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
