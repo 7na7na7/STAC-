@@ -23,9 +23,10 @@ public class SoundMgr : MonoBehaviour
         }
     }
 
-    public void Play(int index,float volume)
+    public void Play(int index,float volume,float pitch)
     {
          Mathf.Clamp(volume,0f, 1f);
+         source.pitch = pitch;
          source.PlayOneShot(clips[index],volume);
     }
 }

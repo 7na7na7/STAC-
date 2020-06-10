@@ -180,7 +180,8 @@ public class Bullet : MonoBehaviour
         canDetect = false;
         ScoreMgr.instance.AddScore(GameManager.instance.scoreUpValue);
         Instantiate(dieParticle, transform.position, Quaternion.identity);
-        SoundMgr.instance.Play(0,1);
+        if(SoundMgr.instance!=null) 
+            SoundMgr.instance.Play(0,1,1);
         Destroy(gameObject); //파괴
     }
 

@@ -129,7 +129,7 @@ PolygonCollider2D:
       - {x: 0.1355614, y: 4.314371}
       - {x: 0.14771888, y: 4.2945094}
       - {x: 1.1691859, y: 2.5844064}
-      - {x: 4.1288347, y: -2.3562365}
+      - {x: 4.1407695, y: -2.364756}
       - {x: 0.13862598, y: 0.32897946}
       - {x: 0.1073409, y: 4.370651}
 --- !u!1 &912489960
@@ -14789,7 +14789,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 4.128705, y: -2.3565416}
+    - - {x: 4.0908866, y: -2.3565416}
       - {x: -3.9138622, y: -2.3564146}
       - {x: 0.079710975, y: 4.3240604}
       - {x: 0.10547816, y: 4.3640895}
@@ -14967,6 +14967,9 @@ MonoBehaviour:
   radMaxY: 16
   minDelay: 0.2
   maxDelay: 0.5
+  delayMinusValue_Min: 0
+  delayMinusValue_Max: 0
+  delyaMinusTime: 0
 --- !u!1 &7030556994850647116
 GameObject:
   m_ObjectHideFlags: 0

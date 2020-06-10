@@ -3347,37 +3347,37 @@ PrefabInstance:
     - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: levels.Array.data[0].delay
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: levels.Array.data[0].percents.Array.data[2]
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: levels.Array.data[0].percents.Array.data[3]
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: levels.Array.data[0].percents.Array.data[4]
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: levels.Array.data[0].percents.Array.data[5]
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: levels.Array.data[0].percents.Array.data[6]
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: levels.Array.data[0].percents.Array.data[7]
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 349d08750d49f164c9782d84f08a0bcd, type: 3}
