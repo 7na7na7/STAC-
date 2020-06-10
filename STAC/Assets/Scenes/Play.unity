@@ -1213,7 +1213,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.44705886, g: 0.95294124, b: 0.6784314, a: 0}
+  m_BackGroundColor: {r: 0.47450984, g: 0.9333334, b: 0.627451, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1727,7 +1727,7 @@ MonoBehaviour:
   isGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 0.3
+  weight: 0.2
   sharedProfile: {fileID: 11400000, guid: 83d2a9ac2b7077e49bfcbf762f0c1867, type: 2}
 --- !u!4 &864257001
 Transform:
@@ -2412,7 +2412,7 @@ PrefabInstance:
     - target: {fileID: 2880409880847786066, guid: 8b79ac721f70e874a8047c8828c0afac,
         type: 3}
       propertyPath: moveSpeed
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2880409880847786066, guid: 8b79ac721f70e874a8047c8828c0afac,
         type: 3}
@@ -3175,6 +3175,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
+      propertyPath: levels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].delay.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].percents.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
       propertyPath: minDelay
       value: 0.25
       objectReference: {fileID: 0}
@@ -3318,6 +3333,51 @@ PrefabInstance:
         type: 3}
       propertyPath: percents.Array.data[5]
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].percents.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].percents.Array.data[1]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].delay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].percents.Array.data[2]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].percents.Array.data[3]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].percents.Array.data[4]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].percents.Array.data[5]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].percents.Array.data[6]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079401270995341325, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].percents.Array.data[7]
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 349d08750d49f164c9782d84f08a0bcd, type: 3}

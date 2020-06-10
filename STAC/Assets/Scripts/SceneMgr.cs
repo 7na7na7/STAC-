@@ -27,10 +27,6 @@ public class SceneMgr : MonoBehaviour
             {
                 Application.Quit();
             }
-            else if (SceneManager.GetActiveScene().name == "Shop" || SceneManager.GetActiveScene().name == "Select")
-            {
-                SceneManager.LoadScene("Title");
-            }
         }
     }
 }

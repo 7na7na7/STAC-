@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a1edf7c1092864dbdb6f5d304054a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ColorIndex: 0
   RD: {fileID: 135303016}
   color: {r: 0.4901961, g: 1, b: 0, a: 0}
 --- !u!60 &6110419205371801213
@@ -14760,6 +14761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a1edf7c1092864dbdb6f5d304054a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ColorIndex: 0
   RD: {fileID: 5707508266899193446}
   color: {r: 0, g: 1, b: 0.5116279, a: 0}
 --- !u!60 &7904058615696427811
@@ -14957,8 +14959,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f65f064e7613604295df525a5ec86ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levels: []
   bulletKind: []
-  percents: []
   radMinX: 14
   radMaxX: 26
   radMinY: 8

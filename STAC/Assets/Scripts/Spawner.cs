@@ -5,26 +5,40 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
+[System.Serializable]
+public class difficulty
+{
+    public float delay; //몇 초 후에
+    public float[] percents; //확률을 어떻게 바꿀것인가
+}
 public class Spawner : MonoBehaviour
 {
+    public difficulty[] levels;
     public GameObject[] bulletKind;
-    public float[] percents;
     public ArrayList bulletList= new ArrayList();
     public float radMinX, radMaxX, radMinY, radMaxY;
     public float minDelay, maxDelay;
-    
+    public float delayMinusValue_Min;
+    public float delayMinusValue_Max;
+    public float delyaMinusTime;
     void Start()
     {
         StartCoroutine(spawn());
+        StartCoroutine(percentHarder());
+        StartCoroutine(delayHarder());
+    }
+
+    public void Set(float[] perc)
+    {
+        bulletList.Clear();
         for (int i = 0; i < bulletKind.Length; i++)
         {
-            for (int j = 0; j < bulletKind.Length * (percents[i] / 100) * 10; j++)
+            for (int j = 0; j < bulletKind.Length * (perc[i] / 100) * 10; j++)
             {
                 bulletList.Add(i);
             }
         }
     }
-
     IEnumerator spawn()
     {
         while (true)
@@ -33,7 +47,7 @@ public class Spawner : MonoBehaviour
             
             int bulletIndex=0;
             bulletIndex = (int)bulletList[Random.Range(0, bulletList.Count)];
-            print(bulletIndex);
+         
             int r = Random.Range(0, 6);
             if (r == 0||r==1) //위
             {
@@ -62,5 +76,22 @@ public class Spawner : MonoBehaviour
         }
     }
 
- 
+    IEnumerator percentHarder()
+    {
+        for (int i = 0; i < levels.Length; i++)
+        {
+            yield return new WaitForSeconds(levels[i].delay);
+            Set(levels[i].percents);
+        }
+    }
+
+    IEnumerator delayHarder()
+    {
+        while (true)
+        {
+         yield return new WaitForSeconds(delyaMinusTime);
+         minDelay -= delayMinusValue_Min;
+         maxDelay -= delayMinusValue_Max;
+        }
+    }
 }

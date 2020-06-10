@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         pos.transform.SetParent(GameObject.Find("GameManager").transform);
         Theme.transform.SetParent(GameObject.Find("GameManager").transform);
         Instantiate(DieParticle, transform.position, Quaternion.identity);
-        CameraManager.instance.GameOver(pos);
+        CameraManager.instance.GameOver();
         Destroy(gameObject);
     }
 

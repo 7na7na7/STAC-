@@ -180,6 +180,7 @@ public class Bullet : MonoBehaviour
         canDetect = false;
         ScoreMgr.instance.AddScore(GameManager.instance.scoreUpValue);
         Instantiate(dieParticle, transform.position, Quaternion.identity);
+        SoundMgr.instance.Play(0,1);
         Destroy(gameObject); //파괴
     }
 
@@ -191,7 +192,7 @@ public class Bullet : MonoBehaviour
 
     IEnumerator Destroy() //10초동안 보이지 않으면 파괴
     {
-        for(int i=0;i<6;i++)
+        for(int i=0;i<20;i++)
         {
             yield return new WaitForSeconds(0.5f);
             if (CheckCamera.instance.CheckObjectIsInCamera(gameObject))

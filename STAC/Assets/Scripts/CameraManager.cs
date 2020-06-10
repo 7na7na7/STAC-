@@ -27,17 +27,17 @@ public class CameraManager : MonoBehaviour
         }
     }
 
-    public void GameOver(GameObject g)
+    public void GameOver()
     {
-        StartCoroutine(targetChange(g));
+        StartCoroutine(targetChange());
     }
-    public IEnumerator targetChange(GameObject g)
+    public IEnumerator targetChange()
     {
         Time.timeScale = 0.2f;
-        while (Camera.main.orthographicSize > 2f)
+        float size = Camera.main.orthographicSize-3;
+        while (Camera.main.orthographicSize > size)
         {
-            Camera.main.orthographicSize -= 0.1f;
-            transform.position = Vector3.Lerp(transform.position, g.transform.position, speed * Time.deltaTime);
+            Camera.main.orthographicSize -= 0.075f;
             yield return new WaitForSeconds(0.01f);
         }
         yield return new WaitForSecondsRealtime(0.5f);
