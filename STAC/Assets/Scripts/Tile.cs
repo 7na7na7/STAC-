@@ -5,7 +5,18 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    public Sprite[] tileThemes;
     public GameObject tile;
+
+    private void Start()
+    {
+        for (int i = 0; i < transform.GetChildCount(); i++)
+        {
+            transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = tileThemes[BulletData.instance.currentColorIndex];
+        }
+        GetComponent<SpriteRenderer>().sprite = tileThemes[BulletData.instance.currentColorIndex];
+    }
+
     private void OnTriggerStay2D(Collider2D col)
     {
         if (col.CompareTag("Edge1") || col.CompareTag("Edge2"))

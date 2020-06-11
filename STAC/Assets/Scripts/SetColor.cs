@@ -6,9 +6,11 @@ public class SetColor : MonoBehaviour
 {
     public int ColorIndex;
     public Renderer RD;
-    public Color color;
+    private Color color;
     void Start()
     {
+        color = BulletData.instance.SetColor(ColorIndex);
+        color.a = 0;
         GetComponent<SpriteRenderer>().color = BulletData.instance.SetColor(ColorIndex);
      RD.material.SetColor("_Color",color);
     }

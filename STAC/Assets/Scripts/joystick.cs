@@ -43,7 +43,7 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         isTouch = false;
         rect_Joysick.localPosition = Vector3.zero; //제자리로 돌아감
         movePosition=Vector3.zero;
-        transform.position=new Vector3(-100,-100,0);
+        transform.position=new Vector3(-500,-500,0);
     }
 
     public void OnDrag(PointerEventData eventData) //드래그할 때 조이스틱이 움직이도록

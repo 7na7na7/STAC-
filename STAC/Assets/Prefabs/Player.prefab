@@ -97,7 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColorIndex: 0
   RD: {fileID: 135303016}
-  color: {r: 0.4901961, g: 1, b: 0, a: 0}
 --- !u!60 &6110419205371801213
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -123,15 +122,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.12548754, y: 4.3327327}
-      - {x: 0.12330392, y: 4.3280025}
-      - {x: 0.12421239, y: 4.3306727}
-      - {x: 0.1355614, y: 4.314371}
-      - {x: 0.14771888, y: 4.2945094}
+    - - {x: 0.18574852, y: 4.257227}
       - {x: 1.1691859, y: 2.5844064}
-      - {x: 4.1407695, y: -2.364756}
+      - {x: 4.1799994, y: -2.412694}
       - {x: 0.13862598, y: 0.32897946}
-      - {x: 0.1073409, y: 4.370651}
+      - {x: 0.10872492, y: 4.343897}
+      - {x: 0.09601999, y: 4.5198565}
+      - {x: 0.1511957, y: 4.383163}
+      - {x: 0.1713018, y: 4.3080387}
 --- !u!1 &912489960
 GameObject:
   m_ObjectHideFlags: 0
@@ -14763,7 +14761,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColorIndex: 0
   RD: {fileID: 5707508266899193446}
-  color: {r: 0, g: 1, b: 0.5116279, a: 0}
 --- !u!60 &7904058615696427811
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14791,8 +14788,9 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 4.0908866, y: -2.3565416}
       - {x: -3.9138622, y: -2.3564146}
-      - {x: 0.079710975, y: 4.3240604}
-      - {x: 0.10547816, y: 4.3640895}
+      - {x: 0.04945079, y: 4.276479}
+      - {x: 0.06676693, y: 4.303207}
+      - {x: 0.10175008, y: 4.3614445}
       - {x: 0.10540832, y: 4.3568163}
       - {x: 0.15812992, y: 0.22079466}
 --- !u!1 &6885763691734771526
@@ -14928,8 +14926,8 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &379198188
 MonoBehaviour:
