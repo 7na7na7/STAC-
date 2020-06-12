@@ -139,7 +139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8bee53f16551d684ba8266d8ae258d10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 045aabc1d3363464cb6a7fb1906373ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 7816667367166683764}
   - component: {fileID: 4833069658959087205}
   m_Layer: 5
-  m_Name: color2
+  m_Name: color3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,5 +253,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5acce8455ea2cd448d54325e57d5f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ColorIndex: 1
+  ColorIndex: 2
   lockImg: {fileID: 5719977008315607625}

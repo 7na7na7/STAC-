@@ -33,11 +33,11 @@ public class CameraManager : MonoBehaviour
     }
     public IEnumerator targetChange()
     {
-        Time.timeScale = 0.2f;
+        Time.timeScale = 0.3f;
         float size = Camera.main.orthographicSize-3;
         while (Camera.main.orthographicSize > size)
         {
-            Camera.main.orthographicSize -= 0.075f;
+            Camera.main.orthographicSize -= 0.05f;
             yield return new WaitForSeconds(0.01f);
         }
         yield return new WaitForSecondsRealtime(0.5f);

@@ -2741,6 +2741,7 @@ MonoBehaviour:
   Colors:
   - {fileID: 7816667367166683763, guid: 1ea6d5f61ac35d54f8266a2524bde31a, type: 3}
   - {fileID: 7816667367166683763, guid: 8521e5a63a5a92a43bccccb358461e5a, type: 3}
+  - {fileID: 7816667367166683763, guid: e95bc6043d222634985229bd5222c50b, type: 3}
 --- !u!1 &1388764531
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,13 +3486,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5be7c6bbee4bf4e83b8160b4631e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentColorIndex: 1
+  currentColorIndex: 0
   colors:
   - color1: {r: 0.4901961, g: 1, b: 0, a: 1}
     color2: {r: 0, g: 1, b: 0.50980395, a: 1}
   - color1: {r: 1, g: 1, b: 1, a: 1}
     color2: {r: 0, g: 0, b: 0, a: 1}
+  - color1: {r: 0.97394234, g: 0.3537736, b: 1, a: 1}
+    color2: {r: 0.46614888, g: 0, b: 0.6603774, a: 1}
   playerAroundValue: 15
+  currentColorKey: currentColor
+  isLockArray: 000000000000000000000000
 --- !u!1 &2496956991949481057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,6 +3982,7 @@ MonoBehaviour:
   Themes:
   - {fileID: 21300000, guid: 0ff709ab08337e84e8e473966b5674e4, type: 3}
   - {fileID: 21300000, guid: 41788fc47c5c6064697ba7bced4b4e0e, type: 3}
+  - {fileID: 21300000, guid: 01f3795ab36e3a3438608b52afafb897, type: 3}
 --- !u!1 &8702238125657555296
 GameObject:
   m_ObjectHideFlags: 0
