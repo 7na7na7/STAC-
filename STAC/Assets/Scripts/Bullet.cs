@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject[] clusterObj = null;
+    public GameObject clusterObj = null;
     public TrailRenderer trail;
     public bool isColor1;
     public GameObject dieParticle;
@@ -20,34 +20,61 @@ public class Bullet : MonoBehaviour
     {
         if (isColor1)
             gameObject.tag = "Color1";
+
+    private float savedTrailWidth;
+    private float savedTrailTime;
+
+    private bool isOnce = false;
+    private void OnEnable()
+    {
+        if (!isOnce)
+        {
+            savedTrailWidth = trail.startWidth;
+            isOnce = true;
+        }
         else
-            gameObject.tag = "Color2";
-
-        if (BulletIndex != 3)
         {
-            speed = Random.Range(minSpeed,maxSpeed);
-            Set();   
-        }
+            trail.time = 0;
+            canDestroy = false;
+            canDetect = true;
+            if (isColor1)
+                gameObject.tag = "Color1";
+            else
+                gameObject.tag = "Color2";
 
-        trail.startWidth *= 1/speed;
-        trail.time += 1/Mathf.Pow(speed,2);
-        switch (BulletIndex)
-        {
-            case 0:
-                straight();
-                break;
-            case 1:
-                guide();
-                break;
-            case 2:
-                straight();
-                break;
-            case 3:
-                break;
-            case 4:
-                randomStraight();
-                break;
+            if (BulletIndex != 3)
+            {
+                speed = Random.Range(minSpeed,maxSpeed);
+                Set();   
+            }
+
+            trail.startWidth =savedTrailWidth* (1/speed);
+            StartCoroutine(delay());
+            
+            switch (BulletIndex)
+            {
+                case 0:
+                    straight();
+                    break;
+                case 1:
+                    guide();
+                    break;
+                case 2:
+                    straight();
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    randomStraight();
+                    break;
+            }   
         }
+    }
+
+    IEnumerator delay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        trail.time= 1+(1/Mathf.Pow(speed,2));
     }
 
     public void randomStraight()
@@ -117,8 +144,14 @@ public class Bullet : MonoBehaviour
     }
     public void cluster()
     {
-        GameObject obj1=Instantiate(clusterObj[0], transform.position, Quaternion.identity);
-        GameObject obj2= Instantiate(clusterObj[1], transform.position, Quaternion.identity);
+        int i = 0;
+        if (isColor1)
+            i = 8;
+        else
+            i = 9;
+        
+        GameObject obj1=ObjectManager.instance.MakeObj(i);
+        GameObject obj2=ObjectManager.instance.MakeObj(i);
         
         obj1.GetComponent<Bullet>().speed = speed * 2;
         obj1.GetComponent<Bullet>().Set();
@@ -132,7 +165,7 @@ public class Bullet : MonoBehaviour
         obj2.GetComponent<Bullet>().dir.Normalize();
         obj2.GetComponent<Bullet>().delayGuide();
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     
     
@@ -182,11 +215,12 @@ public class Bullet : MonoBehaviour
         Instantiate(dieParticle, transform.position, Quaternion.identity);
         if(SoundMgr.instance!=null) 
             SoundMgr.instance.Play(0,1,1);
-        Destroy(gameObject); //파괴
+       gameObject.SetActive(false);
     }
 
     public void OtherColor()
     {
+        gameObject.SetActive(false);
         canDetect = false;
         Player.instance.Die();
     }
@@ -202,7 +236,7 @@ public class Bullet : MonoBehaviour
                 yield break;
             }
         }
-        Destroy(gameObject);
+       gameObject.SetActive(false);
     }
 
    

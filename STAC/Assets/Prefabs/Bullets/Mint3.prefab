@@ -99,7 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColorIndex: 1
   RD: {fileID: 2048562986226166144}
-  color: {r: 0, g: 1, b: 0.50980395, a: 0}
 --- !u!114 &2048562986226166159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,9 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145a0146fe9e8604185c88db3ec52287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clusterObj:
-  - {fileID: 2048562986226166147, guid: 2963d84daa24dbe4bb82422922929290, type: 3}
-  - {fileID: 2048562986226166147, guid: e89114b4b233b4648bb7290361c838ac, type: 3}
+  clusterObj: {fileID: 2048562986226166147, guid: 2963d84daa24dbe4bb82422922929290,
+    type: 3}
   trail: {fileID: 6119638924946717905}
   isColor1: 0
   dieParticle: {fileID: 1838152322236505922, guid: c850fc6c98a264e4fae43e692812f49a,

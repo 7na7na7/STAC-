@@ -25,7 +25,7 @@ public class Rotate : MonoBehaviour
 
     private void Update()
     {
-        int speed = 10;
+        int speed = 6;
         Vector3 moveVelocity = Vector3.zero;
         if (Input.GetAxisRaw("Horizontal") > 0)//오른쪽으로 갈때
         { 

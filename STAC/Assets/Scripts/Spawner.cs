@@ -14,7 +14,6 @@ public class difficulty
 public class Spawner : MonoBehaviour
 {
     public difficulty[] levels;
-    public GameObject[] bulletKind;
     public ArrayList bulletList= new ArrayList();
     public float radMinX, radMaxX, radMinY, radMaxY;
     public float minDelay, maxDelay;
@@ -31,9 +30,9 @@ public class Spawner : MonoBehaviour
     public void Set(float[] perc)
     {
         bulletList.Clear();
-        for (int i = 0; i < bulletKind.Length; i++)
+        for (int i = 0; i <ObjectManager.instance.bulletNum; i++)
         {
-            for (int j = 0; j < bulletKind.Length * (perc[i] / 100) * 10; j++)
+            for (int j = 0; j < ObjectManager.instance.bulletNum * (perc[i] / 100) * 10; j++)
             {
                 bulletList.Add(i);
             }
@@ -49,29 +48,30 @@ public class Spawner : MonoBehaviour
             bulletIndex = (int)bulletList[Random.Range(0, bulletList.Count)];
          
             int r = Random.Range(0, 6);
+            GameObject enemy = ObjectManager.instance.MakeObj(bulletIndex);
             if (r == 0||r==1) //위
             {
-                Instantiate(bulletKind[bulletIndex], new Vector2(
-                    Random.Range(transform.position.x-radMaxX,transform.position.x+radMaxX), 
-                    Random.Range(transform.position.y+radMinY,transform.position.y+radMaxY)), Quaternion.identity);
+                enemy.transform.position = new Vector2(
+                    Random.Range(transform.position.x - radMaxX, transform.position.x + radMaxX),
+                    Random.Range(transform.position.y + radMinY, transform.position.y + radMaxY));
             }
             else if (r == 2||r==3) //아래
             {
-                Instantiate(bulletKind[bulletIndex], new Vector2(
+                enemy.transform.position = new Vector2(
                     Random.Range(transform.position.x-radMaxX,transform.position.x+radMaxX), 
-                    Random.Range(transform.position.y-radMinY,transform.position.y-radMaxY)), Quaternion.identity);
+                    Random.Range(transform.position.y-radMinY,transform.position.y-radMaxY));
             }
             else if (r == 4) //오른쪽
             {
-                Instantiate(bulletKind[bulletIndex], new Vector2(
-                    Random.Range(transform.position.x+radMinX,transform.position.x+radMaxX), 
-                    Random.Range(transform.position.y-radMinY,transform.position.y+radMinY)), Quaternion.identity);
+                enemy.transform.position = new Vector2(
+                    Random.Range(transform.position.x + radMinX, transform.position.x + radMaxX),
+                    Random.Range(transform.position.y - radMinY, transform.position.y + radMinY));
             }
             else if (r == 5) //왼쪽
             {
-                Instantiate(bulletKind[bulletIndex], new Vector2(
-                    Random.Range(transform.position.x-radMinX,transform.position.x-radMaxX), 
-                    Random.Range(transform.position.y-radMinY,transform.position.y+radMinY)), Quaternion.identity);
+                enemy.transform.position = new Vector2(
+                    Random.Range(transform.position.x - radMinX, transform.position.x - radMaxX),
+                    Random.Range(transform.position.y - radMinY, transform.position.y + radMinY));
             }
         }
     }

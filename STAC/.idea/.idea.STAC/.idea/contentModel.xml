@@ -68,6 +68,7 @@
           <e p="GetSize.cs" t="Include" />
           <e p="Joystick.cs" t="Include" />
           <e p="MovingBG.cs" t="Include" />
+          <e p="ObjectManager.cs" t="Include" />
           <e p="Pause.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Revival.cs" t="Include" />

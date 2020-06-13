@@ -47,6 +47,7 @@ public class BulletData : MonoBehaviour
             PlayerPrefs.SetInt(key2,1);
             PlayerPrefs.SetInt(key3,1);
             isLockArray[1] = 1;
+            isLockArray[2] = 1;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftAlt)) //알트키 누르면 설정초기화

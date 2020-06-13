@@ -10,7 +10,7 @@ public class Tile : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < transform.GetChildCount(); i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = tileThemes[BulletData.instance.currentColorIndex];
         }
