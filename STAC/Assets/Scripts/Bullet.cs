@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class Bullet : MonoBehaviour
@@ -16,10 +17,6 @@ public class Bullet : MonoBehaviour
     public float minSpeed, maxSpeed;
     public float speed;
     private bool canDestroy = false;
-    void Start()
-    {
-        if (isColor1)
-            gameObject.tag = "Color1";
 
     private float savedTrailWidth;
     private float savedTrailTime;
@@ -34,6 +31,7 @@ public class Bullet : MonoBehaviour
         }
         else
         {
+            GetComponent<SetColor>().setColor();
             trail.time = 0;
             canDestroy = false;
             canDetect = true;
@@ -116,6 +114,15 @@ public class Bullet : MonoBehaviour
         }
 
         transform.Translate(dir * speed * Time.deltaTime);
+
+        if (SceneManager.GetActiveScene().name != "Play")
+        {
+            if (gameObject.activeSelf)
+            {
+                print("A");
+                gameObject.SetActive(false);
+            }
+        }
     }
 
     public void straight()
