@@ -20,6 +20,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         ScoreMgr.instance.GameStart();
+        Bullet[] bullets = FindObjectsOfType<Bullet>();
+        foreach (var bullet in bullets)
+        {
+            bullet.SetFalse();
+        }
     }
 
     public void Restart()

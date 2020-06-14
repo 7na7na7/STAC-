@@ -46,9 +46,6 @@ public class Bullet : MonoBehaviour
                 Set();   
             }
 
-            trail.startWidth =savedTrailWidth* (1/speed);
-            StartCoroutine(delay());
-            
             switch (BulletIndex)
             {
                 case 0:
@@ -69,7 +66,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    IEnumerator delay()
+    IEnumerator SetTrailTime()
     {
         yield return new WaitForSeconds(0.1f);
         trail.time= 1+(1/Mathf.Pow(speed,2));
@@ -92,6 +89,9 @@ public class Bullet : MonoBehaviour
     }
     public void Set()
     {
+        trail.startWidth =savedTrailWidth* (1/speed);
+        StartCoroutine(SetTrailTime());
+        
         if(BulletIndex==1)
             transform.localScale = new Vector3(1/speed/3f, 1/speed/3f, transform.localScale.z);
         else if(BulletIndex==2)
@@ -114,15 +114,6 @@ public class Bullet : MonoBehaviour
         }
 
         transform.Translate(dir * speed * Time.deltaTime);
-
-        if (SceneManager.GetActiveScene().name != "Play")
-        {
-            if (gameObject.activeSelf)
-            {
-                print("A");
-                gameObject.SetActive(false);
-            }
-        }
     }
 
     public void straight()
@@ -159,6 +150,8 @@ public class Bullet : MonoBehaviour
         
         GameObject obj1=ObjectManager.instance.MakeObj(i);
         GameObject obj2=ObjectManager.instance.MakeObj(i);
+        obj1.transform.position = transform.position;
+        obj2.transform.position = transform.position;
         
         obj1.GetComponent<Bullet>().speed = speed * 2;
         obj1.GetComponent<Bullet>().Set();
@@ -171,7 +164,7 @@ public class Bullet : MonoBehaviour
         obj2.GetComponent<Bullet>().dir=new Vector2( dir.x, dir.y+1);
         obj2.GetComponent<Bullet>().dir.Normalize();
         obj2.GetComponent<Bullet>().delayGuide();
-
+        
         gameObject.SetActive(false);
     }
     
@@ -227,7 +220,6 @@ public class Bullet : MonoBehaviour
 
     public void OtherColor()
     {
-        gameObject.SetActive(false);
         canDetect = false;
         Player.instance.Die();
     }
@@ -246,5 +238,11 @@ public class Bullet : MonoBehaviour
        gameObject.SetActive(false);
     }
 
-   
+    public void SetFalse()
+    {
+        if (gameObject.activeSelf)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }
