@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScoreMgr : MonoBehaviour
 {
@@ -12,18 +13,15 @@ public class ScoreMgr : MonoBehaviour
     public int highScore = 0;
     public int score = 0;
     public bool isHighScore = false;
+
+    public int maxCombo = 0;
+    
+    public GameObject comboText;
+    public GameObject Canvas;
+    
     void Awake()
     {
-        //싱글톤
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
         
         highScore = PlayerPrefs.GetInt(highscoreKey, 0); //저장된 값 받아옴
         
@@ -35,14 +33,27 @@ public class ScoreMgr : MonoBehaviour
         isHighScore = false;
     }
     
-    public void AddScore(int v)
+    
+    public void scoreUp(int count,int point, bool isCombo)
     {
-        score += v;
+        if (isCombo)
+        {
+            GameObject go=Instantiate(comboText,Canvas.transform);
+            go.GetComponent<Text>().text = count+ "콤보 +" + point;
+        }
+        score += point;
         if (score > highScore) //최고점수 갱신
         {
             highScore = score;
             PlayerPrefs.SetInt(highscoreKey,highScore);
             isHighScore = true;
         }
+     ScoreText.instance.pong();
+    }
+    
+    public void comboInitialize(int v)
+    {
+        if (v > maxCombo)
+            maxCombo = v;
     }
 }

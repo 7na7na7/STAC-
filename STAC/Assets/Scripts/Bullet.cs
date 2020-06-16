@@ -211,7 +211,11 @@ public class Bullet : MonoBehaviour
     public void SameColor()
     {
         canDetect = false;
-        ScoreMgr.instance.AddScore(GameManager.instance.scoreUpValue);
+        
+        ScoreMgr.instance.scoreUp(0,GameManager.instance.scoreUpValue,false);
+        ComboManager.instance.comboIniitailize();
+        
+        
         Instantiate(dieParticle, transform.position, Quaternion.identity);
         if(SoundMgr.instance!=null) 
             SoundMgr.instance.Play(0,1,1);

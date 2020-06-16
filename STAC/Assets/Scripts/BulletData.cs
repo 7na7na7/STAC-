@@ -39,31 +39,28 @@ public class BulletData : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)) //스페이스바 누르면 모든 테마 언락
-        {
-            PlayerPrefs.SetInt(key2,1);
-            PlayerPrefs.SetInt(key3,1);
-            isLockArray[1] = 1;
-            isLockArray[2] = 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftAlt)) //알트키 누르면 설정초기화
-        {
-            PlayerPrefs.SetInt(key2,0);
-            isLockArray[1] = 0;
-            PlayerPrefs.SetInt(key3,0);
-            isLockArray[2] = 0;
-        }
-    }
-
+    
     public Color SetColor(int index)
     {
         if (index == 0)
             return colors[currentColorIndex].color1;
         else
             return colors[currentColorIndex].color2;
+    }
+
+    public void Unlock()
+    {
+        PlayerPrefs.SetInt(key2,1);
+        PlayerPrefs.SetInt(key3,1);
+        isLockArray[1] = 1;
+        isLockArray[2] = 1;
+    }
+
+    public void Reset()
+    {
+        PlayerPrefs.SetInt(key2,0);
+        isLockArray[1] = 0;
+        PlayerPrefs.SetInt(key3,0);
+        isLockArray[2] = 0;
     }
 }
