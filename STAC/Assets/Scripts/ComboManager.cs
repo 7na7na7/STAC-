@@ -39,11 +39,5 @@ public class ComboManager : MonoBehaviour
         comboCount = 0;
     }
 
-    public void ComboEnd()
-    {
-        int value =ComboValue;
-        value += comboCount / 5 * ComboValue;
-        ScoreMgr.instance.comboInitialize(comboCount);
-        ScoreMgr.instance.scoreUp(comboCount, value * comboCount, true);
-    }
+   
 }

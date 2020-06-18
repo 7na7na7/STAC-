@@ -33,7 +33,6 @@ public class CameraManager : MonoBehaviour
     }
     public IEnumerator targetChange()
     {
-        ComboManager.instance.ComboEnd();
         Time.timeScale = 0.3f;
         float size = Camera.main.orthographicSize-3;
         while (Camera.main.orthographicSize > size)
