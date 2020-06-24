@@ -9,7 +9,7 @@ public class GameOverPanel : MonoBehaviour
     public GameObject high;
     public Text score;
     public Text highScore;
-    void Start()
+    void OnEnable()
     {
         score.text = ScoreMgr.instance.score.ToString();
         highScore.text = ScoreMgr.instance.highScore.ToString();

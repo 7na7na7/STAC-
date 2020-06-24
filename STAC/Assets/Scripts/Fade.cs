@@ -32,4 +32,19 @@ public class Fade : MonoBehaviour
             image.color = color;
         }
     }
+    
+    public void Unfade()
+    {
+        StartCoroutine(UnfadeCor());
+    }
+    IEnumerator UnfadeCor()
+    {
+        while (color.a>0)
+        {
+            yield return new WaitForSecondsRealtime(delay);
+            color.a -= value;
+            image.color = color;
+        }
+        GetComponent<Image>().raycastTarget = false;
+    }
 }

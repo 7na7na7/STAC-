@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Rotate : MonoBehaviour
@@ -68,7 +69,7 @@ public class Rotate : MonoBehaviour
 
     public void randomSound()
     {
-        SoundMgr.instance.Play(Random.Range(1,7),1,1.5f);
+        SoundMgr.instance.Play(Random.Range(2,5),1,1);
     }
     IEnumerator LeftCor()
     {
@@ -76,7 +77,7 @@ public class Rotate : MonoBehaviour
         canRotate = false;
         for(int i=0;i<120/value;i++)
         {
-            if(transform.eulerAngles.z+value>=370)
+            if(transform.eulerAngles.z+value>=400)
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
             else
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
@@ -127,5 +128,10 @@ public class Rotate : MonoBehaviour
         {
             p.Play();
         }
+    }
+
+    public void revivial()
+    {
+        transform.eulerAngles=Vector3.zero;
     }
 }

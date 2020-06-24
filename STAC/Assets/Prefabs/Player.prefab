@@ -123,14 +123,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.18574852, y: 4.257227}
+    - - {x: 0.17766623, y: 4.2473345}
       - {x: 1.1691859, y: 2.5844064}
-      - {x: 4.2124887, y: -2.4532824}
+      - {x: 4.1373587, y: -2.3638406}
       - {x: 0.13862598, y: 0.32897946}
       - {x: 0.10872492, y: 4.343897}
-      - {x: 0.09601999, y: 4.5198565}
-      - {x: 0.1511957, y: 4.383163}
-      - {x: 0.1713018, y: 4.3080387}
+      - {x: 0.1085925, y: 4.3662767}
+      - {x: 0.13413309, y: 4.324773}
+      - {x: 0.1578313, y: 4.2829127}
 --- !u!1 &768278085
 GameObject:
   m_ObjectHideFlags: 0
@@ -14827,7 +14827,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 4.0908866, y: -2.3565416}
+    - - {x: 4.1155777, y: -2.354075}
       - {x: -3.9138622, y: -2.3564146}
       - {x: 0.04945079, y: 4.276479}
       - {x: 0.06676693, y: 4.303207}
@@ -14862,8 +14862,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6885763691734771526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: -95.8, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 135303015}
@@ -14875,7 +14875,7 @@ Transform:
   - {fileID: 768278086}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
 --- !u!212 &6885763691734771527
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14981,7 +14981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 870eb4d0682442a48b1358386f2b1629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {fileID: 0}
   DieParticle: {fileID: 7885151814575444280, guid: 54270a9cb6ab64d45a199af6e62bb7d2,
     type: 3}
 --- !u!114 &9079401270995341325
@@ -15011,7 +15010,7 @@ MonoBehaviour:
   radMaxX: 26
   radMinY: 8
   radMaxY: 16
-  minDelay: 0.1
+  minDelay: 0.2
   maxDelay: 0.5
   delayMinusValue_Min: 0
   delayMinusValue_Max: 0

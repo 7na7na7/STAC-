@@ -9,7 +9,7 @@ public class SoundMgr : MonoBehaviour
     public AudioSource source;
 
     public AudioClip[] clips;
-
+    
     private void Awake()
     {
         if (instance == null)
@@ -29,4 +29,5 @@ public class SoundMgr : MonoBehaviour
          source.pitch = pitch;
          source.PlayOneShot(clips[index],volume);
     }
+    
 }

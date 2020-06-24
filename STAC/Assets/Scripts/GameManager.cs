@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int scoreUpValue = 1000;
-   
+
+    public bool canRevival = true;
 
     private void Awake()
     {

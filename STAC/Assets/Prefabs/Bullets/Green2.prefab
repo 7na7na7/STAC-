@@ -119,8 +119,8 @@ MonoBehaviour:
     type: 3}
   BulletIndex: 1
   dir: {x: 0, y: 0}
-  minSpeed: 2
-  maxSpeed: 5
+  minSpeed: 2.5
+  maxSpeed: 4
   speed: 0
 --- !u!60 &8675707143953953176
 PolygonCollider2D:

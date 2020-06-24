@@ -10,9 +10,10 @@ public class Revival : MonoBehaviour
     public float time;
     public Text text;
     public Image clock;
-    void Start()
+    void OnEnable()
     {
         maxTime = (int)time;
+        time = maxTime;
     }
 
     void Update()
@@ -39,8 +40,8 @@ public class Revival : MonoBehaviour
         text.text = Mathf.CeilToInt(time).ToString();
         if (Mathf.CeilToInt(time) <= 0)
         {
-            gameOverPanel.SetActive(true);
-            Destroy(gameObject);
+            gameOverPanel.SetActive(true); 
+            gameObject.SetActive(false);
         }
     }
 }

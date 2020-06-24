@@ -35,6 +35,7 @@ public class ComboManager : MonoBehaviour
             ScoreMgr.instance.comboInitialize(comboCount);
             value += comboCount / 5 * ComboValue;
             ScoreMgr.instance.scoreUp(comboCount, value * comboCount, true);
+            SoundMgr.instance.Play(1,1,1);
         }
         comboCount = 0;
     }

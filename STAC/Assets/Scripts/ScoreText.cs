@@ -8,6 +8,7 @@ public class ScoreText : MonoBehaviour
 {
     public static ScoreText instance;
     private Text Txt;
+    public int Upvalue = 3;
     public float delay;
     private void Start()
     {
@@ -29,16 +30,16 @@ public class ScoreText : MonoBehaviour
     {
         while (Txt.fontSize < 300)
             {
-                Txt.fontSize += 2;
+                Txt.fontSize += Upvalue;
 
-                yield return new WaitForSeconds(delay);
+                yield return new WaitForSeconds(Time.deltaTime);
             }
 
             while (Txt.fontSize > 250)
             {
-                Txt.fontSize -= 2;
+                Txt.fontSize -= Upvalue;
 
-                yield return new WaitForSeconds(delay);
+                yield return new WaitForSeconds(Time.deltaTime);
             }
     }
 }
