@@ -73,6 +73,8 @@
           <e p="GetSize.cs" t="Include" />
           <e p="goldCol.cs" t="Include" />
           <e p="GoldManager.cs" t="Include" />
+          <e p="GoldSpawner.cs" t="Include" />
+          <e p="goldText.cs" t="Include" />
           <e p="Joystick.cs" t="Include" />
           <e p="ObjectManager.cs" t="Include" />
           <e p="Pause.cs" t="Include" />

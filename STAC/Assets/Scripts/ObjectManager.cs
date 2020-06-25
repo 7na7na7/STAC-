@@ -22,6 +22,8 @@ public class ObjectManager : MonoBehaviour
    public GameObject GreenClusterObj;
 
    public GameObject MintClusterObj;
+
+   public GameObject GoldObj;
    //===================================================================
 
    //오브젝트풀링 배열
@@ -40,6 +42,7 @@ public class ObjectManager : MonoBehaviour
    private GameObject[] GreenCluster; //네모에서 나온 유도탄
    private GameObject[] MintCluster;
 
+   private GameObject[] Gold; //골드
 
    public static ObjectManager instance;
 
@@ -71,8 +74,9 @@ public class ObjectManager : MonoBehaviour
 
       GreenCluster = new GameObject[60];
       MintCluster = new GameObject[60];
-
-
+      
+      Gold=new GameObject[100];
+      
       Generate();
    }
 
@@ -142,6 +146,11 @@ public class ObjectManager : MonoBehaviour
          Mint4[i].SetActive(false);
       }
 
+      for (int i = 0; i < Gold.Length; i++)
+      {
+         Gold[i] = Instantiate(GoldObj,transform);
+         Gold[i].SetActive(false);
+      }
       #endregion
    }
 
@@ -246,6 +255,16 @@ public class ObjectManager : MonoBehaviour
                {
                   MintCluster[i].SetActive(true);
                   return MintCluster[i];
+               }
+            }
+            break;
+         case 10:
+            for (int i = 0; i < Gold.Length; i++)
+            {
+               if (!Gold[i].activeSelf) //비활성화되어있다면
+               {
+                  Gold[i].SetActive(true);
+                  return Gold[i];
                }
             }
             break;

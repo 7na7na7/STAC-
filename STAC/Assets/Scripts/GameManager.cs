@@ -26,6 +26,12 @@ public class GameManager : MonoBehaviour
         {
             bullet.SetFalse();
         }
+
+        goldCol[] golds = FindObjectsOfType<goldCol>();
+        foreach (var gold in  golds)
+        {
+            gold.SetFalse();
+        }
     }
 
     public void Restart()

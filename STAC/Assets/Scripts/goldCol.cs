@@ -5,12 +5,47 @@ using UnityEngine;
 
 public class goldCol : MonoBehaviour
 {
+    private bool canDestroy = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Edge1")||other.CompareTag("Edge2"))
         {
             GoldManager.instance.GetGold(10);
-            Destroy(gameObject);
+            SoundMgr.instance.Play(3,1,3);
+            SetFalse();
         }
+    }
+    public void SetFalse()
+    {
+        if (gameObject.activeSelf)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        if (!CheckCamera.instance.CheckObjectIsInCamera(gameObject))
+        {
+            if (!canDestroy)
+            {
+                canDestroy = true;
+                StartCoroutine(Destroy());
+            }
+        }
+    }
+
+    IEnumerator Destroy() //20초동안 보이지 않으면 파괴
+    {
+        for(int i=0;i<40;i++)
+        {
+            yield return new WaitForSeconds(0.5f);
+            if (CheckCamera.instance.CheckObjectIsInCamera(gameObject))
+            {
+                canDestroy = false;
+                yield break;
+            }
+        }
+        gameObject.SetActive(false);
     }
 }
