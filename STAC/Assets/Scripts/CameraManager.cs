@@ -40,6 +40,7 @@ public class CameraManager : MonoBehaviour
     }
     public IEnumerator targetChange()
     {
+        BGM.instance.fadeOut();
         Time.timeScale = 0.3f;
         float size = Camera.main.orthographicSize-3;
         while (Camera.main.orthographicSize > size)
@@ -51,7 +52,6 @@ public class CameraManager : MonoBehaviour
         
         Time.timeScale = 1;
         Fade.instance.fade();
-        
         if (GameManager.instance.canRevival)
         {
             GameManager.instance.canRevival = false;
@@ -65,6 +65,12 @@ public class CameraManager : MonoBehaviour
 
     public void Revival()
     {
+        BGM.instance.fadeIn();
+        Bullet[] bullets = FindObjectsOfType<Bullet>();
+        foreach (var bullet in bullets)
+        {
+            bullet.SetFalse();
+        }
         StartCoroutine(targetChange2());
         Fade.instance.Unfade();
         GameObject player=Instantiate(player_GO, lastTr);

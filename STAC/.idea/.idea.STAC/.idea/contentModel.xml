@@ -58,6 +58,7 @@
           <e p="Btn.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
           <e p="BulletData.cs" t="Include" />
+          <e p="BulletSetFalse.cs" t="Include" />
           <e p="CameraManager.cs" t="Include" />
           <e p="ChangeColor.cs" t="Include" />
           <e p="CheckCamera.cs" t="Include" />
@@ -70,6 +71,8 @@
           <e p="GameManager.cs" t="Include" />
           <e p="GameOverPanel.cs" t="Include" />
           <e p="GetSize.cs" t="Include" />
+          <e p="goldCol.cs" t="Include" />
+          <e p="GoldManager.cs" t="Include" />
           <e p="Joystick.cs" t="Include" />
           <e p="ObjectManager.cs" t="Include" />
           <e p="Pause.cs" t="Include" />

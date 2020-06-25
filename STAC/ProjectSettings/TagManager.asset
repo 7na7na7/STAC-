@@ -9,6 +9,8 @@ TagManager:
   - Edge1
   - Edge2
   - Cluster
+  - ScrollManager
+  - gold
   layers:
   - Default
   - TransparentFX

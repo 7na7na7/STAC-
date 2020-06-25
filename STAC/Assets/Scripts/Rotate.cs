@@ -67,13 +67,13 @@ public class Rotate : MonoBehaviour
             StartCoroutine(RightCor());
     }
 
-    public void randomSound()
+    public void RotateSound()
     {
-        SoundMgr.instance.Play(Random.Range(2,5),1,1);
+        SoundMgr.instance.Play(2,1,1);
     }
     IEnumerator LeftCor()
     {
-        randomSound();
+        RotateSound();
         canRotate = false;
         for(int i=0;i<120/value;i++)
         {
@@ -89,7 +89,7 @@ public class Rotate : MonoBehaviour
     }
     IEnumerator RightCor()
     {
-        randomSound();
+        RotateSound();
         canRotate = false;
         for(int i=0;i<120/value;i++)
         {
@@ -122,16 +122,12 @@ public class Rotate : MonoBehaviour
                 Left();
         }
     }
+
     public void Emission()
     {
         foreach (ParticleSystem p in rotateParticles)
         {
             p.Play();
         }
-    }
-
-    public void revivial()
-    {
-        transform.eulerAngles=Vector3.zero;
     }
 }

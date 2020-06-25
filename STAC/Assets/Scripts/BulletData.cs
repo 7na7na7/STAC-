@@ -17,10 +17,8 @@ public class BulletData : MonoBehaviour
     public string currentColorKey = "currentColor";
     
     public int[] isLockArray;
-    
-    private string key1 = "color1";
-    private string key2 = "color2";
-    private string key3 = "color3";
+
+    public string[] keys;
 
     void Awake()
     {
@@ -29,10 +27,21 @@ public class BulletData : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
             currentColorIndex = PlayerPrefs.GetInt(currentColorKey, 0);
-            
-            isLockArray[0] = PlayerPrefs.GetInt(key1,1);
-            isLockArray[1] = PlayerPrefs.GetInt(key2, 0);
-            isLockArray[2] = PlayerPrefs.GetInt(key3, 0);
+
+
+            for (int i = 0; i < keys.Length; i++)
+            {
+                if (i==0)
+                {
+                    isLockArray[i] = PlayerPrefs.GetInt(keys[i],1);
+                }
+                else
+                {
+                    isLockArray[i] = PlayerPrefs.GetInt(keys[i],0);
+                }
+               
+            }
+
         }
         else
         {
@@ -50,17 +59,21 @@ public class BulletData : MonoBehaviour
 
     public void Unlock()
     {
-        PlayerPrefs.SetInt(key2,1);
-        PlayerPrefs.SetInt(key3,1);
-        isLockArray[1] = 1;
-        isLockArray[2] = 1;
+        for (int i = 0; i < isLockArray.Length; i++)
+        {
+            isLockArray[i] = 1;
+            PlayerPrefs.SetInt(keys[i],isLockArray[i]);
+        }
     }
 
     public void Reset()
     {
-        PlayerPrefs.SetInt(key2,0);
-        isLockArray[1] = 0;
-        PlayerPrefs.SetInt(key3,0);
-        isLockArray[2] = 0;
+        for (int i = 0; i < isLockArray.Length; i++)
+        {
+            isLockArray[i] = 0;
+            if(i==0)
+                isLockArray[i] = 1;
+            PlayerPrefs.SetInt(keys[i],isLockArray[i]);
+        }
     }
 }

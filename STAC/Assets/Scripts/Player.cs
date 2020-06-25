@@ -11,7 +11,10 @@ public class Player : MonoBehaviour
     void Awake()
     {
         if (instance == null)
+        {
             instance = this;
+            transform.eulerAngles=new Vector3(0,0,30);
+        }
     }
 
     public void Die()
@@ -21,6 +24,5 @@ public class Player : MonoBehaviour
         CameraManager.instance.lastTr = gameObject.transform;
         Destroy(gameObject);
     }
-
-   
+    
 }

@@ -20,6 +20,7 @@ public class Fade : MonoBehaviour
 
     public void fade()
     {
+        StopAllCoroutines();
         StartCoroutine(fadeCor());
     }
     IEnumerator fadeCor()
@@ -35,6 +36,7 @@ public class Fade : MonoBehaviour
     
     public void Unfade()
     {
+        StopAllCoroutines();
         StartCoroutine(UnfadeCor());
     }
     IEnumerator UnfadeCor()
