@@ -21,7 +21,7 @@ public class Tile : MonoBehaviour
     {
         if (col.CompareTag("Edge1") || col.CompareTag("Edge2"))
         {
-            
+            print(Time.time);
         }
     }
 

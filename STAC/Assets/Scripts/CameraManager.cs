@@ -74,6 +74,7 @@ public class CameraManager : MonoBehaviour
         StartCoroutine(targetChange2());
         Fade.instance.Unfade();
         GameObject player=Instantiate(player_GO, lastTr);
+        FindObjectOfType<Tile>().transform.position = player.transform.position;
         gameoverPanel.SetActive(false);
         Clock.SetActive(false);
         FindObjectOfType<joystick>().go_Player = player;
