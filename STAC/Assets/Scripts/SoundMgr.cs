@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundMgr : MonoBehaviour
 {
@@ -29,5 +30,27 @@ public class SoundMgr : MonoBehaviour
          source.pitch = pitch;
          source.PlayOneShot(clips[index],volume);
     }
-    
+
+/*
+    #region 발표용
+    private void Start()
+    {
+        GameObject.Find("BGM").GetComponent<AudioSource>().Pause();
+    }
+
+    private void Update() 
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (SceneManager.GetActiveScene().name == "Title")
+            {
+                if (GameObject.Find("BGM").GetComponent<AudioSource>().isPlaying)
+                    GameObject.Find("BGM").GetComponent<AudioSource>().Pause();
+                else
+                    GameObject.Find("BGM").GetComponent<AudioSource>().UnPause();
+            }
+        }
+    }
+    #endregion
+   */
 }

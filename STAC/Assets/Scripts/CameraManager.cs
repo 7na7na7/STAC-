@@ -10,7 +10,6 @@ public class CameraManager : MonoBehaviour
     public float speed;
     public GameObject player; //여기에다가 따라갈거 넣는다.
     public GameObject player_GO; //플레이어 게임오브젝트
-    Transform AT;
 
     public Transform lastTr;
     private float savedOrthoSize;
@@ -18,19 +17,16 @@ public class CameraManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-        AT = player.transform;
 
         savedOrthoSize = Camera.main.orthographicSize;
     }
     void Update()
     {
-        if (AT != null)
+        if (player != null)
         {
             if (speed == 0)
-                transform.position = AT.position;
-            else
-                transform.position = Vector3.Lerp(transform.position, AT.position, speed * Time.deltaTime); //Vector3.Lerp()를 쓰면 부드럽게 움직인다.
-            transform.position=new Vector3(transform.position.x, transform.position.y, -10); //카메라를 원래 z축으로 이동   
+                transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
+            //Vector3.Lerp(transform.position, player.transform.position, speed * Time.deltaTime); //Vector3.Lerp()를 쓰면 부드럽게 움직인다.
         }
     }
 
@@ -73,11 +69,12 @@ public class CameraManager : MonoBehaviour
         }
         StartCoroutine(targetChange2());
         Fade.instance.Unfade();
-        GameObject player=Instantiate(player_GO, lastTr);
+        GameObject playerGO=Instantiate(player_GO, lastTr);
+        player = playerGO;
+        FindObjectOfType<Tile>().transform.position = playerGO.transform.position;
         gameoverPanel.SetActive(false);
         Clock.SetActive(false);
-        FindObjectOfType<joystick>().go_Player = player;
-        AT = player.transform;
+        FindObjectOfType<joystick>().go_Player = playerGO;
     }
     
     public IEnumerator targetChange2()

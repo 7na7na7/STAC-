@@ -715,7 +715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 789.9999, y: -284}
+  m_AnchoredPosition: {x: 786, y: -284}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &232683059
@@ -919,7 +919,7 @@ MonoBehaviour:
   ComboValue: 100
   comboCount: 0
   canCombo: 0
-  comboDelay: 1
+  comboDelay: 1.5
 --- !u!4 &297654291
 Transform:
   m_ObjectHideFlags: 0
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   player: {fileID: 1023808086}
   player_GO: {fileID: 6885763691734771526, guid: 349d08750d49f164c9782d84f08a0bcd,
     type: 3}
-  lastTr: {fileID: 0}
+  lastTr: {fileID: 1430420040}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1397,7 +1397,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.29999995, y: -95.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2442,6 +2442,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 349d08750d49f164c9782d84f08a0bcd, type: 3}
+--- !u!4 &1430420040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6885763691734771524, guid: 349d08750d49f164c9782d84f08a0bcd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1430420039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1442933626
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,7 +3058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 459, y: -284}
+  m_AnchoredPosition: {x: 392, y: -284}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874923849

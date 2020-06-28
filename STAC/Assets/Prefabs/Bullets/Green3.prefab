@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a1edf7c1092864dbdb6f5d304054a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSetColor: 0
   ColorIndex: 0
   RD: {fileID: 2048562986226166144}
 --- !u!114 &2048562986226166159
@@ -209,6 +210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trail
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532326310129682906, guid: 29f7542f67c7efb4fae269216bf9107e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29f7542f67c7efb4fae269216bf9107e, type: 3}
