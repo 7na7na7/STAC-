@@ -13,6 +13,8 @@ public class difficulty
 }
 public class Spawner : MonoBehaviour
 {
+    public static Spawner instance;
+    public Transform player;
     public difficulty[] levels;
     public ArrayList bulletList= new ArrayList();
     public float radMinX, radMaxX, radMinY, radMaxY;
@@ -20,6 +22,16 @@ public class Spawner : MonoBehaviour
     public float delayMinusValue_Min;
     public float delayMinusValue_Max;
     public float delyaMinusTime;
+
+    private void Awake()
+    {
+        instance = this;
+        radMinX *= Camera.main.orthographicSize;
+        radMaxX *= Camera.main.orthographicSize;
+        radMinY *= Camera.main.orthographicSize;
+        radMaxY *= Camera.main.orthographicSize;
+    }
+
     void Start()
     {
         StartCoroutine(spawn());
@@ -43,35 +55,37 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(minDelay,maxDelay));
-            
-            int bulletIndex=0;
-            bulletIndex = (int)bulletList[Random.Range(0, bulletList.Count)];
+            if (player != null)
+            {
+                int bulletIndex=0;
+                bulletIndex = (int)bulletList[Random.Range(0, bulletList.Count)];
          
-            int r = Random.Range(0, 6);
-            GameObject enemy = ObjectManager.instance.MakeObj(bulletIndex);
-            if (r == 0||r==1) //위
-            {
-                enemy.transform.position = new Vector2(
-                    Random.Range(transform.position.x - radMaxX, transform.position.x + radMaxX),
-                    Random.Range(transform.position.y + radMinY, transform.position.y + radMaxY));
-            }
-            else if (r == 2||r==3) //아래
-            {
-                enemy.transform.position = new Vector2(
-                    Random.Range(transform.position.x-radMaxX,transform.position.x+radMaxX), 
-                    Random.Range(transform.position.y-radMinY,transform.position.y-radMaxY));
-            }
-            else if (r == 4) //오른쪽
-            {
-                enemy.transform.position = new Vector2(
-                    Random.Range(transform.position.x + radMinX, transform.position.x + radMaxX),
-                    Random.Range(transform.position.y - radMinY, transform.position.y + radMinY));
-            }
-            else if (r == 5) //왼쪽
-            {
-                enemy.transform.position = new Vector2(
-                    Random.Range(transform.position.x - radMinX, transform.position.x - radMaxX),
-                    Random.Range(transform.position.y - radMinY, transform.position.y + radMinY));
+                int r = Random.Range(0, 6);
+                GameObject enemy = ObjectManager.instance.MakeObj(bulletIndex);
+                if (r == 0||r==1) //위
+                {
+                    enemy.transform.position = new Vector2(
+                        Random.Range(player.position.x - radMaxX, player.position.x + radMaxX),
+                        Random.Range(player.position.y + radMinY, player.position.y + radMaxY));
+                }
+                else if (r == 2||r==3) //아래
+                {
+                    enemy.transform.position = new Vector2(
+                        Random.Range(player.position.x-radMaxX,player.position.x+radMaxX), 
+                        Random.Range(player.position.y-radMinY,player.position.y-radMaxY));
+                }
+                else if (r == 4) //오른쪽
+                {
+                    enemy.transform.position = new Vector2(
+                        Random.Range(player.position.x + radMinX, player.position.x + radMaxX),
+                        Random.Range(player.position.y - radMinY, player.position.y + radMinY));
+                }
+                else if (r == 5) //왼쪽
+                {
+                    enemy.transform.position = new Vector2(
+                        Random.Range(player.position.x - radMinX, player.position.x - radMaxX),
+                        Random.Range(player.position.y - radMinY, player.position.y + radMinY));
+                }   
             }
         }
     }

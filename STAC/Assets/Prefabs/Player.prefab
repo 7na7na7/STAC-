@@ -115,7 +115,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.4877946, y: 0.3506807}
-    oldSize: {x: 8.06, y: 6.72}
+    oldSize: {x: 8.04, y: 6.72}
     newSize: {x: 8.06, y: 6.72}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -14819,7 +14819,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.4877946, y: 0.3506807}
-    oldSize: {x: 8.06, y: 6.72}
+    oldSize: {x: 8.04, y: 6.72}
     newSize: {x: 8.06, y: 6.72}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -14847,10 +14847,9 @@ GameObject:
   - component: {fileID: 6885763691734771525}
   - component: {fileID: 379198185}
   - component: {fileID: 379198188}
-  - component: {fileID: 9079401270995341325}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14863,7 +14862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6885763691734771526}
   m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: -95.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 135303015}
@@ -14938,9 +14937,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef0b8b1dfd352845acba930974a1c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoRotate: 0
+  AutoRotate: 1
   rotate: {fileID: 0}
-  autoRotateDelay: 0
+  autoRotateDelay: 1.5
   isRight: 1
   delay: 0.01
   value: 20
@@ -14983,38 +14982,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DieParticle: {fileID: 7885151814575444280, guid: 54270a9cb6ab64d45a199af6e62bb7d2,
     type: 3}
---- !u!114 &9079401270995341325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6885763691734771526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f65f064e7613604295df525a5ec86ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levels:
-  - delay: 0.01
-    percents:
-    - 7.5
-    - 15
-    - 7.5
-    - 15
-    - 3.5
-    - 6.5
-    - 15
-    - 30
-  radMinX: 14
-  radMaxX: 26
-  radMinY: 8
-  radMaxY: 16
-  minDelay: 0.2
-  maxDelay: 0.5
-  delayMinusValue_Min: 0
-  delayMinusValue_Max: 0
-  delyaMinusTime: 0
 --- !u!1 &7030556994850647116
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,15 +10,21 @@ public class Player : MonoBehaviour
   
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
+        instance = this;
             transform.eulerAngles=new Vector3(0,0,30);
-        }
+    }
+
+    private void Start()
+    {
+        if (Spawner.instance.player == null)
+            Spawner.instance.player = this.transform;
+        if (GoldSpawner.instance.player == null)
+            GoldSpawner.instance.player = this.transform;
     }
 
     public void Die()
     {
+        CameraManager.instance.SetSavedOrthographic();
         Instantiate(DieParticle, transform.position, Quaternion.identity);
         CameraManager.instance.GameOver();
         CameraManager.instance.lastTr = gameObject.transform;

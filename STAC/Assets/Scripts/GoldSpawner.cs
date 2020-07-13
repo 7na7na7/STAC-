@@ -6,8 +6,16 @@ using Random = UnityEngine.Random;
 
 public class GoldSpawner : MonoBehaviour
 {
+    public static GoldSpawner instance;
     public float minDelay, maxDelay;
     private float radMaxX, radMinY, radMinX,radMaxY;
+    public Transform player;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         StartCoroutine(spawn());
@@ -23,32 +31,34 @@ public class GoldSpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(minDelay,maxDelay));
-            
-GameObject gold=ObjectManager.instance.MakeObj(10);
-            int r = Random.Range(0, 6);
-            if (r == 0||r==1) //위
+            if (player != null)
             {
-                gold.transform.position = new Vector2(
-                    Random.Range(transform.position.x - radMaxX, transform.position.x + radMaxX),
-                    Random.Range(transform.position.y + radMinY, transform.position.y + radMaxY));
-            }
-            else if (r == 2||r==3) //아래
-            {
-                gold.transform.position = new Vector2(
-                    Random.Range(transform.position.x-radMaxX,transform.position.x+radMaxX), 
-                    Random.Range(transform.position.y-radMinY,transform.position.y-radMaxY));
-            }
-            else if (r == 4) //오른쪽
-            {
-                gold.transform.position = new Vector2(
-                    Random.Range(transform.position.x + radMinX, transform.position.x + radMaxX),
-                    Random.Range(transform.position.y - radMinY, transform.position.y + radMinY));
-            }
-            else if (r == 5) //왼쪽
-            {
-                gold.transform.position = new Vector2(
-                    Random.Range(transform.position.x - radMinX, transform.position.x - radMaxX),
-                    Random.Range(transform.position.y - radMinY, transform.position.y + radMinY));
+                GameObject gold=ObjectManager.instance.MakeObj(10);
+                int r = Random.Range(0, 6);
+                if (r == 0||r==1) //위
+                {
+                    gold.transform.position = new Vector2(
+                        Random.Range(player.position.x - radMaxX, player.position.x + radMaxX),
+                        Random.Range(player.position.y + radMinY, player.position.y + radMaxY));
+                }
+                else if (r == 2||r==3) //아래
+                {
+                    gold.transform.position = new Vector2(
+                        Random.Range(player.position.x-radMaxX,player.position.x+radMaxX), 
+                        Random.Range(player.position.y-radMinY,player.position.y-radMaxY));
+                }
+                else if (r == 4) //오른쪽
+                {
+                    gold.transform.position = new Vector2(
+                        Random.Range(player.position.x + radMinX, player.position.x + radMaxX),
+                        Random.Range(player.position.y - radMinY, player.position.y + radMinY));
+                }
+                else if (r == 5) //왼쪽
+                {
+                    gold.transform.position = new Vector2(
+                        Random.Range(player.position.x - radMinX, player.position.x - radMaxX),
+                        Random.Range(player.position.y - radMinY, player.position.y + radMinY));
+                }   
             }
         }
     }

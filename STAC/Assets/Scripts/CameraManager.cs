@@ -13,12 +13,19 @@ public class CameraManager : MonoBehaviour
 
     public Transform lastTr;
     private float savedOrthoSize;
+
+    public float CameraSizeUpValue;
+    public float CameraSizeUpTime;
+    
     void Start()
     {
+        if (Screen.orientation == ScreenOrientation.Portrait) //세로면
+            Camera.main.orthographicSize *= 1.5f;
+        
         if (instance == null)
             instance = this;
-
-        savedOrthoSize = Camera.main.orthographicSize;
+        
+        StartCoroutine(sizeUp());
     }
     void Update()
     {
@@ -26,7 +33,8 @@ public class CameraManager : MonoBehaviour
         {
             if (speed == 0)
                 transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
-            //Vector3.Lerp(transform.position, player.transform.position, speed * Time.deltaTime); //Vector3.Lerp()를 쓰면 부드럽게 움직인다.
+            else 
+                Vector3.Lerp(transform.position, player.transform.position, speed * Time.deltaTime); //Vector3.Lerp()를 쓰면 부드럽게 움직인다.
         }
     }
 
@@ -86,5 +94,19 @@ public class CameraManager : MonoBehaviour
             Camera.main.orthographicSize += 0.05f;
             yield return new WaitForSeconds(0.01f);
         }
+    }
+
+    IEnumerator sizeUp()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(CameraSizeUpTime);
+            Camera.main.orthographicSize += CameraSizeUpValue;
+        }
+    }
+
+    public void SetSavedOrthographic()
+    {
+        savedOrthoSize = Camera.main.orthographicSize;
     }
 }

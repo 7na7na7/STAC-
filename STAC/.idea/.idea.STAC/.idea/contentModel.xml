@@ -79,6 +79,7 @@
           <e p="ObjectManager.cs" t="Include" />
           <e p="Pause.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="ResolutionSetting.cs" t="Include" />
           <e p="Revival.cs" t="Include" />
           <e p="Rotate.cs" t="Include" />
           <e p="SceneMgr.cs" t="Include" />

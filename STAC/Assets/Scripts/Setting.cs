@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Setting : MonoBehaviour
 {
@@ -18,5 +19,17 @@ public class Setting : MonoBehaviour
     public void open()
     {
         anim.Play("SettingPanelAnim");
+    }
+
+    public void portrait()
+    {
+        Screen.orientation = ScreenOrientation.Portrait;
+        GameObject.Find("Canvas").GetComponent<CanvasScaler>().referenceResolution=new Vector2(1080,1920);
+    }
+
+    public void landscape()
+    {
+        Screen.orientation = ScreenOrientation.Landscape;
+        GameObject.Find("Canvas").GetComponent<CanvasScaler>().referenceResolution=new Vector2(1920,1080);
     }
 }
