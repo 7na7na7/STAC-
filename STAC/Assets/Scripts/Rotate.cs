@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 public class Rotate : MonoBehaviour
 {
     public bool AutoRotate = false;
-    public RectTransform rotate;
+    //public RectTransform rotate;
     public float autoRotateDelay;
     public bool isRight = true;
     
@@ -104,12 +104,12 @@ public class Rotate : MonoBehaviour
        Emission();
     }
 
-    public void ChangeRotate()
-    {
-        rotate.localScale=new Vector3(rotate.localScale.x*-1,rotate.localScale.y,rotate.localScale.z);
-        isRight = !isRight;
-        //이미지 좌우반전시키기
-    }
+//    public void ChangeRotate()
+//    {
+//        rotate.localScale=new Vector3(rotate.localScale.x*-1,rotate.localScale.y,rotate.localScale.z);
+//        isRight = !isRight;
+//        //이미지 좌우반전시키기
+//    }
     IEnumerator autoRotate()
     {
         while (true)
