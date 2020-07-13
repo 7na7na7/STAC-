@@ -82,9 +82,7 @@ public class CameraManager : MonoBehaviour
         FindObjectOfType<Tile>().transform.position = playerGO.transform.position;
         gameoverPanel.SetActive(false);
         Clock.SetActive(false);
-        //수정
-        //FindObjectOfType<joystick>().go_Player = playerGO;
-        FindObjectOfType<dragMove>().player = playerGO;
+        FindObjectOfType<joystick>().go_Player = playerGO;
     }
     
     public IEnumerator targetChange2()

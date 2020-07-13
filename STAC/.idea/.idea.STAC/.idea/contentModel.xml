@@ -66,7 +66,6 @@
           <e p="ComboManager.cs" t="Include" />
           <e p="comboText.cs" t="Include" />
           <e p="delayDestroy.cs" t="Include" />
-          <e p="dragMove.cs" t="Include" />
           <e p="Dynamic.cs" t="Include" />
           <e p="Fade.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
