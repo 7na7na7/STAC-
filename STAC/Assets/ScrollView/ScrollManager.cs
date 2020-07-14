@@ -18,13 +18,21 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
 
     public Slider tabSlider;
     public RectTransform[] BtnRect, BtnImgRect;
+
+    private int lastTargetIndex = 1;
+
+    public float a;
     void Start()
     {
         //거리에 따라 0~1인 pos 대입
         distance = 1f / (SIZE - 1);
         for (int i = 0; i < SIZE; i++) pos[i] = distance * i;
     }
-    public void OnBeginDrag(PointerEventData eventData) => curPos = SetPos();
+    public void OnBeginDrag(PointerEventData eventData)
+    { 
+        curPos = SetPos();
+        lastTargetIndex = targetIndex;
+    } 
     
     public void OnDrag(PointerEventData eventData)=> isDrag = true;
 
@@ -33,37 +41,39 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
         isDrag = false;
 
         targetPos = SetPos();
-        
-        
-            //절반거리를 넘지 않아도 마우스를 빠르게 이동하려면
+
+        a = eventData.delta.x;
+        //절반거리를 넘지 않아도 마우스를 빠르게 이동하려면
             if (curPos == targetPos) //처음드래그시작한 위치와 드래그 끝난 위치가 같다면
             {
                 //스크롤이 왼쪽으로 빠르게 이동시 목표가 하나 감소
-                if (eventData.delta.x > 5)
+                if (eventData.delta.x > 8)
                 {
                     if (targetIndex == 0)
                     {
-                        targetPos = 1;
-                        targetIndex = 2;
+                        ++targetIndex;
+                        ++targetIndex;
+                        targetPos = curPos + distance+distance;  
                     }
                     else
                     {
                         --targetIndex;
-                        targetPos = curPos - distance;
+                        targetPos = curPos - distance;  
                     }
                 }
                 //스크롤이 오른쪽으로 빠르게 이동시 목표가 하나 증가
-                else if (eventData.delta.x < -5)
+                else if (eventData.delta.x < -8)
                 {
                     if (targetIndex == 2)
                     {
-                        targetPos = 0;
-                        targetIndex = 0;
+                        --targetIndex;
+                        --targetIndex;
+                        targetPos = curPos - distance - distance;
                     }
                     else
                     {
                         ++targetIndex;
-                        targetPos = curPos + distance;
+                        targetPos = curPos + distance;   
                     }
                 }
             }
@@ -100,8 +110,8 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
                 Vector3 BtnTargetScale=Vector3.one;
                 if (i == targetIndex)
                 {
-                    BtnTargetPos.y = -23f;
-                    BtnTargetScale=new Vector3(1.2f,1.2f,1);
+                    //BtnTargetPos.y = -23f;
+                    BtnTargetScale=new Vector3(1.3f,1.3f,1);
                 }
                 BtnImgRect[i].anchoredPosition3D = Vector3.Lerp(BtnImgRect[i].anchoredPosition3D, BtnTargetPos, 0.25f);
                 BtnImgRect[i].localScale = Vector3.Lerp(BtnImgRect[i].localScale, BtnTargetScale, 0.25f);
@@ -127,17 +137,16 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
 
     public float SetPos()
     {
-      
-            //절반거리를 기준으로 가까운 위치를 반환
+        //절반거리를 기준으로 가까운 위치를 반환
             for (int i = 0; i < SIZE; i++)
+            {
                 if (scrollbar.value < pos[i] + distance * 0.5f && scrollbar.value > pos[i] - distance * 0.5f)
                 {
                     targetIndex = i;
                     return pos[i];
                 }
-        
-           
-
+            }
+             
             if (scrollbar.value > 0.5f)
             {
                 targetIndex = 0;
