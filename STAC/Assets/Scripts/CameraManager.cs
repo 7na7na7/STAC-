@@ -16,6 +16,7 @@ public class CameraManager : MonoBehaviour
 
     public float CameraSizeUpValue;
     public float CameraSizeUpTime;
+    public float MaxSize;
     
     void Start()
     {
@@ -101,7 +102,8 @@ public class CameraManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(CameraSizeUpTime);
-            Camera.main.orthographicSize += CameraSizeUpValue;
+            if(Camera.main.orthographicSize<MaxSize) 
+                Camera.main.orthographicSize += CameraSizeUpValue;
         }
     }
 

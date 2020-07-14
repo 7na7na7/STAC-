@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450, y: 850}
+  m_AnchoredPosition: {x: -420, y: 850}
   m_SizeDelta: {x: 125, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28320199
@@ -1250,8 +1250,9 @@ MonoBehaviour:
   player_GO: {fileID: 6885763691734771526, guid: 349d08750d49f164c9782d84f08a0bcd,
     type: 3}
   lastTr: {fileID: 1430420040}
-  CameraSizeUpValue: 0.01
-  CameraSizeUpTime: 0.1
+  CameraSizeUpValue: 0.05
+  CameraSizeUpTime: 1
+  MaxSize: 20
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1279,7 +1280,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2335,10 +2336,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 379198188, guid: 349d08750d49f164c9782d84f08a0bcd, type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6885763691734771524, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2394,16 +2391,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: 6885763691734771525, guid: 349d08750d49f164c9782d84f08a0bcd,
-        type: 3}
-      propertyPath: autoRotateDelay
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6885763691734771525, guid: 349d08750d49f164c9782d84f08a0bcd,
-        type: 3}
-      propertyPath: value
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 6885763691734771526, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: m_Name
@@ -2452,7 +2439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 233, y: 850}
+  m_AnchoredPosition: {x: 223, y: 850}
   m_SizeDelta: {x: 1470.7898, y: 469.37195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442933628

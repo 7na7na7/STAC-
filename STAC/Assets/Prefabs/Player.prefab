@@ -14938,11 +14938,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AutoRotate: 1
-  rotate: {fileID: 0}
-  autoRotateDelay: 1.5
+  autoRotateDelay: 2
   isRight: 1
   delay: 0.01
-  value: 20
+  value: 30
   rotateParticles:
   - {fileID: 1231422108}
   - {fileID: 933276817}
