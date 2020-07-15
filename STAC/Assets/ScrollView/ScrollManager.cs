@@ -10,7 +10,7 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
     public Scrollbar scrollbar;
     public Transform contentTr;
 
-    private const int SIZE =3;
+    private const int SIZE =4;
     private float[] pos = new float[SIZE];
     private float distance, curPos, targetPos;
     private bool isDrag;
@@ -19,12 +19,15 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
     public Slider tabSlider;
     public RectTransform[] BtnRect, BtnImgRect;
 
-    public float value = 0.5f;
+    private float value = 0.5f;
+    public float SelectedBtnSize, NormalBtnSize;
     void Start()
     {
         //거리에 따라 0~1인 pos 대입
         distance = 1f / (SIZE - 1);
         for (int i = 0; i < SIZE; i++) pos[i] = distance * i;
+        
+        value=1f/(SIZE-1);
     }
     
     public void OnBeginDrag(PointerEventData eventData)
@@ -50,9 +53,8 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
                     {
                         if (targetIndex == 0)
                         {
-                            ++targetIndex;
-                            ++targetIndex;
-                            targetPos = curPos + distance + distance;
+                            targetIndex = SIZE-1;
+                            targetPos = 1;
                         }
                         else
                         {
@@ -62,12 +64,10 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
                     }
                     else
                     {
-
-                        if (targetIndex == 2)
+                        if (targetIndex == SIZE-1)
                         {
-                            --targetIndex;
-                            --targetIndex;
-                            targetPos = curPos - distance - distance;
+                            targetIndex = 0;
+                            targetPos = 0;
                         }
                         else
                         {
@@ -92,8 +92,8 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
         {
             isFirst = true;
             targetIndex = 1;
-            scrollbar.value = 0.5f;
-            targetPos = 0.5f;
+            scrollbar.value = 1f / (SIZE-1);
+            targetPos = 1f / (SIZE-1);
         }
         else
         {
@@ -101,7 +101,7 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
             {
                 scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, scrollSpeed);
                 //목표 버튼은 크기가 커짐
-                for(int i=0;i<SIZE;i++) BtnRect[i].sizeDelta=new Vector2(i==targetIndex ? 480:300,BtnRect[i].sizeDelta.y);
+                for(int i=0;i<SIZE;i++) BtnRect[i].sizeDelta=new Vector2(i==targetIndex ? SelectedBtnSize:NormalBtnSize,BtnRect[i].sizeDelta.y);
             }
 
             for (int i = 0; i < SIZE; i++)
@@ -146,14 +146,14 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
                     return pos[i];
                 }
             }
-            if (scrollbar.value > 0.5f)
+            if (scrollbar.value > 0.3f)
             {
                 targetIndex = 0;
                 return 0;
             }
             else
             {
-                targetIndex = 2;
+                targetIndex = SIZE - 1;
                 return 1;
             }
         

@@ -27,6 +27,9 @@
             <e p="UITween.cs" t="Include" />
           </e>
         </e>
+        <e p="InfinityBack" t="Include">
+          <e p="bgreturn2.cs" t="Include" />
+        </e>
         <e p="Joystick Pack" t="Include">
           <e p="Examples" t="Include">
             <e p="JoystickPlayerExample.cs" t="Include" />
