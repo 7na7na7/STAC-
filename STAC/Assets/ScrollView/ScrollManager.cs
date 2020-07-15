@@ -10,7 +10,7 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
     public Scrollbar scrollbar;
     public Transform contentTr;
 
-    private const int SIZE = 3;
+    private const int SIZE =3;
     private float[] pos = new float[SIZE];
     private float distance, curPos, targetPos;
     private bool isDrag;
@@ -19,19 +19,18 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
     public Slider tabSlider;
     public RectTransform[] BtnRect, BtnImgRect;
 
-    private int lastTargetIndex = 1;
-
-    public float a;
+    public float value = 0.5f;
     void Start()
     {
         //거리에 따라 0~1인 pos 대입
         distance = 1f / (SIZE - 1);
         for (int i = 0; i < SIZE; i++) pos[i] = distance * i;
     }
+    
     public void OnBeginDrag(PointerEventData eventData)
     { 
         curPos = SetPos();
-        lastTargetIndex = targetIndex;
+        value = scrollbar.value;
     } 
     
     public void OnDrag(PointerEventData eventData)=> isDrag = true;
@@ -39,41 +38,42 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
     public void OnEndDrag(PointerEventData eventData)
     { 
         isDrag = false;
-
         targetPos = SetPos();
 
-        a = eventData.delta.x;
         //절반거리를 넘지 않아도 마우스를 빠르게 이동하려면
             if (curPos == targetPos) //처음드래그시작한 위치와 드래그 끝난 위치가 같다면
             {
-                //스크롤이 왼쪽으로 빠르게 이동시 목표가 하나 감소
-                if (eventData.delta.x > 8)
+                if (Mathf.Abs(eventData.delta.x) > 8)
                 {
-                    if (targetIndex == 0)
+                    //스크롤이 왼쪽으로 빠르게 이동시 목표가 하나 감소
+                    if (scrollbar.value < value) //왼쪽이면
                     {
-                        ++targetIndex;
-                        ++targetIndex;
-                        targetPos = curPos + distance+distance;  
+                        if (targetIndex == 0)
+                        {
+                            ++targetIndex;
+                            ++targetIndex;
+                            targetPos = curPos + distance + distance;
+                        }
+                        else
+                        {
+                            --targetIndex;
+                            targetPos = curPos - distance;
+                        }
                     }
                     else
                     {
-                        --targetIndex;
-                        targetPos = curPos - distance;  
-                    }
-                }
-                //스크롤이 오른쪽으로 빠르게 이동시 목표가 하나 증가
-                else if (eventData.delta.x < -8)
-                {
-                    if (targetIndex == 2)
-                    {
-                        --targetIndex;
-                        --targetIndex;
-                        targetPos = curPos - distance - distance;
-                    }
-                    else
-                    {
-                        ++targetIndex;
-                        targetPos = curPos + distance;   
+
+                        if (targetIndex == 2)
+                        {
+                            --targetIndex;
+                            --targetIndex;
+                            targetPos = curPos - distance - distance;
+                        }
+                        else
+                        {
+                            ++targetIndex;
+                            targetPos = curPos + distance;
+                        }
                     }
                 }
             }
@@ -146,7 +146,6 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
                     return pos[i];
                 }
             }
-             
             if (scrollbar.value > 0.5f)
             {
                 targetIndex = 0;

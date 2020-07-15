@@ -1,10 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TitleBg : MonoBehaviour
 {
-    public Sprite[] Themes;
+    Sprite[] Themes;
+
+    private void Awake()
+    {
+        Themes = FindObjectOfType<BulletData>().Themes;
+    }
+
     void Update()
     {
         if(GetComponent<SpriteRenderer>().sprite!=Themes[BulletData.instance.currentColorIndex])

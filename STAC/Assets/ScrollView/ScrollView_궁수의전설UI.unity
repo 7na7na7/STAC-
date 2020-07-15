@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2731,7 +2731,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2063763865}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5994864
+  m_Size: 0.5994865
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3353,7 +3353,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1436251527}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.25
+  m_Size: 0.25000003
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4154,7 +4154,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1186434851}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5994864
+  m_Size: 0.5994865
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4558,7 +4558,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1359031191}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5994864
+  m_Size: 0.5994865
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5284,6 +5284,18 @@ MonoBehaviour:
   scrollbar: {fileID: 1131133227}
   contentTr: {fileID: 493106705}
   targetIndex: 0
+  tabSlider: {fileID: 435041398}
+  BtnRect:
+  - {fileID: 892199659}
+  - {fileID: 500861245}
+  - {fileID: 996188645}
+  - {fileID: 1556367120}
+  BtnImgRect:
+  - {fileID: 810530324}
+  - {fileID: 319592275}
+  - {fileID: 2074219955}
+  - {fileID: 475150304}
+  a: 0
 --- !u!1 &2073881615
 GameObject:
   m_ObjectHideFlags: 0
@@ -5563,7 +5575,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 431891341}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5994864
+  m_Size: 0.5994865
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

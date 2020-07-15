@@ -53,9 +53,6 @@
         <e p="Mat_Shad" t="Include">
           <e p="Dissolve.cs" t="Include" />
         </e>
-        <e p="Scenes" t="Include">
-          <e p="Test.cs" t="Include" />
-        </e>
         <e p="Scripts" t="Include">
           <e p="BGM.cs" t="Include" />
           <e p="Btn.cs" t="Include" />
