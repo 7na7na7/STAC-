@@ -20,10 +20,10 @@ public class GoldSpawner : MonoBehaviour
     {
         StartCoroutine(spawn());
 
-        radMaxX = FindObjectOfType<Spawner>().radMaxX;
-        radMinY = FindObjectOfType<Spawner>().radMinY;
-        radMinX = FindObjectOfType<Spawner>().radMinX; 
-        radMaxY = FindObjectOfType<Spawner>().radMaxY;
+        radMaxX = FindObjectOfType<Spawner>().radMaxX*Camera.main.orthographicSize;
+        radMinY = FindObjectOfType<Spawner>().radMinY*Camera.main.orthographicSize;
+        radMinX = FindObjectOfType<Spawner>().radMinX*Camera.main.orthographicSize; 
+        radMaxY = FindObjectOfType<Spawner>().radMaxY*Camera.main.orthographicSize;
     }
 
     IEnumerator spawn()

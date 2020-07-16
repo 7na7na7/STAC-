@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -11,15 +12,19 @@ public class Player : MonoBehaviour
     void Awake()
     {
         instance = this;
+        if (SceneManager.GetActiveScene().name == "Play")
             transform.eulerAngles=new Vector3(0,0,30);
     }
 
     private void Start()
     {
-        if (Spawner.instance.player == null)
-            Spawner.instance.player = this.transform;
-        if (GoldSpawner.instance.player == null)
-            GoldSpawner.instance.player = this.transform;
+        if (SceneManager.GetActiveScene().name == "Play")
+        {
+            if (Spawner.instance.player == null)
+                Spawner.instance.player = this.transform;
+            if (GoldSpawner.instance.player == null)
+                GoldSpawner.instance.player = this.transform;   
+        }
     }
 
     public void Die()

@@ -8,6 +8,18 @@ public class SceneMgr : MonoBehaviour
 {
     private void Start()
     {
+        Bullet[] bullets = FindObjectsOfType<Bullet>();
+        foreach (var bullet in bullets)
+        {
+            bullet.SetFalse();
+        }
+
+        goldCol[] golds = FindObjectsOfType<goldCol>();
+        foreach (var gold in  golds)
+        {
+            gold.SetFalse();
+        }
+        
         Time.timeScale = 1;
     }
 

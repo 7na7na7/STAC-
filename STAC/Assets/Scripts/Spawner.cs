@@ -26,10 +26,6 @@ public class Spawner : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        radMinX *= Camera.main.orthographicSize;
-        radMaxX *= Camera.main.orthographicSize;
-        radMinY *= Camera.main.orthographicSize;
-        radMaxY *= Camera.main.orthographicSize;
     }
 
     void Start()
@@ -65,26 +61,26 @@ public class Spawner : MonoBehaviour
                 if (r == 0||r==1) //위
                 {
                     enemy.transform.position = new Vector2(
-                        Random.Range(player.position.x - radMaxX, player.position.x + radMaxX),
-                        Random.Range(player.position.y + radMinY, player.position.y + radMaxY));
+                        Random.Range(player.position.x - radMaxX*Camera.main.orthographicSize, player.position.x + radMaxX*Camera.main.orthographicSize),
+                        Random.Range(player.position.y + radMinY*Camera.main.orthographicSize, player.position.y + radMaxY*Camera.main.orthographicSize));
                 }
                 else if (r == 2||r==3) //아래
                 {
                     enemy.transform.position = new Vector2(
-                        Random.Range(player.position.x-radMaxX,player.position.x+radMaxX), 
-                        Random.Range(player.position.y-radMinY,player.position.y-radMaxY));
+                        Random.Range(player.position.x-radMaxX*Camera.main.orthographicSize,player.position.x+radMaxX*Camera.main.orthographicSize), 
+                        Random.Range(player.position.y-radMinY*Camera.main.orthographicSize,player.position.y-radMaxY*Camera.main.orthographicSize));
                 }
                 else if (r == 4) //오른쪽
                 {
                     enemy.transform.position = new Vector2(
-                        Random.Range(player.position.x + radMinX, player.position.x + radMaxX),
-                        Random.Range(player.position.y - radMinY, player.position.y + radMinY));
+                        Random.Range(player.position.x + radMinX*Camera.main.orthographicSize, player.position.x + radMaxX*Camera.main.orthographicSize),
+                        Random.Range(player.position.y - radMinY*Camera.main.orthographicSize, player.position.y + radMinY*Camera.main.orthographicSize));
                 }
                 else if (r == 5) //왼쪽
                 {
                     enemy.transform.position = new Vector2(
-                        Random.Range(player.position.x - radMinX, player.position.x - radMaxX),
-                        Random.Range(player.position.y - radMinY, player.position.y + radMinY));
+                        Random.Range(player.position.x - radMinX*Camera.main.orthographicSize, player.position.x - radMaxX*Camera.main.orthographicSize),
+                        Random.Range(player.position.y - radMinY*Camera.main.orthographicSize, player.position.y + radMinY*Camera.main.orthographicSize));
                 }   
             }
         }

@@ -21,6 +21,6 @@ public class SetColor : MonoBehaviour
         color = BulletData.instance.SetColor(ColorIndex);
         color.a = 0;
         GetComponent<SpriteRenderer>().color = BulletData.instance.SetColor(ColorIndex);
-        RD.material.SetColor("_Color",color);
+        RD.material.SetColor("Color",color);
     }
 }

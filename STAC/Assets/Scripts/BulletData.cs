@@ -51,6 +51,7 @@ public class BulletData : MonoBehaviour
         }
     }
     
+
     public Color SetColor(int index)
     {
         if (index == 0)

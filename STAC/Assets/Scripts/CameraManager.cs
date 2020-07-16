@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraManager : MonoBehaviour
 {
@@ -20,13 +21,14 @@ public class CameraManager : MonoBehaviour
     
     void Start()
     {
-        if (Screen.orientation == ScreenOrientation.Portrait) //세로면
-            Camera.main.orthographicSize *= 1.5f;
+        //if (Screen.orientation == ScreenOrientation.Portrait) //세로면
+        //    Camera.main.orthographicSize *= 1.5f;
         
         if (instance == null)
             instance = this;
         
-        StartCoroutine(sizeUp());
+        if(SceneManager.GetActiveScene().name=="Play") 
+            StartCoroutine(sizeUp());
     }
     void Update()
     {
@@ -47,10 +49,10 @@ public class CameraManager : MonoBehaviour
     {
         BGM.instance.fadeOut();
         Time.timeScale = 0.3f;
-        float size = Camera.main.orthographicSize/3;
+        float size = Camera.main.orthographicSize/2;
         while (Camera.main.orthographicSize > size)
         {
-            Camera.main.orthographicSize -= 0.2f;
+            Camera.main.orthographicSize -= 0.1f;
             yield return new WaitForSeconds(0.01f);
         }
         yield return new WaitForSecondsRealtime(0.5f);

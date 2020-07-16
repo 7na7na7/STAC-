@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ResolutionSetting : MonoBehaviour
 {
+   public bool isOn = true;
    private void Awake()
    {
-      SetRes();
+      if(isOn) SetRes();
    }
 
    public void SetRes()

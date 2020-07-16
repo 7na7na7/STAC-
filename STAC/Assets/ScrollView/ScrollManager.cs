@@ -18,6 +18,7 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
 
     public Slider tabSlider;
     public RectTransform[] BtnRect, BtnImgRect;
+    public RectTransform[] BtnRect2;
 
     private float value = 0.5f;
     public float SelectedBtnSize, NormalBtnSize;
@@ -77,11 +78,7 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
                     }
                 }
             }
-            //목표가 수직스크롤이고, 옆에서 옮겨왔다면 수직스크롤을 맨 위로 옹림
-            for(int i=0;i<SIZE;i++)
-                if (contentTr.GetChild(i).GetComponent<ScrollScript>() && curPos != pos[i] && targetPos == pos[i])
-                    contentTr.GetChild(i).GetChild(1).GetComponent<Scrollbar>().value = 1;
-        
+
     }
 
     void Update()
@@ -117,7 +114,12 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
                 BtnImgRect[i].localScale = Vector3.Lerp(BtnImgRect[i].localScale, BtnTargetScale, 0.25f);
             }
         }
-        
+
+        for (int i = 0; i < BtnRect.Length; i++)
+        {
+            BtnRect2[i].anchoredPosition3D =new Vector3(BtnRect[i].anchoredPosition3D.x,BtnRect2[i].anchoredPosition3D.y,BtnRect2[i].anchoredPosition3D.z); 
+            BtnRect2[i].sizeDelta=new Vector2( BtnRect[i].sizeDelta.x, BtnRect2[i].sizeDelta.y);
+        }
     }
 
     public void Right()

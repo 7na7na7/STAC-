@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: b3004b65a09be4f41a3b094749d06eba
   - enabled: 1
+    path: Assets/Scenes/Play.unity
+    guid: 43bd3ad9a297fb1498944e7d593a80ca
+  - enabled: 1
+    path: Assets/Scenes/Play2.unity
+    guid: 2d5595fceb411cc41b870436a3d713ba
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 8ed344a6623bdf149affb31eb62faebb
   - enabled: 1
-    path: Assets/Scenes/Play.unity
-    guid: 43bd3ad9a297fb1498944e7d593a80ca
-  - enabled: 0
-    path: Assets/Scenes/Play2.unity
-    guid: 2ea14655226d0734fadf05eb95bfcccb
+    path: Assets/Loading/Loading.unity
+    guid: 1bfaf95496673034b8f2b7d52cf30c75
   m_configObjects: {}

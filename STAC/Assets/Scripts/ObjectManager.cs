@@ -24,6 +24,9 @@ public class ObjectManager : MonoBehaviour
    public GameObject MintClusterObj;
 
    public GameObject GoldObj;
+
+   public GameObject Green1_2Obj;
+   public GameObject Mint1_2Obj;
    //===================================================================
 
    //오브젝트풀링 배열
@@ -43,6 +46,9 @@ public class ObjectManager : MonoBehaviour
    private GameObject[] MintCluster;
 
    private GameObject[] Gold; //골드
+   
+   private GameObject[] Green1_2;
+   private GameObject[] Mint1_2;
 
    public static ObjectManager instance;
 
@@ -76,6 +82,9 @@ public class ObjectManager : MonoBehaviour
       MintCluster = new GameObject[60];
       
       Gold=new GameObject[100];
+      
+      Green1_2=new GameObject[20];
+      Mint1_2=new GameObject[20];
       
       Generate();
    }
@@ -150,6 +159,16 @@ public class ObjectManager : MonoBehaviour
       {
          Gold[i] = Instantiate(GoldObj,transform);
          Gold[i].SetActive(false);
+      }
+      for (int i = 0; i <Green1_2.Length; i++)
+      {
+         Green1_2[i] = Instantiate(Green1_2Obj,transform);
+         Green1_2[i].SetActive(false);
+      }
+      for (int i = 0; i < Mint1_2.Length; i++)
+      {
+         Mint1_2[i] = Instantiate(Mint1_2Obj,transform);
+         Mint1_2[i].SetActive(false);
       }
       #endregion
    }
@@ -265,6 +284,26 @@ public class ObjectManager : MonoBehaviour
                {
                   Gold[i].SetActive(true);
                   return Gold[i];
+               }
+            }
+            break;
+         case 11:
+            for (int i = 0; i < Green1_2.Length; i++)
+            {
+               if (!Green1_2[i].activeSelf) //비활성화되어있다면
+               {
+                  Green1_2[i].SetActive(true);
+                  return Green1_2[i];
+               }
+            }
+            break;
+         case 12:
+            for (int i = 0; i < Green1_2.Length; i++)
+            {
+               if (!Green1_2[i].activeSelf) //비활성화되어있다면
+               {
+                  Green1_2[i].SetActive(true);
+                  return Green1_2[i];
                }
             }
             break;
