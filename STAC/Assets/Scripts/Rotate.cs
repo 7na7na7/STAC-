@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class Rotate : MonoBehaviour
 {
+    public bool rightRotate = false;
     public bool AutoRotate = false;
     //public RectTransform rotate;
     public float autoRotateDelay;
@@ -74,34 +75,62 @@ public class Rotate : MonoBehaviour
     IEnumerator LeftCor()
     {
         RotateSound();
-        canRotate = false;
-        for(int i=0;i<120/value;i++)
+        if (rightRotate)
         {
-            if(transform.eulerAngles.z+value>=400)
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
-            else
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
-            yield return new WaitForSeconds(delay);
+            for(int i=0;i<120/value;i++)
+            {
+                if(transform.eulerAngles.z+value>=400)
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
+                else
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
+            }
         }
-        transform.eulerAngles=new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,Mathf.CeilToInt(transform.eulerAngles.z*10)/10);
-        canRotate = true;
+        else
+        {
+            canRotate = false;
+            for(int i=0;i<120/value;i++)
+            {
+                if(transform.eulerAngles.z+value>=400)
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
+                else
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
+                yield return new WaitForSeconds(delay);
+            }
+            transform.eulerAngles=new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,Mathf.CeilToInt(transform.eulerAngles.z*10)/10);
+            canRotate = true;
+        }
         Emission();
+        yield break;
     }
     IEnumerator RightCor()
     {
         RotateSound();
-        canRotate = false;
-        for(int i=0;i<120/value;i++)
+        if (rightRotate)
         {
-            if(transform.eulerAngles.z-value<=-10)
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 360-transform.eulerAngles.z - value);
-            else
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
-            yield return new WaitForSeconds(delay);
+            for(int i=0;i<120/value;i++)
+            {
+                if(transform.eulerAngles.z-value<=-10)
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 360-transform.eulerAngles.z - value);
+                else
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
+            }
         }
-        transform.eulerAngles=new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,Mathf.CeilToInt(transform.eulerAngles.z*10)/10);
-        canRotate = true;
-       Emission();
+        else
+        {
+            canRotate = false;
+            for(int i=0;i<120/value;i++)
+            {
+                if(transform.eulerAngles.z-value<=-10)
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 360-transform.eulerAngles.z - value);
+                else
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
+                yield return new WaitForSeconds(delay);
+            }
+            transform.eulerAngles=new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,Mathf.CeilToInt(transform.eulerAngles.z*10)/10);
+            canRotate = true;   
+        }
+        Emission();
+        yield break;
     }
 
 //    public void ChangeRotate()

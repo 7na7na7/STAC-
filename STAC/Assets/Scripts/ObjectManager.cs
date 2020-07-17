@@ -298,12 +298,12 @@ public class ObjectManager : MonoBehaviour
             }
             break;
          case 12:
-            for (int i = 0; i < Green1_2.Length; i++)
+            for (int i = 0; i < Mint1_2.Length; i++)
             {
-               if (!Green1_2[i].activeSelf) //비활성화되어있다면
+               if (!Mint1_2[i].activeSelf) //비활성화되어있다면
                {
-                  Green1_2[i].SetActive(true);
-                  return Green1_2[i];
+                  Mint1_2[i].SetActive(true);
+                  return Mint1_2[i];
                }
             }
             break;

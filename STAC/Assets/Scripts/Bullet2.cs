@@ -6,6 +6,11 @@ using UnityEngine;
 public class Bullet2 : MonoBehaviour
 {
     private bool canDestroy = false;
+    private bool isOnce = false;
+
+    public TrailRenderer trail;
+    private float savedTrailWidth;
+    private float savedTrailTime;
     
     public float speed;
     public GameObject dieParticle;
@@ -14,15 +19,34 @@ public class Bullet2 : MonoBehaviour
     
     private void OnEnable()
     {
-        GetComponent<SetColor>().setColor();
+        if (!isOnce)
+        {
+            savedTrailWidth = trail.startWidth;
+            isOnce = true;
+        }
+        else
+        {
+            trail.time = 0;
+            Set();
+            GetComponent<SetColor>().setColor();
             canDestroy = false;
             canDetect = true;
             if (isColor1)
                 gameObject.tag = "Color1";
             else
-                gameObject.tag = "Color2";
+                gameObject.tag = "Color2";   
+        }
     }
-    
+    public void Set()
+    {
+        trail.startWidth = savedTrailWidth;
+        StartCoroutine(SetTrailTime());
+    }
+    IEnumerator SetTrailTime()
+    {
+        yield return new WaitForSeconds(0.1f);
+        trail.time = 1;
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (!col.CompareTag("Color1") && !col.CompareTag("Color2")) //충돌체가 총알이 아니었을 경우
@@ -89,9 +113,9 @@ public class Bullet2 : MonoBehaviour
         }
     }
     
-    IEnumerator Destroy() //3초동안 보이지 않으면 파괴
+    IEnumerator Destroy() //5초동안 보이지 않으면 파괴
     {
-        for(int i=0;i<6;i++)
+        for(int i=0;i<10;i++)
         {
             yield return new WaitForSeconds(0.5f);
             if (CheckCamera.instance.CheckObjectIsInCamera(gameObject))
@@ -101,5 +125,12 @@ public class Bullet2 : MonoBehaviour
             }
         }
         gameObject.SetActive(false);
+    }
+    public void SetFalse()
+    {
+        if (gameObject.activeSelf)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -12,11 +12,15 @@ public class BulletSetFalse : MonoBehaviour
         {
             bullet.SetFalse();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Bullet2[] bullet2s = FindObjectsOfType<Bullet2>();
+        foreach (var bullet in bullet2s)
+        {
+            bullet.SetFalse();
+        }
+        goldCol[] golds = FindObjectsOfType<goldCol>();
+        foreach (var bullet in golds)
+        {
+            bullet.SetFalse();
+        }
     }
 }

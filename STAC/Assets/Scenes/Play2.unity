@@ -1329,7 +1329,6 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1455,19 +1454,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!114 &519420034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae24e149b5444174e8062d3b2eea4d93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 1
 --- !u!1 &636245127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,12 +2087,9 @@ MonoBehaviour:
   - {fileID: 1817776521}
   - {fileID: 93439800}
   levels:
-  - bulletIndex: 01000000
-    bulletPos: 00000000
-  - bulletIndex: 01000000
-    bulletPos: 02000000
-  - bulletIndex: 00000000
-    bulletPos: 01000000
+  - speed: 3
+    bulletIndex: 010000000000000001000000
+    bulletPos: 010000000200000003000000
   beat: 1
 --- !u!4 &938783477
 Transform:
@@ -2612,6 +2595,11 @@ PrefabInstance:
     - target: {fileID: 6885763691734771525, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: AutoRotate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885763691734771525, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: rightRotate
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6885763691734771526, guid: 349d08750d49f164c9782d84f08a0bcd,
