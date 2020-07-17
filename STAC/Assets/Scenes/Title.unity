@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6555,7 +6555,7 @@ MonoBehaviour:
     color2: {r: 0, g: 1, b: 0.5411825, a: 1}
   - color1: {r: 1, g: 1, b: 1, a: 1}
     color2: {r: 0, g: 0, b: 0, a: 1}
-  - color1: {r: 0.97658664, g: 0.4481132, b: 1, a: 1}
+  - color1: {r: 0.9692893, g: 0.2783019, b: 1, a: 1}
     color2: {r: 0.70899487, g: 0, b: 1, a: 1}
   - color1: {r: 1, g: 0.8834678, b: 0, a: 1}
     color2: {r: 1, g: 0, b: 0.15532255, a: 1}

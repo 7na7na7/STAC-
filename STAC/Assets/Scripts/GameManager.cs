@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        ScoreMgr.instance.GameStart();
+        if(SceneManager.GetActiveScene().name=="Play") 
+            ScoreMgr.instance.GameStart();
         Bullet[] bullets = FindObjectsOfType<Bullet>();
         foreach (var bullet in bullets)
         {

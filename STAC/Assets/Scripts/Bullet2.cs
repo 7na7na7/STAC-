@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bullet2 : MonoBehaviour
 {
@@ -82,11 +83,7 @@ public class Bullet2 : MonoBehaviour
     public void SameColor()
     {
         canDetect = false;
-        
-        ScoreMgr.instance.scoreUp(0,GameManager.instance.scoreUpValue,false);
-        ComboManager.instance.comboIniitailize();
-        
-        
+
         Instantiate(dieParticle, transform.position, Quaternion.identity);
         if(SoundMgr.instance!=null) 
             SoundMgr.instance.Play(0,1,1);
