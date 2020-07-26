@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class level
@@ -11,13 +12,37 @@ public class level
 }
 public class Spawner2 : MonoBehaviour
 {
+    public int bpm;
+    public double currentTime;
+    public float speed;
+    
     public Transform[] trianglePos;
     public Transform[] squarePos;
     public level[] levels;
     public float beat;
+    
+    void Update()
+    {
+        currentTime += Time.deltaTime;
+
+        if (currentTime >= 60d / bpm)
+        {
+            GameObject enemy = ObjectManager.instance.MakeObj((Random.Range(0,3)==0 ?0:1) + 11);
+            int p = Random.Range(0, 3);
+            enemy.transform.position = trianglePos[p].position;
+            enemy.transform.eulerAngles = new Vector3(0, 0, trianglePos[p].eulerAngles.z);
+            enemy.GetComponent<Bullet2>().speed = speed;
+                
+            currentTime -= 60d / bpm;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
     void Start()
     {
-        StartCoroutine(spawn());
+        //StartCoroutine(spawn());
     }
 
     IEnumerator spawn()

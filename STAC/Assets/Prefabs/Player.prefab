@@ -14937,11 +14937,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef0b8b1dfd352845acba930974a1c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightRotate: 0
   AutoRotate: 1
   autoRotateDelay: 2
   isRight: 1
   delay: 0.01
-  value: 30
+  value: 20
   rotateParticles:
   - {fileID: 1231422108}
   - {fileID: 933276817}

@@ -2081,6 +2081,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486a19dc6309d2e428a96db1fd5766c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bpm: 120
+  currentTime: 0
+  speed: 10
   trianglePos:
   - {fileID: 1348341115}
   - {fileID: 1169078909}
