@@ -49,10 +49,17 @@ public class CameraManager : MonoBehaviour
     {
         BGM.instance.fadeOut();
         Time.timeScale = 0.3f;
+<<<<<<< HEAD
         float size = Camera.main.orthographicSize/2;
         while (Camera.main.orthographicSize > size)
         {
             Camera.main.orthographicSize -= 0.1f;
+=======
+        float size = Camera.main.orthographicSize-3;
+        while (Camera.main.orthographicSize > size)
+        {
+            Camera.main.orthographicSize -= 0.05f;
+>>>>>>> parent of e252417... 7_15_스크롤뷰 추가작업
             yield return new WaitForSeconds(0.01f);
         }
         yield return new WaitForSecondsRealtime(0.5f);
