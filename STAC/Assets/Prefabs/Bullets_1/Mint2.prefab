@@ -119,8 +119,8 @@ MonoBehaviour:
     type: 3}
   BulletIndex: 1
   dir: {x: 0, y: 0}
-  minSpeed: 2.5
-  maxSpeed: 4
+  minSpeed: 2
+  maxSpeed: 3
   speed: 0
 --- !u!60 &-4071729345581847201
 PolygonCollider2D:
@@ -139,7 +139,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.06, y: 6.72}
+    oldSize: {x: 8.04, y: 6.72}
     newSize: {x: 1.31, y: 1.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

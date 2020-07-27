@@ -59,11 +59,12 @@
         <e p="Mat_Shad" t="Include">
           <e p="Dissolve.cs" t="Include" />
         </e>
+        <e p="Scenes" t="Include">
+          <e p="SendToGoogle.cs" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="BGM.cs" t="Include" />
-          <e p="Btn.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
-          <e p="Bullet2.cs" t="Include" />
           <e p="BulletData.cs" t="Include" />
           <e p="BulletSetFalse.cs" t="Include" />
           <e p="CameraManager.cs" t="Include" />
@@ -96,7 +97,6 @@
           <e p="Setting.cs" t="Include" />
           <e p="SoundMgr.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
-          <e p="Spawner2.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
           <e p="TitleBg.cs" t="Include" />
         </e>

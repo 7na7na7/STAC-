@@ -120,7 +120,7 @@ MonoBehaviour:
   BulletIndex: 0
   dir: {x: 0, y: 0}
   minSpeed: 1.25
-  maxSpeed: 5
+  maxSpeed: 4
   speed: 0
 --- !u!58 &8279076980268649173
 CircleCollider2D:

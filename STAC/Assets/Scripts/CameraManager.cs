@@ -73,11 +73,7 @@ public class CameraManager : MonoBehaviour
     public void Revival()
     {
         BGM.instance.fadeIn();
-        Bullet[] bullets = FindObjectsOfType<Bullet>();
-        foreach (var bullet in bullets)
-        {
-            bullet.SetFalse();
-        }
+        BulletSetFalse.instance.SetFalse();
         StartCoroutine(targetChange2());
         Fade.instance.Unfade();
         GameObject playerGO=Instantiate(player_GO, lastTr);

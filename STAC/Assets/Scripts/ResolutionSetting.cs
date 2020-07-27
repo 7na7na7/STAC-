@@ -6,12 +6,33 @@ using UnityEngine.SceneManagement;
 
 public class ResolutionSetting : MonoBehaviour
 {
+   public GameObject ScrollView, Tab,StartBtn;
    public bool isOn = true;
    private void Awake()
-   {
-      if(isOn) SetRes();
+   { 
+      if(isOn) 
+         UpDown();
+      //SetRes();
    }
 
+   public void UpDown()
+   {
+      float goodRatio = 9f / 16f;
+      float ratio = (float) Screen.width / Screen.height;
+      
+      if (ratio < goodRatio) //세로가 존나게 길경우
+      {
+        float difference = goodRatio - ratio;
+        ScrollView.GetComponent<RectTransform>().anchoredPosition=new Vector3( ScrollView.GetComponent<RectTransform>().anchoredPosition.x, 
+           ScrollView.GetComponent<RectTransform>().anchoredPosition.y+difference*1800,0);
+        Tab.GetComponent<RectTransform>().anchoredPosition = new Vector3(
+           Tab.GetComponent<RectTransform>().anchoredPosition.x,
+           Tab.GetComponent<RectTransform>().anchoredPosition.y + difference * -1800, 0);
+        StartBtn.GetComponent<RectTransform>().anchoredPosition = new Vector3(
+           StartBtn.GetComponent<RectTransform>().anchoredPosition.x,
+           StartBtn.GetComponent<RectTransform>().anchoredPosition.y + difference * -1800, 0);
+      }
+   }
    public void SetRes()
    {
       //남는부분을 Rect를 조정하려 래터박스로 채울 수 있다!

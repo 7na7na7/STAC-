@@ -7,26 +7,18 @@ using Random = UnityEngine.Random;
 
 public class Rotate : MonoBehaviour
 {
-    public bool rightRotate = false;
-    public bool AutoRotate = false;
     //public RectTransform rotate;
-    public float autoRotateDelay;
     public bool isRight = true;
-    
-    private bool canRotate = true;
-    
+
     public float delay;
+    public int bpm;
+    private double currentTime = 0d;
     public int value;
     public ParticleSystem[] rotateParticles;
 
-    private void Start()
-    {
-        if (AutoRotate)
-            StartCoroutine(autoRotate());
-    }
-
     private void Update()
     {
+        #region 임시이동회전코드
         int speed = 6;
         Vector3 moveVelocity = Vector3.zero;
         if (Input.GetAxisRaw("Horizontal") > 0)//오른쪽으로 갈때
@@ -49,88 +41,48 @@ public class Rotate : MonoBehaviour
             moveVelocity = Vector3.down;
             transform.position += moveVelocity * speed * Time.deltaTime;
         }
+        #endregion
+        
+            currentTime += Time.deltaTime;
 
-
-        if(Input.GetKeyDown(KeyCode.J))
-            Left();
-        else if(Input.GetKeyDown(KeyCode.K))
-            Right();
+            if (currentTime >= 60d / bpm)
+            {
+                StartCoroutine(RotateCor(isRight));
+                currentTime -= 60d / bpm;
+            }
     }
-    public void Left()
-    {
-        if(canRotate) 
-            StartCoroutine(LeftCor());
-    }
-
-    public void Right()
-    {
-        if(canRotate) 
-            StartCoroutine(RightCor());
-    }
-
     public void RotateSound()
     {
         SoundMgr.instance.Play(2,1,1);
     }
-    IEnumerator LeftCor()
+    IEnumerator RotateCor(bool isR)
     {
-        RotateSound();
-        if (rightRotate)
-        {
-            for(int i=0;i<120/value;i++)
+     
+            if (isR)
             {
-                if(transform.eulerAngles.z+value>=400)
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
-                else
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
+                for(int i=0;i<120/value;i++)
+                {
+                    if(transform.eulerAngles.z+value>=400)
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
+                    else
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
+                    yield return new WaitForSeconds(delay);
+                }
             }
-        }
-        else
-        {
-            canRotate = false;
-            for(int i=0;i<120/value;i++)
+            else
             {
-                if(transform.eulerAngles.z+value>=400)
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
-                else
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
-                yield return new WaitForSeconds(delay);
+                for(int i=0;i<120/value;i++)
+                {
+                    if(transform.eulerAngles.z+value>=400)
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
+                    else
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
+                    yield return new WaitForSeconds(delay);
+                }
+                transform.eulerAngles=new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,Mathf.CeilToInt(transform.eulerAngles.z*10)/10);
             }
-            transform.eulerAngles=new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,Mathf.CeilToInt(transform.eulerAngles.z*10)/10);
-            canRotate = true;
-        }
-        Emission();
-        yield break;
-    }
-    IEnumerator RightCor()
-    {
-        RotateSound();
-        if (rightRotate)
-        {
-            for(int i=0;i<120/value;i++)
-            {
-                if(transform.eulerAngles.z-value<=-10)
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 360-transform.eulerAngles.z - value);
-                else
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
-            }
-        }
-        else
-        {
-            canRotate = false;
-            for(int i=0;i<120/value;i++)
-            {
-                if(transform.eulerAngles.z-value<=-10)
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 360-transform.eulerAngles.z - value);
-                else
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
-                yield return new WaitForSeconds(delay);
-            }
-            transform.eulerAngles=new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,Mathf.CeilToInt(transform.eulerAngles.z*10)/10);
-            canRotate = true;   
-        }
-        Emission();
-        yield break;
+            RotateSound();
+            Emission();
     }
 
 //    public void ChangeRotate()
@@ -139,17 +91,6 @@ public class Rotate : MonoBehaviour
 //        isRight = !isRight;
 //        //이미지 좌우반전시키기
 //    }
-    IEnumerator autoRotate()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(autoRotateDelay);
-            if (isRight)
-                Right();
-            else
-                Left();
-        }
-    }
 
     public void Emission()
     {

@@ -8,6 +8,7 @@ public class SceneMgr : MonoBehaviour
 {
     private void Start()
     {
+        BulletSetFalse.instance.SetFalse();
         Time.timeScale = 1;
     }
 

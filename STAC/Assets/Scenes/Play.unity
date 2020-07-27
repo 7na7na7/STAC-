@@ -530,7 +530,6 @@ GameObject:
   - component: {fileID: 223331511}
   - component: {fileID: 223331510}
   - component: {fileID: 223331514}
-  - component: {fileID: 223331515}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -636,18 +635,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1c02676fd5cb8b4d80ea9a51aabccdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &223331515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223331509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a626f9d8ee79c2438e388a48a364b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &225553362
@@ -3205,13 +3192,18 @@ PrefabInstance:
     - target: {fileID: 5730189158813715264, guid: 9ca3500266398744f8754447fce59b48,
         type: 3}
       propertyPath: m_Name
-      value: BackGround
+      value: Joystick
       objectReference: {fileID: 0}
     - target: {fileID: 5730189158813715324, guid: 9ca3500266398744f8754447fce59b48,
         type: 3}
       propertyPath: go_Player
       value: 
       objectReference: {fileID: 1023808086}
+    - target: {fileID: 5730189158813715324, guid: 9ca3500266398744f8754447fce59b48,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5730189158813715327, guid: 9ca3500266398744f8754447fce59b48,
         type: 3}
       propertyPath: m_LocalPosition.x

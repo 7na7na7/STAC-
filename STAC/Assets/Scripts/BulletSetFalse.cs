@@ -1,19 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletSetFalse : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static BulletSetFalse instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void SetFalse()
     {
         Bullet[] bullets = FindObjectsOfType<Bullet>();
         foreach (var bullet in bullets)
-        {
-            bullet.SetFalse();
-        }
-        Bullet2[] bullet2s = FindObjectsOfType<Bullet2>();
-        foreach (var bullet in bullet2s)
         {
             bullet.SetFalse();
         }
