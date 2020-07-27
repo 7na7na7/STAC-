@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class TitleBg : MonoBehaviour
 {
-    Sprite[] Themes;
+    private Material[] mats;
 
     private void Awake()
     {
-        Themes = FindObjectOfType<BulletData>().Themes;
+        mats = FindObjectOfType<BulletData>().Themes;
     }
 
     void Update()
     {
-        if(GetComponent<SpriteRenderer>().sprite!=Themes[BulletData.instance.currentColorIndex])
-        GetComponent<SpriteRenderer>().sprite =Themes[BulletData.instance.currentColorIndex];
+        if (GetComponent<MeshRenderer>().material.ToString().Substring(0, 2) != mats[BulletData.instance.currentColorIndex].ToString().Substring(0, 2))
+        {
+            GetComponent<MeshRenderer>().material = mats[BulletData.instance.currentColorIndex];
+        }
     }
 }
