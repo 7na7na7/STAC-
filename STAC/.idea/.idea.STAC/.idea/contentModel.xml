@@ -56,11 +56,47 @@
         <e p="Loading" t="Include">
           <e p="SceneLoad.cs" t="Include" />
         </e>
-        <e p="Mat_Shad" t="Include">
-          <e p="Dissolve.cs" t="Include" />
+        <e p="Packages" t="Include">
+          <e p="Google.Apis.1.48.0" t="Include">
+            <e p="lib" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Google.Apis.xml" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Google.Apis.Auth.1.48.0" t="Include">
+            <e p="lib" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Google.Apis.Auth.xml" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Google.Apis.Core.1.48.0" t="Include">
+            <e p="lib" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Google.Apis.Core.xml" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Google.Apis.Sheets.v4.1.48.0.2021" t="Include">
+            <e p="lib" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Google.Apis.Sheets.v4.xml" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Newtonsoft.Json.12.0.3" t="Include">
+            <e p="lib" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="Newtonsoft.Json.xml" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
-        <e p="Scenes" t="Include">
-          <e p="SendToGoogle.cs" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="Mat_Shad" t="Include">
+            <e p="Dissolve.cs" t="Include" />
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="BGM.cs" t="Include" />
@@ -73,6 +109,7 @@
           <e p="ColorSelect.cs" t="Include" />
           <e p="ComboManager.cs" t="Include" />
           <e p="comboText.cs" t="Include" />
+          <e p="DataManager.cs" t="Include" />
           <e p="delayDestroy.cs" t="Include" />
           <e p="Dynamic.cs" t="Include" />
           <e p="Fade.cs" t="Include" />
