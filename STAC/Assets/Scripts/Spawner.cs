@@ -52,9 +52,10 @@ public class Spawner : MonoBehaviour
         bulletList.Clear();
         for (int i = 0; i <ObjectManager.instance.bulletNum; i++)
         {
-            for (int j = 0; j < ObjectManager.instance.bulletNum * (perc[a,i] / 100) * 10; j++)
+            for (int j = 0; j < ObjectManager.instance.bulletNum * (perc[a,i+1] / 100) * 10; j++)
             {
                 bulletList.Add(i);
+                //print(i);
             }
         }
     }
