@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8279076980268649176}
   - component: {fileID: 8279076980268649177}
   - component: {fileID: 8279076980268649178}
-  - component: {fileID: -4071729345581847201}
+  - component: {fileID: 8279076980268649173}
   m_Layer: 0
-  m_Name: Mint2
+  m_Name: Mint4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 386409be8f262194698e6436bfccb250, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08d7c8209684aac41a07f7912e1b5884, type: 3}
   m_Color: {r: 0, g: 1, b: 0.50980395, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,13 +117,13 @@ MonoBehaviour:
   isColor1: 0
   dieParticle: {fileID: 1838152322236505922, guid: c850fc6c98a264e4fae43e692812f49a,
     type: 3}
-  BulletIndex: 1
+  BulletIndex: 4
   dir: {x: 0, y: 0}
-  minSpeed: 2
-  maxSpeed: 3
+  minSpeed: 1.25
+  maxSpeed: 4
   speed: 0
---- !u!60 &-4071729345581847201
-PolygonCollider2D:
+--- !u!58 &8279076980268649173
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,21 +136,8 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.04, y: 6.72}
-    newSize: {x: 1.31, y: 1.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 4.032919, y: -3.3450937}
-      - {x: 3.12565, y: -3.363516}
-      - {x: -4.027221, y: -3.3543801}
-      - {x: -0.001474063, y: 3.365022}
+  serializedVersion: 2
+  m_Radius: 0.65999997
 --- !u!1001 &6543383637642655332
 PrefabInstance:
   m_ObjectHideFlags: 0

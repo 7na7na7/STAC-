@@ -151,8 +151,7 @@ public class DataManager : MonoBehaviour
             //변환한 테이블을 json 파일로 저장
             SaveDataToFile(result);
         }
-
-     
+        
         table = result;
         return result;
     }
