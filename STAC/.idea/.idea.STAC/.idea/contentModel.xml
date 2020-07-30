@@ -236,7 +236,6 @@
           <e p="ColorSelect.cs" t="Include" />
           <e p="ComboManager.cs" t="Include" />
           <e p="comboText.cs" t="Include" />
-          <e p="DataManager.cs" t="Include" />
           <e p="delayDestroy.cs" t="Include" />
           <e p="Dynamic.cs" t="Include" />
           <e p="Fade.cs" t="Include" />

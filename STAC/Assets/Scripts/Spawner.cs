@@ -5,6 +5,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
+[System.Serializable]
+public class difficulty
+{
+    public float delay; //몇 초 후에
+    public float[] percents; //확률을 어떻게 바꿀것인가
+}
 public class Spawner : MonoBehaviour
 {
     public static Spawner instance;
@@ -15,28 +21,11 @@ public class Spawner : MonoBehaviour
     public float delayMinusValue_Min;
     public float delayMinusValue_Max;
     public float delyaMinusTime;
+    public difficulty[] levels;
 
-
-    private float[] delays;
-    public float[,] percents;
     private void Awake()
     {
-
         instance = this;
-        
-        delays=new float[DataManager.instance.table.Rows.Count];
-        percents=new float[DataManager.instance.table.Rows.Count,DataManager.instance.table.Columns.Count];
-        for (int i = 0; i < DataManager.instance.table.Rows.Count; i++)
-        {
-            for (int j = 0; j < DataManager.instance.table.Columns.Count; j++)
-            {
-                if (j == 0)
-                    delays[i] = float.Parse(DataManager.instance.table.Rows[i][j].ToString());
-                else
-                    percents[i,j]=float.Parse(DataManager.instance.table.Rows[i][j].ToString());
-                
-            }
-        }
     }
 
     void Start()
@@ -46,12 +35,12 @@ public class Spawner : MonoBehaviour
         StartCoroutine(delayHarder());
     }
 
-    public void Set(int a, float[,] perc)
+    public void Set(float[] perc)
     {
         bulletList.Clear();
         for (int i = 0; i <ObjectManager.instance.bulletNum; i++)
         {
-            for (int j = 0; j < ObjectManager.instance.bulletNum * (perc[a,i+1] / 100) * 10; j++)
+            for (int j = 0; j < ObjectManager.instance.bulletNum * (perc[i] / 100) * 10; j++)
             {
                 bulletList.Add(i);
                 //print(i);
@@ -100,10 +89,10 @@ public class Spawner : MonoBehaviour
 
     IEnumerator percentHarder()
     {
-        for (int i = 0; i < delays.Length; i++)
+        for (int i = 0; i < levels.Length; i++)
         {
-            yield return new WaitForSeconds(delays[i]);
-            Set(i,percents);
+            yield return new WaitForSeconds(levels[i].delay);
+            Set(levels[i].percents);
         }
     }
 

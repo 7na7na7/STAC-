@@ -1952,17 +1952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1430420040}
-  levels:
-  - delay: 0.01
-    percents:
-    - 7.5
-    - 15
-    - 7.5
-    - 15
-    - 3.5
-    - 6.5
-    - 15
-    - 30
   radMinX: 1
   radMaxX: 1.5
   radMinY: 1.5
@@ -1972,6 +1961,17 @@ MonoBehaviour:
   delayMinusValue_Min: 0
   delayMinusValue_Max: 0
   delyaMinusTime: 0
+  levels:
+  - delay: 0.01
+    percents:
+    - 7.5
+    - 15
+    - 15
+    - 30
+    - 7.5
+    - 15
+    - 3.5
+    - 6.5
 --- !u!4 &938783477
 Transform:
   m_ObjectHideFlags: 0
