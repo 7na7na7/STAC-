@@ -17,8 +17,7 @@ public class Spawner : MonoBehaviour
     public float delyaMinusTime;
 
 
-    public float[] delays;
-    [SerializeField]
+    private float[] delays;
     public float[,] percents;
     private void Awake()
     {
