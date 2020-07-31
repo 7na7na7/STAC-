@@ -22,6 +22,16 @@ public class Bullet : MonoBehaviour
     private float savedTrailTime;
 
     private bool isOnce = false;
+
+    private void Awake()
+    {
+        if (!isColor1)
+        {
+            gameObject.AddComponent<Rigidbody2D>();
+            GetComponent<Rigidbody2D>().isKinematic = true;
+        }
+    }
+
     private void OnEnable()
     {
         if (!isOnce)
@@ -65,7 +75,6 @@ public class Bullet : MonoBehaviour
             }   
         }
     }
-
     IEnumerator SetTrailTime()
     {
         yield return new WaitForSeconds(0.1f);
@@ -144,9 +153,9 @@ public class Bullet : MonoBehaviour
     {
         int i = 0;
         if (isColor1)
-            i = 8;
+            i = 100;
         else
-            i = 9;
+            i = 101;
         
         GameObject obj1=ObjectManager.instance.MakeObj(i);
         GameObject obj2=ObjectManager.instance.MakeObj(i);
@@ -167,8 +176,12 @@ public class Bullet : MonoBehaviour
         
         gameObject.SetActive(false);
     }
-    
-    
+
+    public void die()
+    {
+        Instantiate(dieParticle, transform.position, Quaternion.identity);
+        gameObject.SetActive(false);
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (!col.CompareTag("Color1") && !col.CompareTag("Color2")) //충돌체가 총알이 아니었을 경우
@@ -200,12 +213,21 @@ public class Bullet : MonoBehaviour
                 }
             }
         }
-
+        else
+        {
+            if(col.GetComponent<Bullet>().isColor1!=isColor1) //두 탄의 색이 다르면
+            {
+                col.GetComponent<Bullet>().die();
+                die();
+            }
+        }
         if (col.CompareTag("Cluster"))
         {
             if(BulletIndex==2)
                 cluster();
-        }
+        }   
+        if(col.CompareTag("Yudotan"))
+            StopAllCoroutines();
     }
 
     public void SameColor()

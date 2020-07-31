@@ -242,7 +242,7 @@ public class ObjectManager : MonoBehaviour
                }
             }
             break;
-         case 8:
+         case 100:
             for (int i = 0; i < GreenCluster.Length; i++)
             {
                if (!GreenCluster[i].activeSelf) //비활성화되어있다면
@@ -252,7 +252,7 @@ public class ObjectManager : MonoBehaviour
                }
             }
             break;
-         case 9:
+         case 101:
             for (int i = 0; i < MintCluster.Length; i++)
             {
                if (!MintCluster[i].activeSelf) //비활성화되어있다면
@@ -262,7 +262,7 @@ public class ObjectManager : MonoBehaviour
                }
             }
             break;
-         case 10:
+         case 102:
             for (int i = 0; i < Gold.Length; i++)
             {
                if (!Gold[i].activeSelf) //비활성화되어있다면

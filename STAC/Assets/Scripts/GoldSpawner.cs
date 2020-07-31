@@ -15,7 +15,7 @@ public class GoldSpawner : MonoBehaviour
     {
         instance = this;
     }
-
+    
     private void Start()
     {
         StartCoroutine(spawn());
@@ -33,7 +33,7 @@ public class GoldSpawner : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(minDelay,maxDelay));
             if (player != null)
             {
-                GameObject gold=ObjectManager.instance.MakeObj(10);
+                GameObject gold=ObjectManager.instance.MakeObj(102);
                 int r = Random.Range(0, 6);
                 if (r == 0||r==1) //위
                 {

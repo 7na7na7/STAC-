@@ -809,7 +809,7 @@ MonoBehaviour:
   ComboValue: 100
   comboCount: 0
   canCombo: 0
-  comboDelay: 1.5
+  comboDelay: 2.5
 --- !u!4 &297654291
 Transform:
   m_ObjectHideFlags: 0
@@ -3202,7 +3202,7 @@ PrefabInstance:
     - target: {fileID: 5730189158813715324, guid: 9ca3500266398744f8754447fce59b48,
         type: 3}
       propertyPath: moveSpeed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5730189158813715327, guid: 9ca3500266398744f8754447fce59b48,
         type: 3}
@@ -3309,10 +3309,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7529171027980399709, guid: 9ca3500266398744f8754447fce59b48,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.29411766
+      objectReference: {fileID: 0}
     - target: {fileID: 7529171028170053702, guid: 9ca3500266398744f8754447fce59b48,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.27450982
+      value: 0.29411766
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ca3500266398744f8754447fce59b48, type: 3}
