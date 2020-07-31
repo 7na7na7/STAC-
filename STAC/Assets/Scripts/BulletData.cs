@@ -60,11 +60,12 @@ public class BulletData : MonoBehaviour
             return colors[currentColorIndex].color2;
     }
 
-    public void Unlock()
+    public void Unlock(int value)
     {
         for (int i = 0; i < isLockArray.Length; i++)
         {
-            isLockArray[i] = 1;
+            if(i==value) 
+                isLockArray[i] = 1;
             PlayerPrefs.SetInt(keys[i],isLockArray[i]);
         }
     }

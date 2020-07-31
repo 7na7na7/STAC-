@@ -32,10 +32,15 @@ public class GoldManager : MonoBehaviour
 
     public void LoseGold(int value)
     {
+        gold -= value;
+        PlayerPrefs.SetInt(goldKey,gold);
+    }
+
+    public bool isGold(int value)
+    {
         if (gold >= value)
-        {
-            gold -= value;
-            PlayerPrefs.SetInt(goldKey,gold);
-        }
+            return true;
+        else
+            return false;
     }
 }

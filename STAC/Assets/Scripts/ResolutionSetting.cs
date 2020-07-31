@@ -31,6 +31,7 @@ public class ResolutionSetting : MonoBehaviour
         StartBtn.GetComponent<RectTransform>().anchoredPosition = new Vector3(
            StartBtn.GetComponent<RectTransform>().anchoredPosition.x,
            StartBtn.GetComponent<RectTransform>().anchoredPosition.y + difference * -1800, 0);
+        print(difference * -1800);
       }
    }
    public void SetRes()

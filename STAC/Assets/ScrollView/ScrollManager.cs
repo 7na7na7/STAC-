@@ -10,7 +10,7 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
     public Scrollbar scrollbar;
     public Transform contentTr;
 
-    private const int SIZE =4;
+    private const int SIZE =3;
     private float[] pos = new float[SIZE];
     private float distance, curPos, targetPos;
     private bool isDrag;

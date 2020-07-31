@@ -266,6 +266,7 @@
         </e>
         <e p="ScrollView" t="Include">
           <e p="ScrollManager.cs" t="Include" />
+          <e p="ScrollScript.cs" t="Include" />
           <e p="tabManager.cs" t="Include" />
         </e>
       </e>
