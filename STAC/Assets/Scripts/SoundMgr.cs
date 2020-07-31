@@ -11,12 +11,19 @@ public class SoundMgr : MonoBehaviour
 
     public AudioClip[] clips;
     
+    private string bgmKey = "bgmKey";
+    private string seKey = "seKey";
+    public float savedBgm;
+    public float savedSE;
+    
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            savedBgm = PlayerPrefs.GetFloat(bgmKey,1);
+            savedSE = PlayerPrefs.GetFloat(seKey,1);
         }
         else
         {
@@ -26,11 +33,22 @@ public class SoundMgr : MonoBehaviour
 
     public void Play(int index,float volume,float pitch)
     {
-         Mathf.Clamp(volume,0f, 1f);
+         volume=Mathf.Clamp(savedSE*volume,0f, 1f);
          source.pitch = pitch;
          source.PlayOneShot(clips[index],volume);
     }
+    
+    public void bgmValue(float v)
+    {
+        savedBgm = v;
+        PlayerPrefs.SetFloat(bgmKey,savedBgm);
+    }
 
+    public void seValue(float v)
+    {
+        savedSE = v;
+        PlayerPrefs.SetFloat(seKey,savedSE);
+    }
 /*
     #region 발표용
     private void Start()

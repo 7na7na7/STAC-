@@ -15,6 +15,7 @@ public class BGM : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
         instance = this;
+        source.volume = SoundMgr.instance.savedBgm;
     }
 
     public void fadeOut()

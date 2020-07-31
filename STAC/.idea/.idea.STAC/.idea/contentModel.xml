@@ -27,12 +27,6 @@
             <e p="UITween.cs" t="Include" />
           </e>
         </e>
-        <e p="ExternalDependencyManager" t="Include">
-          <e p="Editor" t="Include">
-            <e p="external-dependency-manager_version-1.2.153_manifest.txt" t="Include" />
-            <e p="GoogleRegistries.xml" t="Include" />
-          </e>
-        </e>
         <e p="GooglePlayGames" t="Include">
           <e p="BasicApi" t="Include">
             <e p="Achievement.cs" t="Include" />
@@ -220,6 +214,11 @@
             </e>
           </e>
         </e>
+        <e p="PlayServicesResolver" t="Include">
+          <e p="Editor" t="Include">
+            <e p="play-services-resolver_v1.2.135.0.txt" t="Include" />
+          </e>
+        </e>
         <e p="Resources" t="Include">
           <e p="Mat_Shad" t="Include">
             <e p="Dissolve.cs" t="Include" />
@@ -227,6 +226,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="BGM.cs" t="Include" />
+          <e p="Bgm_BgsManager.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
           <e p="BulletData.cs" t="Include" />
           <e p="BulletSetFalse.cs" t="Include" />

@@ -26,13 +26,11 @@ public class GooglePlayManager : MonoBehaviour
 
    public void LogIn()
    {
-      if (Social.localUser.authenticated)
+      Social.localUser.Authenticate((bool success) =>
       {
-      }
-      else
-      {
-         Social.localUser.Authenticate((bool success) => { });
-      }
+         if(success) 
+            GameObject.Find("a").GetComponent<Text>().text = Social.localUser.userName; 
+      });
    }
 
    public void LogInOrLogOut()
