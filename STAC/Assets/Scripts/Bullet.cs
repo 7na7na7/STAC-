@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
     private float savedTrailTime;
 
     private bool isOnce = false;
-
+    
     private void Awake()
     {
         if (!isColor1)
@@ -179,7 +179,8 @@ public class Bullet : MonoBehaviour
 
     public void die()
     {
-        Instantiate(dieParticle, transform.position, Quaternion.identity);
+        GameObject p=Instantiate(dieParticle, transform.position, Quaternion.identity);
+        p.GetComponent<ParticleSystem>().startColor = GetComponent<SpriteRenderer>().color;
         gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D col)
@@ -238,10 +239,9 @@ public class Bullet : MonoBehaviour
         ComboManager.instance.comboIniitailize();
         
         
-        Instantiate(dieParticle, transform.position, Quaternion.identity);
-        if(SoundMgr.instance!=null) 
-            SoundMgr.instance.Play(0,1,1);
-       gameObject.SetActive(false);
+        GameObject p=Instantiate(dieParticle, transform.position, Quaternion.identity);
+        p.GetComponent<ParticleSystem>().startColor = GetComponent<SpriteRenderer>().color;
+        gameObject.SetActive(false);
     }
 
     public void OtherColor()

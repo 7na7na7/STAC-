@@ -11,7 +11,7 @@ public class goldCol : MonoBehaviour
         if (other.CompareTag("Edge1")||other.CompareTag("Edge2"))
         {
             GoldManager.instance.GetGold(10);
-            SoundMgr.instance.Play(3,0.3f,3);
+            SoundMgr.instance.Play(3,0.7f,3);
             SetFalse();
         }
     }

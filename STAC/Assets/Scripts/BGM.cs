@@ -43,7 +43,7 @@ public class BGM : MonoBehaviour
     {
         while (source.volume<1)
         {
-            source.volume = Mathf.Lerp(source.volume, 1, speed);
+            source.volume = Mathf.Lerp(source.volume, SoundMgr.instance.savedBgm, speed);
             yield return new WaitForSeconds(Time.deltaTime);
         }
     }

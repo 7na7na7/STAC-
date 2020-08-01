@@ -263,6 +263,7 @@
           <e p="Spawner.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
           <e p="TitleBg.cs" t="Include" />
+          <e p="TitleTriangleRotate.cs" t="Include" />
         </e>
         <e p="ScrollView" t="Include">
           <e p="ScrollManager.cs" t="Include" />
