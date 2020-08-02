@@ -10,6 +10,15 @@ public class ChangeColor : MonoBehaviour
     public GameObject Price;
     public int ColorIndex = 0;
     public GameObject lockImg;
+    float speed;
+    private RectTransform rect;
+
+    private void Start()
+    {
+        rect = transform.GetChild(0).GetComponent<RectTransform>();
+        speed = FindObjectOfType<TitleTriangleRotate>().speed;
+    }
+    
     public void ColorChange()
     {
         if (BulletData.instance.isLockArray[ColorIndex] == 1)
@@ -29,7 +38,8 @@ public class ChangeColor : MonoBehaviour
         else
         {
             Price.SetActive(false);
-            lockImg.SetActive(false);   
+            lockImg.SetActive(false);
+            rect.eulerAngles=new Vector3(rect.eulerAngles.x,rect.eulerAngles.y,rect.eulerAngles.z+Time.deltaTime*speed);
         }
     }
 

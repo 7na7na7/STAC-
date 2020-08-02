@@ -241,6 +241,7 @@ public class Bullet : MonoBehaviour
         
         GameObject p=Instantiate(dieParticle, transform.position, Quaternion.identity);
         p.GetComponent<ParticleSystem>().startColor = GetComponent<SpriteRenderer>().color;
+        SoundMgr.instance.Play(0,1,1);
         gameObject.SetActive(false);
     }
 
