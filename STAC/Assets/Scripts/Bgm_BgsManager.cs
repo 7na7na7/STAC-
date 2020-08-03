@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class Bgm_BgsManager : MonoBehaviour
 {
-    float upValue=0.33f;
     public GameObject[] BGMvolumes;
     public GameObject[] SEvolumes;
     private int BGMIndex,SEIndex;

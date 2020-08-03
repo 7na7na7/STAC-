@@ -4,9 +4,17 @@
     <e p="C:\Users\mingu\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\mingu\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_STAC.1264394398.00" t="ExcludeRecursive" />
     <e p="C:\Users\mingu\Documents\GitHub\STAC-\STAC" t="IncludeRecursive">
+      <e p="ACTk.Editor.csproj" t="IncludeRecursive" />
+      <e p="ACTk.Examples.Genuine.Editor.csproj" t="IncludeRecursive" />
+      <e p="ACTk.Examples.Genuine.Runtime.csproj" t="IncludeRecursive" />
+      <e p="ACTk.Examples.Runtime.csproj" t="IncludeRecursive" />
+      <e p="ACTk.Runtime.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="ConsolePro" t="Include">
+          <e p="ConsoleProDebug.cs" t="Include" />
+        </e>
         <e p="DoTween" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DoTween" t="Include">
@@ -25,6 +33,40 @@
           <e p="Scenes" t="Include">
             <e p="ObjTween.cs" t="Include" />
             <e p="UITween.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Epic Toon FX" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ETFXButtonScript.cs" t="Include" />
+              <e p="ETFXFireProjectile.cs" t="Include" />
+              <e p="ETFXLoopScript.cs" t="Include" />
+              <e p="ETFXMouseOrbit.cs" t="Include" />
+              <e p="ETFXProjectileScript.cs" t="Include" />
+              <e p="ETFXSceneManager.cs" t="Include" />
+              <e p="ETFXTarget.cs" t="Include" />
+              <e p="VFX Library" t="Include">
+                <e p="ParticleEffectsLibrary.cs" t="Include" />
+                <e p="PEButtonScript.cs" t="Include" />
+                <e p="UICanvasManager.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Combat" t="Include">
+              <e p="Combat FX.txt" t="Include" />
+            </e>
+            <e p="Environment" t="Include">
+              <e p="Environment FX.txt" t="Include" />
+            </e>
+            <e p="Interactive" t="Include">
+              <e p="Interactive FX.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ETFXLightFade.cs" t="Include" />
+            <e p="ETFXPitchRandomizer.cs" t="Include" />
+            <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
         <e p="GooglePlayGames" t="Include">
@@ -174,10 +216,35 @@
             </e>
           </e>
         </e>
-        <e p="Loading" t="Include">
-          <e p="SceneLoad.cs" t="Include" />
-        </e>
         <e p="Packages" t="Include">
+          <e p="ConsolePro" t="Include">
+            <e p="Remote" t="Include">
+              <e p="ConsoleProRemoteServer.cs" t="Include" />
+              <e p="LiteNetLib" t="Include">
+                <e p="FastBitConverter.cs" t="Include" />
+                <e p="INetEventListener.cs" t="Include" />
+                <e p="NatPunchModule.cs" t="Include" />
+                <e p="NetConstants.cs" t="Include" />
+                <e p="NetDataReader.cs" t="Include" />
+                <e p="NetDataWriter.cs" t="Include" />
+                <e p="NetDebug.cs" t="Include" />
+                <e p="NetEndPoint.cs" t="Include" />
+                <e p="NetManager.cs" t="Include" />
+                <e p="NetPacket.cs" t="Include" />
+                <e p="NetPacketPool.cs" t="Include" />
+                <e p="NetPeer.cs" t="Include" />
+                <e p="NetPeerCollection.cs" t="Include" />
+                <e p="NetSerializer.cs" t="Include" />
+                <e p="NetSocket.cs" t="Include" />
+                <e p="NetThread.cs" t="Include" />
+                <e p="NetUtils.cs" t="Include" />
+                <e p="NtpSyncModule.cs" t="Include" />
+                <e p="ReliableChannel.cs" t="Include" />
+                <e p="SequencedChannel.cs" t="Include" />
+                <e p="SimpleChannel.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="Google.Apis.1.48.0" t="Include">
             <e p="lib" t="Include">
               <e p="netstandard2.0" t="Include">
@@ -219,6 +286,204 @@
             <e p="play-services-resolver_v1.2.135.0.txt" t="Include" />
           </e>
         </e>
+        <e p="Plugins" t="Include">
+          <e p="CodeStage" t="Include">
+            <e p="AntiCheatToolkit" t="Include">
+              <e p="Editor" t="Include">
+                <e p="ACTk.Editor.asmdef" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="ACTkEditorConstants.cs" t="Include" />
+                  <e p="ACTkMarker.cs" t="Include" />
+                  <e p="ACTkMenuItems.cs" t="Include" />
+                  <e p="AssemblyInfo.cs" t="Include" />
+                  <e p="Editors" t="Include">
+                    <e p="InjectionDetectorEditor.cs" t="Include" />
+                    <e p="KeepAliveBehaviourEditor.cs" t="Include" />
+                    <e p="ObscuredCheatingDetectorEditor.cs" t="Include" />
+                    <e p="SpeedHackDetectorEditor.cs" t="Include" />
+                    <e p="TimeCheatingDetectorEditor.cs" t="Include" />
+                    <e p="WallHackDetectorEditor.cs" t="Include" />
+                  </e>
+                  <e p="Genuine" t="Include">
+                    <e p="CodeHash" t="Include">
+                      <e p="PostProcess" t="Include">
+                        <e p="CodeHashGeneratorPostprocessor.cs" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                  <e p="Injection" t="Include">
+                    <e p="AllowedAssembly.cs" t="Include" />
+                    <e p="InjectionConstants.cs" t="Include" />
+                    <e p="InjectionRoutines.cs" t="Include" />
+                    <e p="InjectionWhitelistBuilder.cs" t="Include" />
+                    <e p="PostProcess" t="Include">
+                      <e p="BuildPostProcessor.cs" t="Include" />
+                      <e p="BuildPostProcessor.Legacy.cs" t="Include" />
+                    </e>
+                    <e p="UserWhitelistEditor.cs" t="Include" />
+                  </e>
+                  <e p="ObscuredTypes" t="Include">
+                    <e p="MigrateUtils.cs" t="Include" />
+                    <e p="PropertyDrawers" t="Include">
+                      <e p="ObscuredBoolDrawer.cs" t="Include" />
+                      <e p="ObscuredDecimalDrawer.cs" t="Include" />
+                      <e p="ObscuredDoubleDrawer.cs" t="Include" />
+                      <e p="ObscuredFloatDrawer.cs" t="Include" />
+                      <e p="ObscuredIntDrawer.cs" t="Include" />
+                      <e p="ObscuredLongDrawer.cs" t="Include" />
+                      <e p="ObscuredQuaternionDrawer.cs" t="Include" />
+                      <e p="ObscuredShortDrawer.cs" t="Include" />
+                      <e p="ObscuredStringDrawer.cs" t="Include" />
+                      <e p="ObscuredUIntDrawer.cs" t="Include" />
+                      <e p="ObscuredULongDrawer.cs" t="Include" />
+                      <e p="ObscuredVector2Drawer.cs" t="Include" />
+                      <e p="ObscuredVector2IntDrawer.cs" t="Include" />
+                      <e p="ObscuredVector3Drawer.cs" t="Include" />
+                      <e p="ObscuredVector3IntDrawer.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="PrefsEditor" t="Include">
+                    <e p="ACTkPrefsEditor.cs" t="Include" />
+                    <e p="Plist.cs" t="Include" />
+                    <e p="PrefsRecord.cs" t="Include" />
+                  </e>
+                  <e p="Settings" t="Include">
+                    <e p="ACTkEditorPrefsSettings.cs" t="Include" />
+                    <e p="ACTkSettings.cs" t="Include" />
+                    <e p="SettingsGUI.cs" t="Include" />
+                    <e p="SettingsPreferenceItem.cs" t="Include" />
+                    <e p="SettingsProviderWrapper.cs" t="Include" />
+                    <e p="SettingsUtils.cs" t="Include" />
+                    <e p="SettingsValidator.cs" t="Include" />
+                    <e p="SymbolsData.cs" t="Include" />
+                  </e>
+                  <e p="Tools" t="Include">
+                    <e p="ColorTools.cs" t="Include" />
+                    <e p="DetectorTools.cs" t="Include" />
+                    <e p="EditorTools.cs" t="Include" />
+                    <e p="GUITools.cs" t="Include" />
+                    <e p="ReflectionTools.cs" t="Include" />
+                    <e p="TextureTools.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Examples" t="Include">
+                <e p="API Examples" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Runtime" t="Include">
+                      <e p="ACTk.Examples.Runtime.asmdef" t="Include" />
+                      <e p="ExamplesGUI.cs" t="Include" />
+                      <e p="InfiniteRotator.cs" t="Include" />
+                      <e p="InfiniteRotatorReliable.cs" t="Include" />
+                      <e p="ObscuredPerformanceTests.cs" t="Include" />
+                      <e p="UsageExamples" t="Include">
+                        <e p="CodeHashExample.cs" t="Include" />
+                        <e p="DetectorsExamples.cs" t="Include" />
+                        <e p="ObscuredPrefsExamples.cs" t="Include" />
+                        <e p="ObscuredTypesExamples.cs" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                </e>
+                <e p="Code Genuine Validation" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="ACTk.Examples.Genuine.Editor.asmdef" t="Include" />
+                      <e p="CodeHashGeneratorListener.cs" t="Include" />
+                    </e>
+                    <e p="Runtime" t="Include">
+                      <e p="ACTk.Examples.Genuine.Runtime.asmdef" t="Include" />
+                      <e p="GenuineValidatorExample.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="ACTk.Runtime.asmdef" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="AssemblyInfo.cs" t="Include" />
+                  <e p="Common" t="Include">
+                    <e p="ACTkByte16.cs" t="Include" />
+                    <e p="ACTkByte4.cs" t="Include" />
+                    <e p="ACTkByte8.cs" t="Include" />
+                    <e p="ACTkConstants.cs" t="Include" />
+                    <e p="KeepAliveBehaviour.cs" t="Include" />
+                  </e>
+                  <e p="Detectors" t="Include">
+                    <e p="Abstract" t="Include">
+                      <e p="ACTkDetectorBase.cs" t="Include" />
+                    </e>
+                    <e p="InjectionDetector.cs" t="Include" />
+                    <e p="ObscuredCheatingDetector.cs" t="Include" />
+                    <e p="SpeedHackDetector.cs" t="Include" />
+                    <e p="TimeCheatingDetector.cs" t="Include" />
+                    <e p="WallHackDetector.cs" t="Include" />
+                  </e>
+                  <e p="Genuine" t="Include">
+                    <e p="CodeHash" t="Include">
+                      <e p="BuildHashes.cs" t="Include" />
+                      <e p="CodeHashGenerator.cs" t="Include" />
+                      <e p="FileFilter.cs" t="Include" />
+                      <e p="FileHash.cs" t="Include" />
+                      <e p="HashGeneratorResult.cs" t="Include" />
+                      <e p="ICodeHashGenerator.cs" t="Include" />
+                      <e p="SHA1Wrapper.cs" t="Include" />
+                      <e p="Workers" t="Include">
+                        <e p="AndroidWorker.cs" t="Include" />
+                        <e p="BaseWorker.cs" t="Include" />
+                        <e p="StandaloneWindowsWorker.cs" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                  <e p="ObscuredTypes" t="Include">
+                    <e p="Interfaces" t="Include">
+                      <e p="IObscuredType.cs" t="Include" />
+                    </e>
+                    <e p="ObscuredBool.cs" t="Include" />
+                    <e p="ObscuredByte.cs" t="Include" />
+                    <e p="ObscuredChar.cs" t="Include" />
+                    <e p="ObscuredDecimal.cs" t="Include" />
+                    <e p="ObscuredDouble.cs" t="Include" />
+                    <e p="ObscuredFloat.cs" t="Include" />
+                    <e p="ObscuredInt.cs" t="Include" />
+                    <e p="ObscuredLong.cs" t="Include" />
+                    <e p="ObscuredQuaternion.cs" t="Include" />
+                    <e p="ObscuredSByte.cs" t="Include" />
+                    <e p="ObscuredShort.cs" t="Include" />
+                    <e p="ObscuredString.cs" t="Include" />
+                    <e p="ObscuredUInt.cs" t="Include" />
+                    <e p="ObscuredULong.cs" t="Include" />
+                    <e p="ObscuredUShort.cs" t="Include" />
+                    <e p="ObscuredVector2.cs" t="Include" />
+                    <e p="ObscuredVector2Int.cs" t="Include" />
+                    <e p="ObscuredVector3.cs" t="Include" />
+                    <e p="ObscuredVector3Int.cs" t="Include" />
+                  </e>
+                  <e p="Storage" t="Include">
+                    <e p="Prefs" t="Include">
+                      <e p="ObscuredPrefs.cs" t="Include" />
+                      <e p="ObscuredPrefs.Routines.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Time" t="Include">
+                    <e p="SpeedHackProofTime.cs" t="Include" />
+                  </e>
+                  <e p="Utils" t="Include">
+                    <e p="Base64Utils.cs" t="Include" />
+                    <e p="RandomUtils.cs" t="Include" />
+                    <e p="StringUtils.cs" t="Include" />
+                    <e p="ThreadSafeRandom.cs" t="Include" />
+                    <e p="TimeUtils.cs" t="Include" />
+                    <e p="xxHash.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="WallHackTexture.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Resources" t="Include">
           <e p="Mat_Shad" t="Include">
             <e p="Dissolve.cs" t="Include" />
@@ -257,18 +522,16 @@
           <e p="SceneMgr.cs" t="Include" />
           <e p="ScoreMgr.cs" t="Include" />
           <e p="ScoreText.cs" t="Include" />
+          <e p="ScrollManager.cs" t="Include" />
+          <e p="ScrollScript.cs" t="Include" />
           <e p="SetColor.cs" t="Include" />
           <e p="Setting.cs" t="Include" />
           <e p="SoundMgr.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
+          <e p="tabManager.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
           <e p="TitleBg.cs" t="Include" />
           <e p="TitleTriangleRotate.cs" t="Include" />
-        </e>
-        <e p="ScrollView" t="Include">
-          <e p="ScrollManager.cs" t="Include" />
-          <e p="ScrollScript.cs" t="Include" />
-          <e p="tabManager.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
