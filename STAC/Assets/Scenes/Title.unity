@@ -3435,7 +3435,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 0, y: 0.05}
-  m_mesh: {fileID: 0}
 --- !u!114 &621596036
 MonoBehaviour:
   m_ObjectHideFlags: 0
