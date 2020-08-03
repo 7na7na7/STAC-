@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int scoreUpValue = 1000;
+    public int liveScoreUpValue = 100;
 
     public bool canRevival = true;
 

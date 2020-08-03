@@ -4055,6 +4055,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e65790849156614a95408b9c900b781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BGM: {fileID: 1453143365}
+  SE: {fileID: 1336338327}
+  SoundOn: {fileID: 21300000, guid: 075b2f2d1162d25489f88a418d8bb65f, type: 3}
+  SoundOff: {fileID: 21300000, guid: a6e58d4f651ebcd47beb3c421b7ee276, type: 3}
   BGMvolumes:
   - {fileID: 255050973}
   - {fileID: 168791773}
@@ -7435,6 +7439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5be7c6bbee4bf4e83b8160b4631e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brightness: 2
   Themes:
   - {fileID: 2100000, guid: ac9553184c8617e44a52e5ea42173327, type: 2}
   - {fileID: 2100000, guid: def7a1d194272cd48b17bb289d78ba54, type: 2}

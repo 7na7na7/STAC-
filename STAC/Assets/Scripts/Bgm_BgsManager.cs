@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class Bgm_BgsManager : MonoBehaviour
 {
+    public Image BGM, SE;
+    public Sprite SoundOn, SoundOff;
     public GameObject[] BGMvolumes;
     public GameObject[] SEvolumes;
     private int BGMIndex,SEIndex;
@@ -26,6 +28,14 @@ public class Bgm_BgsManager : MonoBehaviour
             else
                 SEvolumes[i].SetActive(false);
         }
+        if (SEIndex == 0)
+            SE.sprite = SoundOff;
+        else
+            SE.sprite = SoundOn;
+        if (BGMIndex == 0)
+            BGM.sprite = SoundOff;
+        else
+            BGM.sprite = SoundOn;
     }
 
     public void BGMUp()
@@ -41,8 +51,12 @@ public class Bgm_BgsManager : MonoBehaviour
             else
                 BGMvolumes[i].SetActive(false);
         }
-        SoundMgr.instance.bgmValue(0.33f*BGMIndex);
         bgm.volume = 0.33f * BGMIndex;
+        if (BGMIndex == 0)
+            BGM.sprite = SoundOff;
+        else
+            BGM.sprite = SoundOn;
+        SoundMgr.instance.bgmValue(0.33f*BGMIndex);
     }
     public void SEUp()
     {
@@ -57,6 +71,10 @@ public class Bgm_BgsManager : MonoBehaviour
             else
                 SEvolumes[i].SetActive(false);
         }
+        if (SEIndex == 0)
+            SE.sprite = SoundOff;
+        else
+            SE.sprite = SoundOn;
         SoundMgr.instance.seValue(0.33f*SEIndex);
     }
 }

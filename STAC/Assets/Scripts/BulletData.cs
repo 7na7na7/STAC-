@@ -10,6 +10,7 @@ public class color
 }
 public class BulletData : MonoBehaviour
 {
+    public float brightness;
     public Material[] Themes;
     public GameObject[] Colors;
     public int currentColorIndex;

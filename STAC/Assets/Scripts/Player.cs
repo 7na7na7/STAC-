@@ -18,13 +18,11 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Play")
-        {
-            if (Spawner.instance.player == null)
-                Spawner.instance.player = this.transform;
-            if (GoldSpawner.instance.player == null)
-                GoldSpawner.instance.player = this.transform;   
-        }
+        if (Spawner.instance.player == null)
+            Spawner.instance.player = this.transform;
+        if (GoldSpawner.instance.player == null)
+            GoldSpawner.instance.player = this.transform;
+        StartCoroutine(LiveScoreUp());
     }
 
     public void Die()
@@ -35,5 +33,13 @@ public class Player : MonoBehaviour
         CameraManager.instance.lastTr = gameObject.transform;
         Destroy(gameObject);
     }
-    
+
+    IEnumerator LiveScoreUp()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            ScoreMgr.instance.scoreUp(0,GameManager.instance.liveScoreUpValue,false,false);
+        }
+    }
 }

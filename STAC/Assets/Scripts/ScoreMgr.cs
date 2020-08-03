@@ -32,9 +32,9 @@ public class ScoreMgr : MonoBehaviour
         score = 0;
         isHighScore = false;
     }
-    
-    
-    public void scoreUp(int count,int point, bool isCombo)
+
+
+    public void scoreUp(int count, int point, bool isCombo, bool isPong = true)
     {
         if (isCombo)
         {
@@ -48,7 +48,8 @@ public class ScoreMgr : MonoBehaviour
             PlayerPrefs.SetInt(highscoreKey,highScore);
             isHighScore = true;
         }
-     ScoreText.instance.pong();
+        if(isPong) 
+            ScoreText.instance.pong();
     }
     
     public void comboInitialize(int v)

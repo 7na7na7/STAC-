@@ -1563,6 +1563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreUpValue: 1000
+  liveScoreUpValue: 100
   canRevival: 1
 --- !u!4 &753113431
 Transform:
@@ -2118,6 +2119,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 135303016, guid: 349d08750d49f164c9782d84f08a0bcd, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6226415
+      objectReference: {fileID: 0}
+    - target: {fileID: 135303016, guid: 349d08750d49f164c9782d84f08a0bcd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6226415
+      objectReference: {fileID: 0}
+    - target: {fileID: 135303016, guid: 349d08750d49f164c9782d84f08a0bcd, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6226415
+      objectReference: {fileID: 0}
+    - target: {fileID: 135303016, guid: 349d08750d49f164c9782d84f08a0bcd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d365544fa5793449b37f939e5904416,
+        type: 3}
+    - target: {fileID: 5707508266899193446, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707508266899193446, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5707508266899193446, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110419205371801213, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.4877946
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110419205371801213, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.35068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110419205371801213, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 8.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110419205371801213, guid: 349d08750d49f164c9782d84f08a0bcd,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 6.72
+      objectReference: {fileID: 0}
     - target: {fileID: 6885763691734771524, guid: 349d08750d49f164c9782d84f08a0bcd,
         type: 3}
       propertyPath: m_LocalPosition.x
