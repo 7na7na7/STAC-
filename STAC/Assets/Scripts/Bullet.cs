@@ -178,9 +178,8 @@ public class Bullet : MonoBehaviour
     }
 
     public void die()
-    {
-        GameObject p=Instantiate(dieParticle, transform.position, Quaternion.identity);
-        p.GetComponent<ParticleSystem>().startColor = GetComponent<SpriteRenderer>().color;
+    { 
+        ShowParticle();
         gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D col)
@@ -236,15 +235,25 @@ public class Bullet : MonoBehaviour
         canDetect = false;
         
         ScoreMgr.instance.scoreUp(0,GameManager.instance.scoreUpValue,false);
-        ComboManager.instance.comboIniitailize();
-        
-        
-        GameObject p=Instantiate(dieParticle, transform.position, Quaternion.identity);
-        p.GetComponent<ParticleSystem>().startColor = GetComponent<SpriteRenderer>().color;
+        ComboManager.instance.comboIniitailize(); 
+        ShowParticle();
         SoundMgr.instance.Play(0,1,1);
         gameObject.SetActive(false);
     }
 
+    void ShowParticle()
+    {
+        GameObject p=Instantiate(dieParticle, transform.position, Quaternion.identity);
+        //하얀색 파티클 예외처리
+        if (BulletData.instance.getCurrentColor() == 1)
+        {
+            if (GetComponent<SetColor>().ColorIndex == 0)
+                GetComponent<SpriteRenderer>().color = Color.white;
+            else
+                GetComponent<SpriteRenderer>().color = BulletData.instance.SetColor(GetComponent<SetColor>().ColorIndex);   
+        }
+        p.GetComponent<ParticleSystem>().startColor = GetComponent<SpriteRenderer>().color;
+    }
     public void OtherColor()
     {
         canDetect = false;

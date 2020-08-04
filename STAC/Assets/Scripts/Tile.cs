@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public Sprite[] tileThemes;
+    Sprite[] tileThemes;
     public GameObject tile;
 
     private void Start()
     {
+        tileThemes=new Sprite[BulletData.instance.tileThemes.Length];
+        for(int i=0;i<tileThemes.Length;i++)
+        {
+            tileThemes[i] = BulletData.instance.tileThemes[i];
+        }
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = tileThemes[BulletData.instance.currentColorIndex];

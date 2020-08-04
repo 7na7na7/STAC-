@@ -13,6 +13,7 @@ public class BulletData : MonoBehaviour
     public float brightness;
     public Material[] Themes;
     public GameObject[] Colors;
+    public Sprite[] tileThemes;
     public int currentColorIndex;
     public color[] colors;
     public static BulletData instance;
@@ -61,6 +62,10 @@ public class BulletData : MonoBehaviour
             return colors[currentColorIndex].color2;
     }
 
+    public int getCurrentColor()
+    {
+        return currentColorIndex;
+    }
     public void Unlock(int value)
     {
         for (int i = 0; i < isLockArray.Length; i++)
