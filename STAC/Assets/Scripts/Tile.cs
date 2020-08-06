@@ -22,14 +22,6 @@ public class Tile : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = tileThemes[BulletData.instance.currentColorIndex];
     }
 
-    private void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.CompareTag("Edge1") || col.CompareTag("Edge2"))
-        {
-            
-        }
-    }
-
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.CompareTag("Edge1") || col.CompareTag("Edge2"))

@@ -244,15 +244,8 @@ public class Bullet : MonoBehaviour
     void ShowParticle()
     {
         GameObject p=Instantiate(dieParticle, transform.position, Quaternion.identity);
-        //하얀색 파티클 예외처리
-        if (BulletData.instance.getCurrentColor() == 1)
-        {
-            if (GetComponent<SetColor>().ColorIndex == 0)
-                GetComponent<SpriteRenderer>().color = Color.white;
-            else
-                GetComponent<SpriteRenderer>().color = BulletData.instance.SetColor(GetComponent<SetColor>().ColorIndex);   
-        }
-        p.GetComponent<ParticleSystem>().startColor = GetComponent<SpriteRenderer>().color;
+        GetComponent<SpriteRenderer>().color = BulletData.instance.SetColor(GetComponent<SetColor>().ColorIndex);
+        p.GetComponent<ParticleSystem>().startColor = GetComponent<SpriteRenderer>().color*3f;
     }
     public void OtherColor()
     {
