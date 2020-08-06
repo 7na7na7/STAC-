@@ -640,6 +640,7 @@
           <e p="ScoreMgr.cs" t="Include" />
           <e p="ScoreText.cs" t="Include" />
           <e p="ScrollManager.cs" t="Include" />
+          <e p="ScrollMgr_2.cs" t="Include" />
           <e p="ScrollScript.cs" t="Include" />
           <e p="SetColor.cs" t="Include" />
           <e p="Setting.cs" t="Include" />
