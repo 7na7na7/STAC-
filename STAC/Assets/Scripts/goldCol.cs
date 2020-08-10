@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class goldCol : MonoBehaviour
 {
+    public GameObject goldParticle;
     private bool canDestroy = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -12,6 +13,7 @@ public class goldCol : MonoBehaviour
         {
             GoldManager.instance.GetGold(10);
             SoundMgr.instance.Play(3,0.7f,3);
+            Instantiate(goldParticle, transform.position, Quaternion.identity);
             SetFalse();
         }
     }
