@@ -31,8 +31,8 @@ public class Bullet : MonoBehaviour
             GetComponent<Rigidbody2D>().isKinematic = true;
         }
     }
-
-    private void OnEnable()
+    
+    public void OnEnable()
     {
         if (!isOnce)
         {
@@ -52,8 +52,11 @@ public class Bullet : MonoBehaviour
 
             if (BulletIndex != 3)
             {
-                speed = Random.Range(minSpeed,maxSpeed);
-                Set();   
+                if (BulletIndex != 5)
+                {
+                    speed = Random.Range(minSpeed,maxSpeed);
+                }
+                Set();  
             }
 
             switch (BulletIndex)
@@ -74,6 +77,12 @@ public class Bullet : MonoBehaviour
                     break;
             }   
         }
+    }
+
+    public void Star()
+    {
+        transform.parent = null;
+        dir = Vector2.up;
     }
     IEnumerator SetTrailTime()
     {
@@ -107,6 +116,8 @@ public class Bullet : MonoBehaviour
             transform.localScale = new Vector3(1/speed/3f, 1/speed/3f, transform.localScale.z);
         else if(BulletIndex==3)
             transform.localScale = new Vector3(1/speed/2f, 1/speed/2f, transform.localScale.z);
+        else if(BulletIndex==5)
+            transform.localScale = new Vector3(1/speed/1.5f, 1/speed/1.5f, transform.localScale.z);
         else
             transform.localScale = new Vector3(1/speed, 1/speed, transform.localScale.z);
     }
@@ -180,7 +191,10 @@ public class Bullet : MonoBehaviour
     public void die()
     { 
         ShowParticle();
-        gameObject.SetActive(false);
+        if (BulletIndex != 5)
+            gameObject.SetActive(false);
+        else
+            Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -238,7 +252,10 @@ public class Bullet : MonoBehaviour
         ComboManager.instance.comboIniitailize(); 
         ShowParticle();
         SoundMgr.instance.Play(0,1,1);
-        gameObject.SetActive(false);
+        if (BulletIndex != 5)
+            gameObject.SetActive(false);
+        else
+            Destroy(gameObject);
     }
 
     void ShowParticle()
@@ -264,12 +281,16 @@ public class Bullet : MonoBehaviour
                 yield break;
             }
         }
-       gameObject.SetActive(false);
+
+        if (BulletIndex != 5)
+            gameObject.SetActive(false);
+        else
+            Destroy(gameObject);
     }
 
     public void SetFalse()
     {
-        if (gameObject.activeSelf)
+        if (gameObject.activeSelf&&BulletIndex!=5)
         {
             gameObject.SetActive(false);
         }
