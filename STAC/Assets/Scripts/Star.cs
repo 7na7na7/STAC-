@@ -33,4 +33,16 @@ public class Star : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Update()
+    {
+        bool b=false;
+        foreach (Bullet star in stars)
+        {
+            if (star != null)
+                b = true;
+        }
+        if(!b)
+            Destroy(gameObject);
+    }
 }

@@ -8,8 +8,6 @@ public class CameraManager : MonoBehaviour
     public GameObject Clock;
     public GameObject gameoverPanel;
     public static CameraManager instance;
-    public float speed;
-    public GameObject player; //여기에다가 따라갈거 넣는다.
     public GameObject player_GO; //플레이어 게임오브젝트
 
     public Transform lastTr;
@@ -29,16 +27,6 @@ public class CameraManager : MonoBehaviour
         
         if(SceneManager.GetActiveScene().name=="Play") 
             StartCoroutine(sizeUp());
-    }
-    void Update()
-    {
-        if (player != null)
-        {
-            if (speed == 0)
-                transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
-            else 
-                Vector3.Lerp(transform.position, player.transform.position, speed * Time.deltaTime); //Vector3.Lerp()를 쓰면 부드럽게 움직인다.
-        }
     }
 
     public void GameOver()
@@ -77,7 +65,6 @@ public class CameraManager : MonoBehaviour
         StartCoroutine(targetChange2());
         Fade.instance.Unfade();
         GameObject playerGO=Instantiate(player_GO, lastTr);
-        player = playerGO;
         FindObjectOfType<Tile>().transform.position = playerGO.transform.position;
         gameoverPanel.SetActive(false);
         Clock.SetActive(false);

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1627,7 +1627,7 @@ PrefabInstance:
     - target: {fileID: 3146784077267578032, guid: 516ad0138e105d64c8f6f424c3624063,
         type: 3}
       propertyPath: bulletNum
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3146784077267578032, guid: 516ad0138e105d64c8f6f424c3624063,
         type: 3}
@@ -1682,6 +1682,18 @@ PrefabInstance:
       propertyPath: Mint4Obj
       value: 
       objectReference: {fileID: 2048562986226166147, guid: ebe1ada366d4d5844bd47bf98c0f3ef8,
+        type: 3}
+    - target: {fileID: 3146784077267578032, guid: 516ad0138e105d64c8f6f424c3624063,
+        type: 3}
+      propertyPath: Green5Obj
+      value: 
+      objectReference: {fileID: 1059378482501207974, guid: 020fdf9c3114e9c4a8d8101f57fa8514,
+        type: 3}
+    - target: {fileID: 3146784077267578032, guid: 516ad0138e105d64c8f6f424c3624063,
+        type: 3}
+      propertyPath: Mint5Obj
+      value: 
+      objectReference: {fileID: 6640445016049164867, guid: 1012468caf3fa834bae7ba42742b43cf,
         type: 3}
     - target: {fileID: 3146784077267578033, guid: 516ad0138e105d64c8f6f424c3624063,
         type: 3}
@@ -7463,7 +7475,7 @@ MonoBehaviour:
     color2: {r: 0, g: 0, b: 0, a: 1}
   - color1: {r: 0.9692893, g: 0.2783019, b: 1, a: 1}
     color2: {r: 0.70899487, g: 0, b: 1, a: 1}
-  - color1: {r: 0.8666667, g: 0.65215105, b: 0.109803915, a: 1}
+  - color1: {r: 1, g: 0.7101993, b: 0.11792451, a: 1}
     color2: {r: 1, g: 0, b: 0, a: 1}
   playerAroundValue: 15
   currentColorKey: currentColor
@@ -7881,7 +7893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2140.2822, y: -0.000061035}
+  m_AnchoredPosition: {x: 0, y: -0.000061035}
   m_SizeDelta: {x: 0, y: 1921.4092}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &8702238125813798715
@@ -8107,7 +8119,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8702238126736757923}
   m_HandleRect: {fileID: 8702238126736757932}
   m_Direction: 0
-  m_Value: 0.9999999
+  m_Value: 0
   m_Size: 0.33559132
   m_NumberOfSteps: 0
   m_OnValueChanged:

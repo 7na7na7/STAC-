@@ -7,6 +7,7 @@ using UnityEngine.EventSystems; //포인터 입력을 상속받기 위해
 //터치를 받기 위해 3개 상속받음
 public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
+    private Camera cam;
     //RectTransform으로 받아옴
     public RectTransform rect_Background;
     public RectTransform rect_Joysick;
@@ -21,6 +22,7 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
   
     void Start()
     {
+        cam=Camera.main;
         radius = rect_Background.rect.width * 0.5f; //반지름을 구함
     }
     
@@ -28,8 +30,11 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
     {
         if (isTouch) //터치 중일 때만
         {
-           if(go_Player!=null) 
-               go_Player.transform.position += movePosition*Time.deltaTime;
+            if (go_Player != null)
+            {
+                go_Player.transform.position += movePosition*Time.deltaTime;
+                cam.transform.position=new Vector3(go_Player.transform.position.x,go_Player.transform.position.y,cam.transform.position.z);
+            }
         }
     }
 

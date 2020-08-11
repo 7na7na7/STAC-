@@ -21,8 +21,10 @@ public class ObjectManager : MonoBehaviour
    public GameObject Green4Obj;
    public GameObject Mint4Obj;
 
+   public GameObject Green5Obj;
+   public GameObject Mint5Obj;
+   
    public GameObject GreenClusterObj;
-
    public GameObject MintClusterObj;
 
    public GameObject GoldObj;
@@ -241,6 +243,12 @@ public class ObjectManager : MonoBehaviour
                   return Mint4[i];
                }
             }
+            break;
+         case 8:
+            return Instantiate(Green5Obj);
+            break;
+         case 9:
+            return Instantiate(Mint5Obj);
             break;
          case 100:
             for (int i = 0; i < GreenCluster.Length; i++)

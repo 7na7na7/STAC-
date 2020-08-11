@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    public Color color;
     Sprite[] tileThemes;
     public GameObject tile;
 
@@ -18,8 +19,10 @@ public class Tile : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = tileThemes[BulletData.instance.currentColorIndex];
+            transform.GetChild(i).GetComponent<SpriteRenderer>().color = color;
         }
         GetComponent<SpriteRenderer>().sprite = tileThemes[BulletData.instance.currentColorIndex];
+        GetComponent<SpriteRenderer>().color = color;
     }
 
     private void OnTriggerExit2D(Collider2D col)
