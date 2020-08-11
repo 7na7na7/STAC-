@@ -246,10 +246,8 @@ public class ObjectManager : MonoBehaviour
             break;
          case 8:
             return Instantiate(Green5Obj);
-            break;
          case 9:
             return Instantiate(Mint5Obj);
-            break;
          case 100:
             for (int i = 0; i < GreenCluster.Length; i++)
             {

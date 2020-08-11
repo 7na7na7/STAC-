@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,15 +17,18 @@ public class CameraManager : MonoBehaviour
     public float CameraSizeUpValue;
     public float CameraSizeUpTime;
     public float MaxSize;
-    
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+    }
+
     void Start()
     {
         //if (Screen.orientation == ScreenOrientation.Portrait) //세로면
         //    Camera.main.orthographicSize *= 1.5f;
-        
-        if (instance == null)
-            instance = this;
-        
+
         if(SceneManager.GetActiveScene().name=="Play") 
             StartCoroutine(sizeUp());
     }
@@ -69,6 +73,7 @@ public class CameraManager : MonoBehaviour
         gameoverPanel.SetActive(false);
         Clock.SetActive(false);
         FindObjectOfType<joystick>().go_Player = playerGO;
+        transform.position = new Vector3(playerGO.transform.position.x,playerGO.transform.position.y,transform.position.z);
     }
     
     public IEnumerator targetChange2()

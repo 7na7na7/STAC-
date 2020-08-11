@@ -499,7 +499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -200}
+  m_AnchoredPosition: {x: -200, y: -200}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &196463575
@@ -1496,8 +1496,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Clock: {fileID: 1374317701}
   gameoverPanel: {fileID: 637617557}
-  speed: 10
-  player: {fileID: 1023808086}
   player_GO: {fileID: 6885763691734771526, guid: 349d08750d49f164c9782d84f08a0bcd,
     type: 3}
   lastTr: {fileID: 1430420040}
@@ -3470,7 +3468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -200}
+  m_AnchoredPosition: {x: 200, y: -200}
   m_SizeDelta: {x: 320, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869796153

@@ -43,7 +43,7 @@ public class Spawner : MonoBehaviour
             for (int j = 0; j < ObjectManager.instance.bulletNum * (perc[i] / 100) * 10; j++)
             {
                 bulletList.Add(i);
-                print(i);
+                //print(i);
             }
         }
     }

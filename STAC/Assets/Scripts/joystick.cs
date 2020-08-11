@@ -7,7 +7,7 @@ using UnityEngine.EventSystems; //포인터 입력을 상속받기 위해
 //터치를 받기 위해 3개 상속받음
 public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
-    private Camera cam;
+    private GameObject cam;
     //RectTransform으로 받아옴
     public RectTransform rect_Background;
     public RectTransform rect_Joysick;
@@ -22,7 +22,7 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
   
     void Start()
     {
-        cam=Camera.main;
+        cam = Camera.main.gameObject;
         radius = rect_Background.rect.width * 0.5f; //반지름을 구함
     }
     
@@ -33,9 +33,37 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
             if (go_Player != null)
             {
                 go_Player.transform.position += movePosition*Time.deltaTime;
-                cam.transform.position=new Vector3(go_Player.transform.position.x,go_Player.transform.position.y,cam.transform.position.z);
+                cam.transform.position += movePosition * Time.deltaTime;
             }
         }
+        #region 임시이동코드
+        int speed = 6;
+        Vector3 moveVelocity = Vector3.zero;
+        if (Input.GetAxisRaw("Horizontal") > 0)//오른쪽으로 갈때
+        { 
+            moveVelocity = Vector3.right;
+            go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
+            cam.transform.position+=moveVelocity * speed * Time.deltaTime;
+        }
+        if (Input.GetAxisRaw("Horizontal") < 0)//왼쪽으로 갈때
+        { 
+            moveVelocity = Vector3.left;
+            go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
+            cam.transform.position+=moveVelocity * speed * Time.deltaTime;
+        }
+        if (Input.GetAxisRaw("Vertical") > 0)//위
+        {
+            moveVelocity = Vector3.up;
+            go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
+            cam.transform.position+=moveVelocity * speed * Time.deltaTime;
+        }
+        if (Input.GetAxisRaw("Vertical") < 0)//아래
+        { 
+            moveVelocity = Vector3.down;
+            go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
+            cam.transform.position+=moveVelocity * speed * Time.deltaTime;
+        }
+        #endregion
     }
 
     public void OnPointerDown(PointerEventData eventData) //터치를 시작하면

@@ -18,32 +18,7 @@ public class Rotate : MonoBehaviour
 
     private void Update()
     {
-        #region 임시이동회전코드
-        int speed = 6;
-        Vector3 moveVelocity = Vector3.zero;
-        if (Input.GetAxisRaw("Horizontal") > 0)//오른쪽으로 갈때
-        { 
-            moveVelocity = Vector3.right;
-            transform.position += moveVelocity * speed * Time.deltaTime;
-        }
-        if (Input.GetAxisRaw("Horizontal") < 0)//왼쪽으로 갈때
-        { 
-            moveVelocity = Vector3.left;
-            transform.position += moveVelocity * speed * Time.deltaTime;
-        }
-        if (Input.GetAxisRaw("Vertical") > 0)//위
-        {
-            moveVelocity = Vector3.up;
-            transform.position += moveVelocity * speed * Time.deltaTime;
-        }
-        if (Input.GetAxisRaw("Vertical") < 0)//아래
-        { 
-            moveVelocity = Vector3.down;
-            transform.position += moveVelocity * speed * Time.deltaTime;
-        }
-        #endregion
-        
-            currentTime += Time.deltaTime;
+        currentTime += Time.deltaTime;
 
             if (currentTime >= 60d / bpm)
             {
