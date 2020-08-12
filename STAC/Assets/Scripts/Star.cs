@@ -24,7 +24,6 @@ public class Star : MonoBehaviour
     {
         if (other.CompareTag("Edge1")||other.CompareTag("Edge2"))
         {
-            print("A");
             foreach (Bullet star in stars)
             { 
                 if(star!=null) 
