@@ -37,31 +37,34 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
             }
         }
         #region 임시이동코드
-        int speed = 6;
-        Vector3 moveVelocity = Vector3.zero;
-        if (Input.GetAxisRaw("Horizontal") > 0)//오른쪽으로 갈때
-        { 
-            moveVelocity = Vector3.right;
-            go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
-            cam.transform.position+=moveVelocity * speed * Time.deltaTime;
-        }
-        if (Input.GetAxisRaw("Horizontal") < 0)//왼쪽으로 갈때
-        { 
-            moveVelocity = Vector3.left;
-            go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
-            cam.transform.position+=moveVelocity * speed * Time.deltaTime;
-        }
-        if (Input.GetAxisRaw("Vertical") > 0)//위
+        if (go_Player != null)
         {
-            moveVelocity = Vector3.up;
-            go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
-            cam.transform.position+=moveVelocity * speed * Time.deltaTime;
-        }
-        if (Input.GetAxisRaw("Vertical") < 0)//아래
-        { 
-            moveVelocity = Vector3.down;
-            go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
-            cam.transform.position+=moveVelocity * speed * Time.deltaTime;
+            int speed = 6;
+            Vector3 moveVelocity = Vector3.zero;
+            if (Input.GetAxisRaw("Horizontal") > 0)//오른쪽으로 갈때
+            { 
+                moveVelocity = Vector3.right;
+                go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
+                cam.transform.position+=moveVelocity * speed * Time.deltaTime;
+            }
+            if (Input.GetAxisRaw("Horizontal") < 0)//왼쪽으로 갈때
+            { 
+                moveVelocity = Vector3.left;
+                go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
+                cam.transform.position+=moveVelocity * speed * Time.deltaTime;
+            }
+            if (Input.GetAxisRaw("Vertical") > 0)//위
+            {
+                moveVelocity = Vector3.up;
+                go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
+                cam.transform.position+=moveVelocity * speed * Time.deltaTime;
+            }
+            if (Input.GetAxisRaw("Vertical") < 0)//아래
+            { 
+                moveVelocity = Vector3.down;
+                go_Player.transform.position += moveVelocity * speed * Time.deltaTime;
+                cam.transform.position+=moveVelocity * speed * Time.deltaTime;
+            }   
         }
         #endregion
     }
