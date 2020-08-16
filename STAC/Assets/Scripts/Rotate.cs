@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class Rotate : MonoBehaviour
 {
     //public RectTransform rotate;
+    public int StartRot = 30;
     public bool isRight = true;
     public bool isTriangle = true;
     public float delay;
@@ -15,10 +16,10 @@ public class Rotate : MonoBehaviour
     private double currentTime = 0d;
     public int value;
     public ParticleSystem[] rotateParticles;
-
     private void Start()
     {
         isRight = BulletData.instance.isRight == 1 ? true : false;
+        transform.eulerAngles=new Vector3(0,0,StartRot);
     }
 
     private void Update()
@@ -72,7 +73,7 @@ public class Rotate : MonoBehaviour
         {
             for(int i=0;i<90/value;i++)
             {
-                if(transform.eulerAngles.z+value>=361)
+                if(transform.eulerAngles.z+value>=410)
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
                 else
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
@@ -83,7 +84,7 @@ public class Rotate : MonoBehaviour
         {
             for(int i=0;i<90/value;i++)
             {
-                if(transform.eulerAngles.z+value>=361)
+                if(transform.eulerAngles.z+value>=410)
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
                 else
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);

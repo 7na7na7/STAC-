@@ -131,9 +131,11 @@ public class Bullet : MonoBehaviour
                 canDestroy = true;
                 StartCoroutine(Destroy());
             }
-        }
-
-        transform.Translate(dir * speed * Time.deltaTime);
+        } 
+        if(BulletIndex==5) 
+            transform.Translate(dir*speed*Time.deltaTime);
+        else
+            transform.position+=new Vector3(dir.x * speed * Time.deltaTime,dir.y * speed * Time.deltaTime);
     }
 
     public void straight()
@@ -156,6 +158,9 @@ public class Bullet : MonoBehaviour
             {
                 dir = Player.instance.transform.position - transform.position;
                 dir.Normalize();
+                
+                float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0, 0f, angle+30);
             }
             yield return new WaitForSeconds(.1f);
         }
