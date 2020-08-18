@@ -139,7 +139,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.49753335, y: 0.34506416}
     oldSize: {x: 8.04, y: 6.72}
     newSize: {x: 1.31, y: 1.32}
     adaptiveTilingThreshold: 0.5
@@ -148,9 +148,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0057566594, y: 3.359848}
-      - {x: -4.0266075, y: -3.3672683}
-      - {x: 4.045173, y: -3.3622966}
+    - - {x: 0.010180596, y: 4.403698}
+      - {x: -4.022647, y: -2.3197167}
+      - {x: 4.045173, y: -2.3177135}
 --- !u!114 &6710837368243052424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +189,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  Mul: 4
   Speed: 0.5
 --- !u!1001 &6282401726341868606
 PrefabInstance:

@@ -14953,7 +14953,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.09364385, y: 4.3661623}
-      - {x: 0.48976982, y: 3.6992364}
+      - {x: 0.51154906, y: 3.6574214}
       - {x: 0.11589238, y: 3.7973123}
       - {x: -3.3681643, y: -2.0314562}
       - {x: 3.3428085, y: -2.0272977}
@@ -15064,6 +15064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef0b8b1dfd352845acba930974a1c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartRot: 30
   isRight: 1
   isTriangle: 1
   delay: 0.001

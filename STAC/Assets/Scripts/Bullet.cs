@@ -102,7 +102,7 @@ public class Bullet : MonoBehaviour
 
     IEnumerator delayGuideCor()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         guide();
     }
     public void Set()
@@ -113,9 +113,9 @@ public class Bullet : MonoBehaviour
         if(BulletIndex==1)
             transform.localScale = new Vector3(1/speed/3f, 1/speed/3f, transform.localScale.z);
         else if(BulletIndex==2)
-            transform.localScale = new Vector3(1/speed/3f, 1/speed/3f, transform.localScale.z);
+            transform.localScale = new Vector3(1/speed/4f, 1/speed/4f, transform.localScale.z);
         else if(BulletIndex==3)
-            transform.localScale = new Vector3(1/speed/2f, 1/speed/2f, transform.localScale.z);
+            transform.localScale = new Vector3(1/speed/3f, 1/speed/3f, transform.localScale.z);
         else if(BulletIndex==5)
             transform.localScale = new Vector3(1/speed/1.5f, 1/speed/1.5f, transform.localScale.z);
         else
@@ -162,7 +162,7 @@ public class Bullet : MonoBehaviour
                 float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(0, 0f, angle+30);
             }
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(0.05f);
         }
     }
     public void cluster()
