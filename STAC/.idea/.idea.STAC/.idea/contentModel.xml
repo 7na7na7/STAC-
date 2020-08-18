@@ -338,6 +338,11 @@
             </e>
           </e>
         </e>
+        <e p="Kenney" t="Include">
+          <e p="Particle samples" t="Include">
+            <e p="License.txt" t="Include" />
+          </e>
+        </e>
         <e p="Packages" t="Include">
           <e p="ConsolePro" t="Include">
             <e p="Remote" t="Include">

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -686,7 +686,6 @@ RectTransform:
   - {fileID: 999658106}
   - {fileID: 2037302247}
   - {fileID: 1548338278}
-  - {fileID: 659316769}
   - {fileID: 1453143363}
   - {fileID: 1336338325}
   - {fileID: 492530309}
@@ -2838,7 +2837,7 @@ RectTransform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.053579997}
   m_Children: []
   m_Father: {fileID: 91956128}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3756,135 +3755,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632617112}
   m_CullTransparentMesh: 0
---- !u!1 &659316768
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 659316769}
-  - component: {fileID: 659316772}
-  - component: {fileID: 659316771}
-  - component: {fileID: 659316770}
-  m_Layer: 5
-  m_Name: GooglePlay (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &659316769
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659316768}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8075641, y: 0.8075641, z: 0.67297006}
-  m_Children: []
-  m_Father: {fileID: 91956128}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 303, y: 482}
-  m_SizeDelta: {x: 136.6525, y: 148.45132}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &659316770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659316768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Highlighted
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 659316771}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 572303077}
-        m_MethodName: LogIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &659316771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659316768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4c19ce9e081e7e478bca5461613e5f3, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &659316772
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659316768}
-  m_CullTransparentMesh: 0
 --- !u!1 &671772464
 GameObject:
   m_ObjectHideFlags: 0
@@ -4527,7 +4397,7 @@ RectTransform:
   - {fileID: 544821147}
   - {fileID: 1111983516}
   m_Father: {fileID: 91956128}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4660,8 +4530,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -365, y: 727}
-  m_SizeDelta: {x: 136.6525, y: 148.45132}
+  m_AnchoredPosition: {x: -356.61, y: 736.11}
+  m_SizeDelta: {x: 157.42426, y: 171.01657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999658107
 MonoBehaviour:
@@ -5186,7 +5056,7 @@ RectTransform:
   - {fileID: 1483652366}
   - {fileID: 1553846535}
   m_Father: {fileID: 91956128}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5812,8 +5682,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1336338325}
   - component: {fileID: 1336338328}
-  - component: {fileID: 1336338327}
   - component: {fileID: 1336338326}
+  - component: {fileID: 1336338327}
   m_Layer: 5
   m_Name: SE
   m_TagString: Untagged
@@ -5837,7 +5707,7 @@ RectTransform:
   - {fileID: 1679175184}
   - {fileID: 1711815631}
   m_Father: {fileID: 91956128}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5910,7 +5780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
@@ -6281,8 +6151,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1453143363}
   - component: {fileID: 1453143366}
-  - component: {fileID: 1453143365}
   - component: {fileID: 1453143364}
+  - component: {fileID: 1453143365}
   m_Layer: 5
   m_Name: BGM
   m_TagString: Untagged
@@ -6306,7 +6176,7 @@ RectTransform:
   - {fileID: 168791774}
   - {fileID: 320307360}
   m_Father: {fileID: 91956128}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6379,7 +6249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
@@ -6706,7 +6576,7 @@ GameObject:
   - component: {fileID: 1548338280}
   - component: {fileID: 1548338279}
   m_Layer: 5
-  m_Name: GooglePlay
+  m_Name: LogIn/LogOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6728,8 +6598,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -206, y: 430}
-  m_SizeDelta: {x: 136.6525, y: 148.45132}
+  m_AnchoredPosition: {x: 14.022, y: 724.88983}
+  m_SizeDelta: {x: 230.77588, y: 148.57642}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548338279
 MonoBehaviour:
@@ -6804,7 +6674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4c19ce9e081e7e478bca5461613e5f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd7c1c5f5f119134385f3bdd14eb7d7d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7855,15 +7725,15 @@ RectTransform:
   m_GameObject: {fileID: 2037302246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8075641, y: 0.8075641, z: 0.67297006}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0.67297006}
   m_Children: []
   m_Father: {fileID: 91956128}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 106, y: 712}
-  m_SizeDelta: {x: 136.6525, y: 148.45132}
+  m_AnchoredPosition: {x: -189.63, y: 765}
+  m_SizeDelta: {x: 176.52756, y: 191.76929}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037302248
 MonoBehaviour:
@@ -7938,7 +7808,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4c19ce9e081e7e478bca5461613e5f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc0f0a0c7d48bd343b1f4bb49ef42c12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8836,7 +8706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000061035}
+  m_AnchoredPosition: {x: -0.00024414062, y: -0.000061035}
   m_SizeDelta: {x: 0, y: 1921.4092}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &8702238125813798715
@@ -9062,7 +8932,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8702238126736757923}
   m_HandleRect: {fileID: 8702238126736757932}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 0.00000011406936
   m_Size: 0.33559132
   m_NumberOfSteps: 0
   m_OnValueChanged:

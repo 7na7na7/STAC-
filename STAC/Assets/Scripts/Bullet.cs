@@ -102,7 +102,7 @@ public class Bullet : MonoBehaviour
 
     IEnumerator delayGuideCor()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         guide();
     }
     public void Set()
