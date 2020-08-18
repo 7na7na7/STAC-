@@ -7,7 +7,6 @@ using Random = UnityEngine.Random;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject clusterObj = null;
     public TrailRenderer trail;
     public bool isColor1;
     public GameObject dieParticle;
@@ -295,9 +294,12 @@ public class Bullet : MonoBehaviour
 
     public void SetFalse()
     {
-        if (gameObject.activeSelf&&BulletIndex!=5)
+        if (gameObject.activeSelf)
         {
-            gameObject.SetActive(false);
+            if (BulletIndex != 5)
+                gameObject.SetActive(false);
+            else
+                Destroy(gameObject);
         }
     }
 }

@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class ScoreMgr : MonoBehaviour
 {
+    public int goldUpValue = 10;
+    public ScoreText goldScript;
+    public ScoreText scoreScript;
     public static ScoreMgr instance;
     private string highscoreKey = "highscore";
     
@@ -33,6 +36,11 @@ public class ScoreMgr : MonoBehaviour
         isHighScore = false;
     }
 
+    public void goldPong()
+    {
+        goldScript.currentGold += goldUpValue;
+        goldScript.pong();
+    }
 
     public void scoreUp(int count, int point, bool isCombo, bool isPong = true)
     {
@@ -48,8 +56,11 @@ public class ScoreMgr : MonoBehaviour
             PlayerPrefs.SetInt(highscoreKey,highScore);
             isHighScore = true;
         }
-        if(isPong) 
-            ScoreText.instance.pong();
+
+        if (isPong)
+        {
+            scoreScript.pong();   
+        }
     }
     
     public void comboInitialize(int v)

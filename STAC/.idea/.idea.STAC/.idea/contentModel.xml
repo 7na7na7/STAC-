@@ -636,6 +636,7 @@
           <e p="goldText.cs" t="Include" />
           <e p="GooglePlayManager.cs" t="Include" />
           <e p="Joystick.cs" t="Include" />
+          <e p="JoyStickScale.cs" t="Include" />
           <e p="ObjectManager.cs" t="Include" />
           <e p="Pause.cs" t="Include" />
           <e p="Player.cs" t="Include" />
@@ -657,6 +658,7 @@
           <e p="Tile.cs" t="Include" />
           <e p="TitleBg.cs" t="Include" />
           <e p="TitleTriangleRotate.cs" t="Include" />
+          <e p="Vibrate.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

@@ -6,19 +6,24 @@ using UnityEngine.UI;
 
 public class ScoreText : MonoBehaviour
 {
-    public static ScoreText instance;
+    public int maxFontSize = 300;
+    public int minFontSize = 250;
+    public int currentGold = 0;
+    public bool isScore = true;
     private Text Txt;
     public int Upvalue = 3;
     public float delay;
     private void Start()
     {
-        instance = this;
         Txt = GetComponent<Text>();
     }
 
     void Update()
     {
-        Txt.text = ScoreMgr.instance.score.ToString();
+        if (isScore)
+            Txt.text = ScoreMgr.instance.score.ToString();
+        else
+            Txt.text = currentGold.ToString();
     }
 
     public void pong()
@@ -28,14 +33,14 @@ public class ScoreText : MonoBehaviour
     }
     public IEnumerator size()
     {
-        while (Txt.fontSize < 300)
+        while (Txt.fontSize < maxFontSize)
             {
                 Txt.fontSize += Upvalue;
 
                 yield return new WaitForSeconds(Time.deltaTime);
             }
 
-            while (Txt.fontSize > 250)
+            while (Txt.fontSize > minFontSize)
             {
                 Txt.fontSize -= Upvalue;
 

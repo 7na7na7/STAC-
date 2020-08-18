@@ -44,7 +44,7 @@ public class CameraManager : MonoBehaviour
         float size = Camera.main.orthographicSize/2;
         while (Camera.main.orthographicSize > size)
         {
-            Camera.main.orthographicSize -= 0.1f;
+            Camera.main.orthographicSize -= 0.07f;
             yield return new WaitForSeconds(0.01f);
         }
         yield return new WaitForSecondsRealtime(0.5f);

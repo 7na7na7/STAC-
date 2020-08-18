@@ -13,6 +13,7 @@ public class goldCol : MonoBehaviour
         {
             GoldManager.instance.GetGold(10);
             SoundMgr.instance.Play(3,0.7f,3);
+            ScoreMgr.instance.goldPong();
             Instantiate(goldParticle, transform.position, Quaternion.identity);
             SetFalse();
         }
