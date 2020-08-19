@@ -193,7 +193,7 @@ public class Bullet : MonoBehaviour
     }
 
     public void die()
-    { 
+    {
         ShowParticle();
         if (BulletIndex != 5)
             gameObject.SetActive(false);
@@ -250,6 +250,7 @@ public class Bullet : MonoBehaviour
 
     public void SameColor()
     {
+        Vibrate.instance.Vibe(50);
         canDetect = false;
         
         ScoreMgr.instance.scoreUp(0,GameManager.instance.scoreUpValue,false);

@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JoyStickScale : MonoBehaviour
 {
     public float JoystickSize;
     public static JoyStickScale instance;
-
     private string joystickScalekey = "joystickscale";
     void Start()
     {
@@ -22,8 +22,9 @@ public class JoyStickScale : MonoBehaviour
         }
     }
 
-    public void SetSize()
+    public void SetSize(float value)
     {
-        
+        JoystickSize = value;
+        PlayerPrefs.SetFloat(joystickScalekey,JoystickSize);
     }
 }

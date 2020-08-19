@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
         Instantiate(DieParticle, transform.position, Quaternion.identity);
         CameraManager.instance.GameOver();
         CameraManager.instance.lastTr = gameObject.transform;
+        Vibrate.instance.Vibe(750);
         Destroy(gameObject);
     }
 

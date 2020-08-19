@@ -22,7 +22,7 @@ public class joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
   
     void Start()
     {
-        //transform.localScale=new Vector3(1+,1+,1);
+        transform.localScale=new Vector3(1.5f+(JoyStickScale.instance.JoystickSize-0.5f)/1.5f,1.5f+(JoyStickScale.instance.JoystickSize-0.5f)/1.5f,1);
         cam = Camera.main.gameObject;
         radius = rect_Background.rect.width * 0.5f; //반지름을 구함
     }
