@@ -54,8 +54,8 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
                     {
                         if (targetIndex == 0)
                         {
-                            targetIndex = SIZE-1;
-                            targetPos = 1;
+//                            targetIndex = SIZE-1;
+//                            targetPos = 1;
                         }
                         else
                         {
@@ -67,8 +67,8 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
                     {
                         if (targetIndex == SIZE-1)
                         {
-                            targetIndex = 0;
-                            targetPos = 0;
+//                            targetIndex = 0;
+//                            targetPos = 0;
                         }
                         else
                         {
@@ -148,17 +148,17 @@ public class ScrollManager : MonoBehaviour, IBeginDragHandler,IDragHandler,IEndD
                     return pos[i];
                 }
             }
-            if (scrollbar.value > 0.3f)
-            {
-                targetIndex = 0;
-                return 0;
-            }
-            else
-            {
-                targetIndex = SIZE - 1;
-                return 1;
-            }
-        
+//            if (scrollbar.value > 0.3f)
+//            {
+//                targetIndex = 0;
+//                return 0;
+//            }
+//            else
+//            {
+//                targetIndex = SIZE - 1;
+//                return 1;
+//            }
+        return 0;
     }
 
     public void TabClick(int n)

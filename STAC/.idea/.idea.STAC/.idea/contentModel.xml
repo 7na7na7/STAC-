@@ -621,6 +621,7 @@
           <e p="ChangeColor.cs" t="Include" />
           <e p="CheckCamera.cs" t="Include" />
           <e p="ColorSelect.cs" t="Include" />
+          <e p="ComboFill.cs" t="Include" />
           <e p="ComboManager.cs" t="Include" />
           <e p="comboText.cs" t="Include" />
           <e p="delayDestroy.cs" t="Include" />

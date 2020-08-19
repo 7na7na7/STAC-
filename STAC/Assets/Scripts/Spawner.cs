@@ -18,9 +18,10 @@ public class Spawner : MonoBehaviour
     public ArrayList bulletList= new ArrayList();
     public float radMinX, radMaxX, radMinY, radMaxY;
     public float minDelay, maxDelay;
-    public float delayMinusValue_Min;
-    public float delayMinusValue_Max;
+    public float delayMinMinus;
+    public float delayMaxMinus;
     public float delyaMinusTime;
+    public float minimumDealy;
     public difficulty[] levels;
 
     private void Awake()
@@ -51,7 +52,8 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(minDelay,maxDelay));
+            float rr = Random.Range(minDelay, maxDelay);
+            yield return new WaitForSeconds(rr<=minDelay ? minDelay : rr);
             if (player != null)
             {
                 int bulletIndex=0;
@@ -101,8 +103,8 @@ public class Spawner : MonoBehaviour
         while (true)
         {
          yield return new WaitForSeconds(delyaMinusTime);
-         minDelay -= delayMinusValue_Min;
-         maxDelay -= delayMinusValue_Max;
+         minDelay -= delayMinMinus;
+         maxDelay -= delayMaxMinus;
         }
     }
 }
