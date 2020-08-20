@@ -27,6 +27,7 @@ public class ComboManager : MonoBehaviour
         int value =ComboValue;
         canCombo = true;
         comboCount++;
+        ComboFill.instance.Set(comboCount);
         yield return new WaitForSeconds(comboDelay);
         canCombo = false;
         if (comboCount >= 2)
@@ -39,5 +40,18 @@ public class ComboManager : MonoBehaviour
         comboCount = 0;
     }
 
-   
+    public void ComboEnd()
+    {
+        int value = ComboValue;
+        canCombo = false;
+        if (comboCount >= 2)
+        {
+            ScoreMgr.instance.comboInitialize(comboCount);
+            value += comboCount / 5 * ComboValue;
+            ScoreMgr.instance.scoreUp(comboCount, value * comboCount, true);
+            SoundMgr.instance.Play(1,1,1);
+        }
+        comboCount = 0;
+    }
+
 }
