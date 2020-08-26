@@ -1,29 +1,15 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
-[System.Serializable]
-public class difficulty
-{
-    public float delay; //몇 초 후에
-    public float[] percents; //확률을 어떻게 바꿀것인가
-}
 public class Spawner : MonoBehaviour
 {
     public static Spawner instance;
     public Transform player;
-    public ArrayList bulletList= new ArrayList();
     public float radMinX, radMaxX, radMinY, radMaxY;
-    public float minDelay, maxDelay;
-    public float delayMinMinus;
-    public float delayMaxMinus;
-    public float delyaMinusTime;
-    public float minimumDealy;
-    public difficulty[] levels;
-
+    public float[] delays;
+    public float[] minusPercents;
+    public float minusDelay;
     private void Awake()
     {
         instance = this;
@@ -31,36 +17,19 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(spawn());
-        StartCoroutine(percentHarder());
-        StartCoroutine(delayHarder());
-    }
-
-    public void Set(float[] perc)
-    {
-        bulletList.Clear();
-        for (int i = 0; i <ObjectManager.instance.bulletNum; i++)
+        for (int i = 0; i < delays.Length; i++)
         {
-            for (int j = 0; j < ObjectManager.instance.bulletNum * (perc[i] / 100) * 10; j++)
-            {
-                bulletList.Add(i);
-                //print(i);
-            }
+            StartCoroutine(spawn(i));
+            StartCoroutine(delayMinus(i));
         }
     }
-    IEnumerator spawn()
+
+    public void set(int index)
     {
-        while (true)
-        {
-            float rr = Random.Range(minDelay, maxDelay);
-            yield return new WaitForSeconds(rr<=minDelay ? minDelay : rr);
-            if (player != null)
+        if (player != null)
             {
-                int bulletIndex=0;
-                bulletIndex = (int)bulletList[Random.Range(0, bulletList.Count)];
-         
                 int r = Random.Range(0, 6);
-                GameObject enemy = ObjectManager.instance.MakeObj(bulletIndex);
+                GameObject enemy = ObjectManager.instance.MakeObj(index);
                 if (r == 0||r==1) //위
                 {
                     enemy.transform.position = new Vector2(
@@ -86,25 +55,26 @@ public class Spawner : MonoBehaviour
                         Random.Range(player.position.y - radMinY*Camera.main.orthographicSize, player.position.y + radMinY*Camera.main.orthographicSize));
                 }   
             }
-        }
     }
-
-    IEnumerator percentHarder()
+    IEnumerator spawn(int index)
     {
-        for (int i = 0; i < levels.Length; i++)
-        {
-            yield return new WaitForSeconds(levels[i].delay);
-            Set(levels[i].percents);
+        while (true)
+        { 
+            yield return new WaitForSeconds(delays[index]);
+            int random = Random.Range(0, 3);
+            if(random==0) 
+                set(index*2);
+            else
+                set(index*2+1);
         }
     }
 
-    IEnumerator delayHarder()
+    IEnumerator delayMinus(int index)
     {
         while (true)
         {
-         yield return new WaitForSeconds(delyaMinusTime);
-         minDelay -= delayMinMinus;
-         maxDelay -= delayMaxMinus;
+            yield return new WaitForSeconds(minusDelay);
+            delays[index] = delays[index] - delays[index] * minusPercents[index];
         }
     }
 }

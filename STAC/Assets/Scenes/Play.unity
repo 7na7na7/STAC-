@@ -2747,73 +2747,8 @@ MonoBehaviour:
   radMaxX: 1.5
   radMinY: 1.5
   radMaxY: 2.25
-  minDelay: 0.2
-  maxDelay: 0.5
-  delayMinMinus: 0.02
-  delayMaxMinus: 0.02
-  delyaMinusTime: 10
-  minimumDealy: 0
-  levels:
-  - delay: 0.1
-    percents:
-    - 25
-    - 50
-    - 15
-    - 30
-    - 10
-    - 20
-    - 0
-    - 0
-    - 0
-    - 0
-  - delay: 10
-    percents:
-    - 25
-    - 50
-    - 15
-    - 30
-    - 15
-    - 30
-    - 0
-    - 0
-    - 0
-    - 0
-  - delay: 10
-    percents:
-    - 25
-    - 50
-    - 15
-    - 30
-    - 15
-    - 30
-    - 5
-    - 10
-    - 0
-    - 0
-  - delay: 10
-    percents:
-    - 25
-    - 50
-    - 15
-    - 30
-    - 15
-    - 30
-    - 10
-    - 20
-    - 5
-    - 10
-  - delay: 10
-    percents:
-    - 25
-    - 50
-    - 15
-    - 30
-    - 15
-    - 30
-    - 10
-    - 20
-    - 10
-    - 20
+  delays:
+  - 0.5
 --- !u!4 &938783477
 Transform:
   m_ObjectHideFlags: 0

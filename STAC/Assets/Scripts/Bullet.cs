@@ -58,26 +58,30 @@ public class Bullet : MonoBehaviour
                 Set();  
             }
 
-            switch (BulletIndex)
-            {
-                case 0:
-                    straight();
-                    break;
-                case 1:
-                    guide();
-                    break;
-                case 2:
-                    straight();
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    randomStraight();
-                    break;
-            }   
+            StartCoroutine(switchCor());
         }
     }
-
+IEnumerator switchCor()
+{
+    yield return new WaitForSeconds(0.05f);
+    switch (BulletIndex)
+    {
+        case 0:
+            straight();
+            break;
+        case 1:
+            guide();
+            break;
+        case 2:
+            straight();
+            break;
+        case 3:
+            break;
+        case 4:
+            randomStraight();
+            break;
+    }   
+}
     public void Star()
     {
         transform.parent = null;
@@ -140,7 +144,6 @@ public class Bullet : MonoBehaviour
     public void straight()
     {
         dir = Player.instance.transform.position - transform.position;
-        //+new Vector3(Random.Range(BulletData.instance.playerAroundValue*-1,BulletData.instance.playerAroundValue),Random.Range(BulletData.instance.playerAroundValue*-1,BulletData.instance.playerAroundValue),0);
         dir.Normalize();
     }
 
