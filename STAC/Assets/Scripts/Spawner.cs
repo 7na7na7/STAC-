@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,16 +10,9 @@ public class Spawner : MonoBehaviour
     public float[] delays;
     public float[] minusPercents;
     public float minusDelay;
-    public float[] bulletAppearTimings;
-    public float time = 0;
     private void Awake()
     {
         instance = this;
-    }
-
-    private void Update()
-    {
-        time += Time.deltaTime;
     }
 
     void Start()
@@ -67,15 +59,13 @@ public class Spawner : MonoBehaviour
     IEnumerator spawn(int index)
     {
         while (true)
-        {
-            if (bulletAppearTimings[index] < time)
-            {
-                int random = Random.Range(0, 3);
-                if(random==0) 
-                    set(index*2);
-                else
-                    set(index*2+1);   
-            }
+        { 
+            yield return new WaitForSeconds(delays[index]);
+            int random = Random.Range(0, 3);
+            if(random==0) 
+                set(index*2);
+            else
+                set(index*2+1);
         }
     }
 
@@ -84,8 +74,7 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(minusDelay);
-            if(bulletAppearTimings[index]<time) 
-                delays[index] = delays[index] - delays[index] * minusPercents[index];
+            delays[index] = delays[index] - delays[index] * minusPercents[index];
         }
     }
 }
