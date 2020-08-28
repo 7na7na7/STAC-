@@ -16,6 +16,8 @@ public class BulletData : MonoBehaviour
     public Material[] Themes;
     public GameObject[] Colors;
     public Sprite[] tileThemes;
+    public AudioClip[] Clips;
+    public int[] BPMs;
     public int currentColorIndex;
     public color[] colors;
     public static BulletData instance;

@@ -12,7 +12,7 @@ public class Rotate : MonoBehaviour
     public bool isRight = true;
     public bool isTriangle = true;
     public float delay;
-    public int bpm;
+    private int bpm;
     private double currentTime = 0d;
     public int value;
     public ParticleSystem[] rotateParticles;
@@ -20,6 +20,7 @@ public class Rotate : MonoBehaviour
     {
         isRight = BulletData.instance.isRight == 1 ? true : false;
         transform.eulerAngles=new Vector3(0,0,StartRot);
+       bpm = BulletData.instance.BPMs[BulletData.instance.currentColorIndex];
     }
 
     private void Update()

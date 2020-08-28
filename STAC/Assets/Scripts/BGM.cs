@@ -14,6 +14,7 @@ public class BGM : MonoBehaviour
     private void Start()
     {
         source = GetComponent<AudioSource>();
+        source.clip = BulletData.instance.Clips[BulletData.instance.currentColorIndex];
         instance = this;
         source.volume = SoundMgr.instance.savedBgm;
     }
