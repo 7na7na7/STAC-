@@ -12,285 +12,10 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="2DShaderCollection" t="Include">
-          <e p="Demo" t="Include">
-            <e p="_2DC_ArrowSelection.cs" t="Include" />
-            <e p="_2DC_ShaderLerpDemo.cs" t="Include" />
-          </e>
-          <e p="license.txt.txt" t="Include" />
-          <e p="Material" t="Include">
-            <e p="txt.txt" t="Include" />
-          </e>
-          <e p="Shader" t="Include">
-            <e p="Additive.shader" t="Include" />
-            <e p="AlphaIntensity.shader" t="Include" />
-            <e p="Animated_Movement.shader" t="Include" />
-            <e p="Animated_Offset.shader" t="Include" />
-            <e p="Animated_PingPong.shader" t="Include" />
-            <e p="Animated_PingPong_Rotation.shader" t="Include" />
-            <e p="Animated_Twist.shader" t="Include" />
-            <e p="Animated_Zoom.shader" t="Include" />
-            <e p="AnimatedBurn.shader" t="Include" />
-            <e p="Automatic2spritesLerp.shader" t="Include" />
-            <e p="Blur.shader" t="Include" />
-            <e p="BlurHQ.shader" t="Include" />
-            <e p="BlurHQPlus.shader" t="Include" />
-            <e p="BreakingGlass.shader" t="Include" />
-            <e p="BreakingGlassFull.shader" t="Include" />
-            <e p="BreakingMirror.shader" t="Include" />
-            <e p="Burn.shader" t="Include" />
-            <e p="BurnPixel.shader" t="Include" />
-            <e p="CircleFade.shader" t="Include" />
-            <e p="CircleHole.shader" t="Include" />
-            <e p="ColorBrightness.shader" t="Include" />
-            <e p="ColorDarkness.shader" t="Include" />
-            <e p="ColorGrayScale.shader" t="Include" />
-            <e p="ColorHDR_Creation.shader" t="Include" />
-            <e p="ColorHSV.shader" t="Include" />
-            <e p="ColorNegative.shader" t="Include" />
-            <e p="ColorOnly.shader" t="Include" />
-            <e p="ColorRGB.shader" t="Include" />
-            <e p="ColorTint.shader" t="Include" />
-            <e p="CompressionTintAdditive.shader" t="Include" />
-            <e p="DesintegrationPixel.shader" t="Include" />
-            <e p="DisolveHDR.shader" t="Include" />
-            <e p="DisolvePixel.shader" t="Include" />
-            <e p="Distortion.shader" t="Include" />
-            <e p="DoodleDraw.shader" t="Include" />
-            <e p="Emboss.shader" t="Include" />
-            <e p="EmbossFull.shader" t="Include" />
-            <e p="Explode.shader" t="Include" />
-            <e p="FishEye.shader" t="Include" />
-            <e p="Fluo.shader" t="Include" />
-            <e p="Fusion2Sprites.shader" t="Include" />
-            <e p="Fusion2SpritesAdditive.shader" t="Include" />
-            <e p="Fusion3Sprites.shader" t="Include" />
-            <e p="GhostClipping.shader" t="Include" />
-            <e p="Glitch.shader" t="Include" />
-            <e p="HologramParasite.shader" t="Include" />
-            <e p="HologramParasiteAdditive.shader" t="Include" />
-            <e p="HologramParasiteTint.shader" t="Include" />
-            <e p="HologramParasiteTintAdditive.shader" t="Include" />
-            <e p="HologramScanLine.shader" t="Include" />
-            <e p="HologramScanLineAdditive.shader" t="Include" />
-            <e p="Holographic.shader" t="Include" />
-            <e p="HolographicTint.shader" t="Include" />
-            <e p="HolographicTintAdditive.shader" t="Include" />
-            <e p="InfiniteZoom.shader" t="Include" />
-            <e p="InnerGlow.shader" t="Include" />
-            <e p="InsideDistortion.shader" t="Include" />
-            <e p="JpegCompressionStyle.shader" t="Include" />
-            <e p="Kaleidoscope.shader" t="Include" />
-            <e p="Lerp2sprites.shader" t="Include" />
-            <e p="LightGlow.shader" t="Include" />
-            <e p="LiquidWave.shader" t="Include" />
-            <e p="MotionBlurFast.shader" t="Include" />
-            <e p="NightVision.shader" t="Include" />
-            <e p="NoiseBlur_Horizontal.shader" t="Include" />
-            <e p="NoiseBlur_Vertical.shader" t="Include" />
-            <e p="Offset.shader" t="Include" />
-            <e p="Outline.shader" t="Include" />
-            <e p="OutlineEmpty.shader" t="Include" />
-            <e p="Perspective3D.shader" t="Include" />
-            <e p="Pinch.shader" t="Include" />
-            <e p="PixelExplosion.shader" t="Include" />
-            <e p="PixelGravityDie.shader" t="Include" />
-            <e p="Pixelisation.shader" t="Include" />
-            <e p="PixelisationXY.shader" t="Include" />
-            <e p="Plasma.shader" t="Include" />
-            <e p="Repeat.shader" t="Include" />
-            <e p="RetroC64.shader" t="Include" />
-            <e p="RetroCGA.shader" t="Include" />
-            <e p="RetroCGA2.shader" t="Include" />
-            <e p="RetroEGA.shader" t="Include" />
-            <e p="RetroGB.shader" t="Include" />
-            <e p="RoarDistortion.shader" t="Include" />
-            <e p="Shake.shader" t="Include" />
-            <e p="Sharpness.shader" t="Include" />
-            <e p="ShinyFX.shader" t="Include" />
-            <e p="ShinyPixel.shader" t="Include" />
-            <e p="SymbioseDistortion.shader" t="Include" />
-            <e p="SymbioseDistortionFix.shader" t="Include" />
-            <e p="Threshold.shader" t="Include" />
-            <e p="ThresholdSmooth.shader" t="Include" />
-            <e p="Tilt_Down.shader" t="Include" />
-            <e p="Tilt_Left.shader" t="Include" />
-            <e p="Tilt_Right.shader" t="Include" />
-            <e p="TurnFire.shader" t="Include" />
-            <e p="TurnFirePixel.shader" t="Include" />
-            <e p="TurnGold.shader" t="Include" />
-            <e p="TurnLiquid.shader" t="Include" />
-            <e p="TurnMetal.shader" t="Include" />
-            <e p="TurnToInfinite.shader" t="Include" />
-            <e p="TurnTransparent.shader" t="Include" />
-            <e p="Twist.shader" t="Include" />
-            <e p="Vintage.shader" t="Include" />
-            <e p="Zoom.shader" t="Include" />
-          </e>
-        </e>
-        <e p="ConsolePro" t="Include">
-          <e p="ConsoleProDebug.cs" t="Include" />
-        </e>
-        <e p="DoTween" t="Include">
-          <e p="Demigiant" t="Include">
-            <e p="DoTween" t="Include">
-              <e p="Modules" t="Include">
-                <e p="DOTweenModuleAudio.cs" t="Include" />
-                <e p="DOTweenModulePhysics.cs" t="Include" />
-                <e p="DOTweenModulePhysics2D.cs" t="Include" />
-                <e p="DOTweenModuleSprite.cs" t="Include" />
-                <e p="DOTweenModuleUI.cs" t="Include" />
-                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
-                <e p="DOTweenModuleUtils.cs" t="Include" />
-              </e>
-              <e p="readme.txt" t="Include" />
-            </e>
-          </e>
-          <e p="Scenes" t="Include">
-            <e p="ObjTween.cs" t="Include" />
-            <e p="UITween.cs" t="Include" />
-          </e>
-        </e>
-        <e p="Epic Toon FX" t="Include">
-          <e p="Demo" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="ETFXButtonScript.cs" t="Include" />
-              <e p="ETFXFireProjectile.cs" t="Include" />
-              <e p="ETFXLoopScript.cs" t="Include" />
-              <e p="ETFXMouseOrbit.cs" t="Include" />
-              <e p="ETFXProjectileScript.cs" t="Include" />
-              <e p="ETFXSceneManager.cs" t="Include" />
-              <e p="ETFXTarget.cs" t="Include" />
-              <e p="VFX Library" t="Include">
-                <e p="ParticleEffectsLibrary.cs" t="Include" />
-                <e p="PEButtonScript.cs" t="Include" />
-                <e p="UICanvasManager.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="Prefabs" t="Include">
-            <e p="Combat" t="Include">
-              <e p="Combat FX.txt" t="Include" />
-            </e>
-            <e p="Environment" t="Include">
-              <e p="Environment FX.txt" t="Include" />
-            </e>
-            <e p="Interactive" t="Include">
-              <e p="Interactive FX.txt" t="Include" />
-            </e>
-          </e>
-          <e p="Scripts" t="Include">
-            <e p="ETFXLightFade.cs" t="Include" />
-            <e p="ETFXPitchRandomizer.cs" t="Include" />
-            <e p="ETFXRotation.cs" t="Include" />
-          </e>
-        </e>
         <e p="ExternalDependencyManager" t="Include">
           <e p="Editor" t="Include">
             <e p="external-dependency-manager_version-1.2.156_manifest.txt" t="Include" />
             <e p="GoogleRegistries.xml" t="Include" />
-          </e>
-        </e>
-        <e p="GoogleMobileAds" t="Include">
-          <e p="Api" t="Include">
-            <e p="AdLoader.cs" t="Include" />
-            <e p="BannerView.cs" t="Include" />
-            <e p="Core" t="Include">
-              <e p="AdapterStatus.cs" t="Include" />
-              <e p="AdErrorEventArgs.cs" t="Include" />
-              <e p="AdFailedToLoadEventArgs.cs" t="Include" />
-              <e p="AdPosition.cs" t="Include" />
-              <e p="AdRequest.cs" t="Include" />
-              <e p="AdSize.cs" t="Include" />
-              <e p="AdValue.cs" t="Include" />
-              <e p="AdValueEventArgs.cs" t="Include" />
-              <e p="Gender.cs" t="Include" />
-              <e p="MaxAdContentRating.cs" t="Include" />
-              <e p="NativeAdType.cs" t="Include" />
-              <e p="RequestConfiguration.cs" t="Include" />
-              <e p="Reward.cs" t="Include" />
-              <e p="ServerSideVerificationOptions.cs" t="Include" />
-              <e p="TagForChildDirectedTreatment.cs" t="Include" />
-              <e p="TagForUnderAgeOfConsent.cs" t="Include" />
-            </e>
-            <e p="CustomNativeEventArgs.cs" t="Include" />
-            <e p="CustomNativeTemplateAd.cs" t="Include" />
-            <e p="InitializationStatus.cs" t="Include" />
-            <e p="InterstitialAd.cs" t="Include" />
-            <e p="Mediation" t="Include">
-              <e p="MediationExtras.cs" t="Include" />
-            </e>
-            <e p="MobileAds.cs" t="Include" />
-            <e p="ResponseInfo.cs" t="Include" />
-            <e p="RewardBasedVideoAd.cs" t="Include" />
-            <e p="RewardedAd.cs" t="Include" />
-            <e p="RewardedInterstitialAd.cs" t="Include" />
-          </e>
-          <e p="Common" t="Include">
-            <e p="AdLoaderClientArgs.cs" t="Include" />
-            <e p="CustomNativeClientEventArgs.cs" t="Include" />
-            <e p="DummyClient.cs" t="Include" />
-            <e p="IAdLoaderClient.cs" t="Include" />
-            <e p="IBannerClient.cs" t="Include" />
-            <e p="IClientFactory.cs" t="Include" />
-            <e p="ICustomNativeTemplateClient.cs" t="Include" />
-            <e p="IInitializationStatusClient.cs" t="Include" />
-            <e p="IInterstitialClient.cs" t="Include" />
-            <e p="IMobileAdsClient.cs" t="Include" />
-            <e p="IResponseInfoClient.cs" t="Include" />
-            <e p="IRewardBasedVideoAdClient.cs" t="Include" />
-            <e p="IRewardedAdClient.cs" t="Include" />
-            <e p="IRewardedInterstitialAdClient.cs" t="Include" />
-            <e p="MobileAdsEventExecutor.cs" t="Include" />
-            <e p="RewardedAdDummyClient.cs" t="Include" />
-            <e p="RewardedInterstitialAdDummyClient.cs" t="Include" />
-            <e p="Utils.cs" t="Include" />
-          </e>
-          <e p="Editor" t="Include">
-            <e p="AndroidBuildPostProcessor.cs" t="Include" />
-            <e p="GoogleMobileAds.Editor.asmdef" t="Include" />
-            <e p="GoogleMobileAdsDependencies.xml" t="Include" />
-            <e p="GoogleMobileAdsSettings.cs" t="Include" />
-            <e p="GoogleMobileAdsSettingsEditor.cs" t="Include" />
-            <e p="ManifestProcessor.cs" t="Include" />
-            <e p="PListProcessor.cs" t="Include" />
-          </e>
-          <e p="GoogleMobileAds.asmdef" t="Include" />
-          <e p="Platforms" t="Include">
-            <e p="Android" t="Include">
-              <e p="AdLoaderClient.cs" t="Include" />
-              <e p="BannerClient.cs" t="Include" />
-              <e p="CustomNativeTemplateClient.cs" t="Include" />
-              <e p="DisplayMetrics.cs" t="Include" />
-              <e p="InitializationStatusClient.cs" t="Include" />
-              <e p="InterstitialClient.cs" t="Include" />
-              <e p="MobileAdsClient.cs" t="Include" />
-              <e p="RequestConfigurationClient.cs" t="Include" />
-              <e p="ResponseInfoClient.cs" t="Include" />
-              <e p="RewardBasedVideoAdClient.cs" t="Include" />
-              <e p="RewardedAdClient.cs" t="Include" />
-              <e p="Utils.cs" t="Include" />
-            </e>
-            <e p="GoogleMobileAdsClientFactory.cs" t="Include" />
-            <e p="iOS" t="Include">
-              <e p="AdLoaderClient.cs" t="Include" />
-              <e p="BannerClient.cs" t="Include" />
-              <e p="CustomNativeTemplateClient.cs" t="Include" />
-              <e p="Externs.cs" t="Include" />
-              <e p="GoogleMobileAdsClientFactory.cs" t="Include" />
-              <e p="InitializationStatusClient.cs" t="Include" />
-              <e p="InterstitialClient.cs" t="Include" />
-              <e p="MobileAdsClient.cs" t="Include" />
-              <e p="MonoPInvokeCallbackAttribute.cs" t="Include" />
-              <e p="RequestConfigurationClient.cs" t="Include" />
-              <e p="ResponseInfoClient.cs" t="Include" />
-              <e p="RewardBasedVideoAdClient.cs" t="Include" />
-              <e p="RewardedAdClient.cs" t="Include" />
-              <e p="Utils.cs" t="Include" />
-            </e>
-            <e p="Unity" t="Include">
-              <e p="InitializationStatusDummyClient.cs" t="Include" />
-            </e>
           </e>
         </e>
         <e p="GooglePlayGames" t="Include">
@@ -414,37 +139,6 @@
           <e p="PluginVersion.cs" t="Include" />
         </e>
         <e p="GPGSIds.cs" t="Include" />
-        <e p="InfinityBack" t="Include">
-          <e p="bgreturn2.cs" t="Include" />
-        </e>
-        <e p="Joystick Pack" t="Include">
-          <e p="Examples" t="Include">
-            <e p="JoystickPlayerExample.cs" t="Include" />
-            <e p="JoystickSetterExample.cs" t="Include" />
-          </e>
-          <e p="Scripts" t="Include">
-            <e p="Base" t="Include">
-              <e p="Joystick.cs" t="Include" />
-            </e>
-            <e p="Editor" t="Include">
-              <e p="DynamicJoystickEditor.cs" t="Include" />
-              <e p="FloatingJoystickEditor.cs" t="Include" />
-              <e p="JoystickEditor.cs" t="Include" />
-              <e p="VariableJoystickEditor.cs" t="Include" />
-            </e>
-            <e p="Joysticks" t="Include">
-              <e p="DynamicJoystick.cs" t="Include" />
-              <e p="FixedJoystick.cs" t="Include" />
-              <e p="FloatingJoystick.cs" t="Include" />
-              <e p="VariableJoystick.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Kenney" t="Include">
-          <e p="Particle samples" t="Include">
-            <e p="License.txt" t="Include" />
-          </e>
-        </e>
         <e p="Packages" t="Include">
           <e p="ConsolePro" t="Include">
             <e p="Remote" t="Include">
@@ -709,12 +403,215 @@
           </e>
         </e>
         <e p="Resources" t="Include">
+          <e p="2DShaderCollection" t="Include">
+            <e p="Demo" t="Include">
+              <e p="_2DC_ArrowSelection.cs" t="Include" />
+              <e p="_2DC_ShaderLerpDemo.cs" t="Include" />
+            </e>
+            <e p="license.txt.txt" t="Include" />
+            <e p="Material" t="Include">
+              <e p="txt.txt" t="Include" />
+            </e>
+            <e p="Shader" t="Include">
+              <e p="Additive.shader" t="Include" />
+              <e p="AlphaIntensity.shader" t="Include" />
+              <e p="Animated_Movement.shader" t="Include" />
+              <e p="Animated_Offset.shader" t="Include" />
+              <e p="Animated_PingPong.shader" t="Include" />
+              <e p="Animated_PingPong_Rotation.shader" t="Include" />
+              <e p="Animated_Twist.shader" t="Include" />
+              <e p="Animated_Zoom.shader" t="Include" />
+              <e p="AnimatedBurn.shader" t="Include" />
+              <e p="Automatic2spritesLerp.shader" t="Include" />
+              <e p="Blur.shader" t="Include" />
+              <e p="BlurHQ.shader" t="Include" />
+              <e p="BlurHQPlus.shader" t="Include" />
+              <e p="BreakingGlass.shader" t="Include" />
+              <e p="BreakingGlassFull.shader" t="Include" />
+              <e p="BreakingMirror.shader" t="Include" />
+              <e p="Burn.shader" t="Include" />
+              <e p="BurnPixel.shader" t="Include" />
+              <e p="CircleFade.shader" t="Include" />
+              <e p="CircleHole.shader" t="Include" />
+              <e p="ColorBrightness.shader" t="Include" />
+              <e p="ColorDarkness.shader" t="Include" />
+              <e p="ColorGrayScale.shader" t="Include" />
+              <e p="ColorHDR_Creation.shader" t="Include" />
+              <e p="ColorHSV.shader" t="Include" />
+              <e p="ColorNegative.shader" t="Include" />
+              <e p="ColorOnly.shader" t="Include" />
+              <e p="ColorRGB.shader" t="Include" />
+              <e p="ColorTint.shader" t="Include" />
+              <e p="CompressionTintAdditive.shader" t="Include" />
+              <e p="DesintegrationPixel.shader" t="Include" />
+              <e p="DisolveHDR.shader" t="Include" />
+              <e p="DisolvePixel.shader" t="Include" />
+              <e p="Distortion.shader" t="Include" />
+              <e p="DoodleDraw.shader" t="Include" />
+              <e p="Emboss.shader" t="Include" />
+              <e p="EmbossFull.shader" t="Include" />
+              <e p="Explode.shader" t="Include" />
+              <e p="FishEye.shader" t="Include" />
+              <e p="Fluo.shader" t="Include" />
+              <e p="Fusion2Sprites.shader" t="Include" />
+              <e p="Fusion2SpritesAdditive.shader" t="Include" />
+              <e p="Fusion3Sprites.shader" t="Include" />
+              <e p="GhostClipping.shader" t="Include" />
+              <e p="Glitch.shader" t="Include" />
+              <e p="HologramParasite.shader" t="Include" />
+              <e p="HologramParasiteAdditive.shader" t="Include" />
+              <e p="HologramParasiteTint.shader" t="Include" />
+              <e p="HologramParasiteTintAdditive.shader" t="Include" />
+              <e p="HologramScanLine.shader" t="Include" />
+              <e p="HologramScanLineAdditive.shader" t="Include" />
+              <e p="Holographic.shader" t="Include" />
+              <e p="HolographicTint.shader" t="Include" />
+              <e p="HolographicTintAdditive.shader" t="Include" />
+              <e p="InfiniteZoom.shader" t="Include" />
+              <e p="InnerGlow.shader" t="Include" />
+              <e p="InsideDistortion.shader" t="Include" />
+              <e p="JpegCompressionStyle.shader" t="Include" />
+              <e p="Kaleidoscope.shader" t="Include" />
+              <e p="Lerp2sprites.shader" t="Include" />
+              <e p="LightGlow.shader" t="Include" />
+              <e p="LiquidWave.shader" t="Include" />
+              <e p="MotionBlurFast.shader" t="Include" />
+              <e p="NightVision.shader" t="Include" />
+              <e p="NoiseBlur_Horizontal.shader" t="Include" />
+              <e p="NoiseBlur_Vertical.shader" t="Include" />
+              <e p="Offset.shader" t="Include" />
+              <e p="Outline.shader" t="Include" />
+              <e p="OutlineEmpty.shader" t="Include" />
+              <e p="Perspective3D.shader" t="Include" />
+              <e p="Pinch.shader" t="Include" />
+              <e p="PixelExplosion.shader" t="Include" />
+              <e p="PixelGravityDie.shader" t="Include" />
+              <e p="Pixelisation.shader" t="Include" />
+              <e p="PixelisationXY.shader" t="Include" />
+              <e p="Plasma.shader" t="Include" />
+              <e p="Repeat.shader" t="Include" />
+              <e p="RetroC64.shader" t="Include" />
+              <e p="RetroCGA.shader" t="Include" />
+              <e p="RetroCGA2.shader" t="Include" />
+              <e p="RetroEGA.shader" t="Include" />
+              <e p="RetroGB.shader" t="Include" />
+              <e p="RoarDistortion.shader" t="Include" />
+              <e p="Shake.shader" t="Include" />
+              <e p="Sharpness.shader" t="Include" />
+              <e p="ShinyFX.shader" t="Include" />
+              <e p="ShinyPixel.shader" t="Include" />
+              <e p="SymbioseDistortion.shader" t="Include" />
+              <e p="SymbioseDistortionFix.shader" t="Include" />
+              <e p="Threshold.shader" t="Include" />
+              <e p="ThresholdSmooth.shader" t="Include" />
+              <e p="Tilt_Down.shader" t="Include" />
+              <e p="Tilt_Left.shader" t="Include" />
+              <e p="Tilt_Right.shader" t="Include" />
+              <e p="TurnFire.shader" t="Include" />
+              <e p="TurnFirePixel.shader" t="Include" />
+              <e p="TurnGold.shader" t="Include" />
+              <e p="TurnLiquid.shader" t="Include" />
+              <e p="TurnMetal.shader" t="Include" />
+              <e p="TurnToInfinite.shader" t="Include" />
+              <e p="TurnTransparent.shader" t="Include" />
+              <e p="Twist.shader" t="Include" />
+              <e p="Vintage.shader" t="Include" />
+              <e p="Zoom.shader" t="Include" />
+            </e>
+          </e>
+          <e p="ConsolePro" t="Include">
+            <e p="ConsoleProDebug.cs" t="Include" />
+          </e>
+          <e p="DoTween" t="Include">
+            <e p="Demigiant" t="Include">
+              <e p="DoTween" t="Include">
+                <e p="Modules" t="Include">
+                  <e p="DOTweenModuleAudio.cs" t="Include" />
+                  <e p="DOTweenModulePhysics.cs" t="Include" />
+                  <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                  <e p="DOTweenModuleSprite.cs" t="Include" />
+                  <e p="DOTweenModuleUI.cs" t="Include" />
+                  <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                  <e p="DOTweenModuleUtils.cs" t="Include" />
+                </e>
+                <e p="readme.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Scenes" t="Include">
+              <e p="ObjTween.cs" t="Include" />
+              <e p="UITween.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Epic Toon FX" t="Include">
+            <e p="Demo" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="ETFXButtonScript.cs" t="Include" />
+                <e p="ETFXFireProjectile.cs" t="Include" />
+                <e p="ETFXLoopScript.cs" t="Include" />
+                <e p="ETFXMouseOrbit.cs" t="Include" />
+                <e p="ETFXProjectileScript.cs" t="Include" />
+                <e p="ETFXSceneManager.cs" t="Include" />
+                <e p="ETFXTarget.cs" t="Include" />
+                <e p="VFX Library" t="Include">
+                  <e p="ParticleEffectsLibrary.cs" t="Include" />
+                  <e p="PEButtonScript.cs" t="Include" />
+                  <e p="UICanvasManager.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Prefabs" t="Include">
+              <e p="Combat" t="Include">
+                <e p="Combat FX.txt" t="Include" />
+              </e>
+              <e p="Environment" t="Include">
+                <e p="Environment FX.txt" t="Include" />
+              </e>
+              <e p="Interactive" t="Include">
+                <e p="Interactive FX.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="ETFXLightFade.cs" t="Include" />
+              <e p="ETFXPitchRandomizer.cs" t="Include" />
+              <e p="ETFXRotation.cs" t="Include" />
+            </e>
+          </e>
+          <e p="InfinityBack" t="Include">
+            <e p="bgreturn2.cs" t="Include" />
+          </e>
+          <e p="Joystick Pack" t="Include">
+            <e p="Examples" t="Include">
+              <e p="JoystickPlayerExample.cs" t="Include" />
+              <e p="JoystickSetterExample.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Base" t="Include">
+                <e p="Joystick.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="DynamicJoystickEditor.cs" t="Include" />
+                <e p="FloatingJoystickEditor.cs" t="Include" />
+                <e p="JoystickEditor.cs" t="Include" />
+                <e p="VariableJoystickEditor.cs" t="Include" />
+              </e>
+              <e p="Joysticks" t="Include">
+                <e p="DynamicJoystick.cs" t="Include" />
+                <e p="FixedJoystick.cs" t="Include" />
+                <e p="FloatingJoystick.cs" t="Include" />
+                <e p="VariableJoystick.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Kenney" t="Include">
+            <e p="Particle samples" t="Include">
+              <e p="License.txt" t="Include" />
+            </e>
+          </e>
           <e p="Mat_Shad" t="Include">
             <e p="Dissolve.cs" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Admob.cs" t="Include" />
           <e p="BGM.cs" t="Include" />
           <e p="Bgm_BgsManager.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
@@ -766,8 +663,6 @@
           <e p="Vibrate.cs" t="Include" />
         </e>
       </e>
-      <e p="GoogleMobileAds.csproj" t="IncludeRecursive" />
-      <e p="GoogleMobileAds.Editor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="STAC.sln" t="IncludeFlat" />
