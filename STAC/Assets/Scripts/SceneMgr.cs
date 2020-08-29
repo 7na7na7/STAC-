@@ -17,7 +17,12 @@ public class SceneMgr : MonoBehaviour
         if (SceneName == "this")
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         else
-            SceneManager.LoadScene(SceneName);
+        {
+            if(SceneName=="Play")
+                FindObjectOfType<Fade>().fade();
+            else
+                SceneManager.LoadScene(SceneName);   
+        }
     }
 
     private void Update()
