@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GooglePlayManager : MonoBehaviour
 {
-   
+   /*
    public static GooglePlayManager instance;
 
    private void Start()
@@ -29,8 +29,8 @@ public class GooglePlayManager : MonoBehaviour
    {
       Social.localUser.Authenticate((bool success) =>
       {
-         //if(success) 
-            //GameObject.Find("a").GetComponent<Text>().text = Social.localUser.userName; 
+         if (success)
+         { }
       });
    }
 
@@ -42,9 +42,10 @@ public class GooglePlayManager : MonoBehaviour
       }
       else // GPGS 로그인이 되어 있지 않은 경우
       {
-         Social.localUser.Authenticate((bool Success) =>
+         Social.localUser.Authenticate((bool success) =>
          {
-            //로그인
+            if (success)
+            { }
          });
       }
    }
@@ -65,5 +66,5 @@ public class GooglePlayManager : MonoBehaviour
    {
       Social.ShowAchievementsUI();
    }
-
+*/
 }

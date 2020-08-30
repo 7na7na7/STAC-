@@ -12,7 +12,7 @@ public class Rotate : MonoBehaviour
     public bool isRight = true;
     public bool isTriangle = true;
     public float delay;
-    private int bpm;
+    private float bpm;
     private double currentTime = 0d;
     public int value;
     public ParticleSystem[] rotateParticles;

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 public class BGM : MonoBehaviour
@@ -14,9 +15,14 @@ public class BGM : MonoBehaviour
     private void Start()
     {
         source = GetComponent<AudioSource>();
-        source.clip = BulletData.instance.Clips[BulletData.instance.currentColorIndex];
+        if (SceneManager.GetActiveScene().name != "Title")
+        {
+            source.clip = BulletData.instance.Clips[BulletData.instance.currentColorIndex];
+            source.pitch = BulletData.instance.pitches[BulletData.instance.currentColorIndex];   
+        }
         instance = this;
         source.volume = SoundMgr.instance.savedBgm;
+        source.Play();
     }
 
     public void fadeOut()
@@ -33,7 +39,7 @@ public class BGM : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
         }
     }
-    
+
     public void fadeIn()
     {
         StopAllCoroutines();

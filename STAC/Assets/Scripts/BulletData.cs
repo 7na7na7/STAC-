@@ -17,17 +17,17 @@ public class BulletData : MonoBehaviour
     public GameObject[] Colors;
     public Sprite[] tileThemes;
     public AudioClip[] Clips;
-    public int[] BPMs;
+    public float[] BPMs;
     public int currentColorIndex;
     public color[] colors;
     public static BulletData instance;
     public float playerAroundValue; //플레이어 방향으로 직선 이동하는 동그라미가 인식하는 부분
     public string currentColorKey = "currentColor";
-    
+    public float[] pitches;
     public int[] isLockArray;
 
     public string[] keys;
-
+    
     public void right()
     {
         isRight = 1;
@@ -96,6 +96,16 @@ public class BulletData : MonoBehaviour
         for (int i = 0; i < isLockArray.Length; i++)
         {
             isLockArray[i] = 0;
+            if(i==0)
+                isLockArray[i] = 1;
+            PlayerPrefs.SetInt(keys[i],isLockArray[i]);
+        }
+    }
+    public void UnlockAll()
+    {
+        for (int i = 0; i < isLockArray.Length; i++)
+        {
+            isLockArray[i] = 1;
             if(i==0)
                 isLockArray[i] = 1;
             PlayerPrefs.SetInt(keys[i],isLockArray[i]);
