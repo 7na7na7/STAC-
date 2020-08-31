@@ -13,6 +13,8 @@ public class Spawner : MonoBehaviour
     public float minusDelay;
     public float[] bulletAppearTimings;
     public float time = 0;
+    public float bulletSpeedPercent = 0f;
+    public float bulletSpeedUpValue;
     private void Awake()
     {
         instance = this;
@@ -81,6 +83,14 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    IEnumerator bulletSpeedUP()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            bulletSpeedPercent += bulletSpeedUpValue;
+        }
+    }
     IEnumerator delayMinus(int index)
     {
         while (true)

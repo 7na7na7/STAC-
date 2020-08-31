@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GooglePlayManager : MonoBehaviour
 {
-   /*
    public static GooglePlayManager instance;
 
    private void Start()
@@ -66,5 +65,4 @@ public class GooglePlayManager : MonoBehaviour
    {
       Social.ShowAchievementsUI();
    }
-*/
 }

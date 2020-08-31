@@ -54,6 +54,7 @@ public class Bullet : MonoBehaviour
                 if (BulletIndex != 5)
                 {
                     speed = Random.Range(minSpeed,maxSpeed);
+                    speed += speed * Spawner.instance.bulletSpeedPercent;
                 }
                 Set();  
             }
