@@ -14,7 +14,7 @@
       <e p="Assets" t="Include">
         <e p="ExternalDependencyManager" t="Include">
           <e p="Editor" t="Include">
-            <e p="external-dependency-manager_version-1.2.156_manifest.txt" t="Include" />
+            <e p="external-dependency-manager_version-1.2.157_manifest.txt" t="Include" />
             <e p="GoogleRegistries.xml" t="Include" />
           </e>
         </e>
@@ -31,16 +31,6 @@
             </e>
             <e p="IPlayGamesClient.cs" t="Include" />
             <e p="LeaderboardScoreData.cs" t="Include" />
-            <e p="Multiplayer" t="Include">
-              <e p="Invitation.cs" t="Include" />
-              <e p="IRealTimeMultiplayerClient.cs" t="Include" />
-              <e p="ITurnBasedMultiplayerClient.cs" t="Include" />
-              <e p="MatchOutcome.cs" t="Include" />
-              <e p="Participant.cs" t="Include" />
-              <e p="Player.cs" t="Include" />
-              <e p="RealTimeMultiplayerListener.cs" t="Include" />
-              <e p="TurnBasedMatch.cs" t="Include" />
-            </e>
             <e p="Nearby" t="Include">
               <e p="AdvertisingResult.cs" t="Include" />
               <e p="ConnectionRequest.cs" t="Include" />
@@ -50,6 +40,8 @@
               <e p="INearbyConnectionClient.cs" t="Include" />
               <e p="NearbyConnectionConfiguration.cs" t="Include" />
             </e>
+            <e p="Player.cs" t="Include" />
+            <e p="PlayerProfile.cs" t="Include" />
             <e p="PlayerStats.cs" t="Include" />
             <e p="PlayGamesClientConfiguration.cs" t="Include" />
             <e p="SavedGame" t="Include">
@@ -69,7 +61,7 @@
             </e>
           </e>
           <e p="Editor" t="Include">
-            <e p="GooglePlayGamesPlugin_v0.10.09.txt" t="Include" />
+            <e p="GooglePlayGamesPlugin_v0.10.10.txt" t="Include" />
             <e p="GooglePlayGamesPluginDependencies.xml" t="Include" />
             <e p="GPGSAndroidSetupUI.cs" t="Include" />
             <e p="GPGSDocsUI.cs" t="Include" />
@@ -117,12 +109,10 @@
               <e p="AndroidHelperFragment.cs" t="Include" />
               <e p="AndroidJavaConverter.cs" t="Include" />
               <e p="AndroidNearbyConnectionClient.cs" t="Include" />
-              <e p="AndroidRealTimeMultiplayerClient.cs" t="Include" />
               <e p="AndroidSavedGameClient.cs" t="Include" />
               <e p="AndroidSnapshotMetadata.cs" t="Include" />
               <e p="AndroidTaskUtils.cs" t="Include" />
               <e p="AndroidTokenClient.cs" t="Include" />
-              <e p="AndroidTurnBasedMultiplayerClient.cs" t="Include" />
               <e p="AndroidVideoClient.cs" t="Include" />
             </e>
             <e p="NearbyConnectionClientFactory.cs" t="Include" />
@@ -638,6 +628,7 @@
           <e p="GooglePlayManager.cs" t="Include" />
           <e p="Joystick.cs" t="Include" />
           <e p="JoyStickScale.cs" t="Include" />
+          <e p="MusicSource.cs" t="Include" />
           <e p="ObjectManager.cs" t="Include" />
           <e p="Pause.cs" t="Include" />
           <e p="Player.cs" t="Include" />
@@ -653,6 +644,7 @@
           <e p="setJoystickBtn.cs" t="Include" />
           <e p="SetRotateDir.cs" t="Include" />
           <e p="Setting.cs" t="Include" />
+          <e p="SiteConnect.cs" t="Include" />
           <e p="SoundMgr.cs" t="Include" />
           <e p="Spawner.cs" t="Include" />
           <e p="Star.cs" t="Include" />

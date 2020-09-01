@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ResolutionSetting : MonoBehaviour
 {
-   public GameObject ScrollView, Tab,StartBtn;
+   public GameObject ScrollView, Tab,StartBtn,upUI;
    public bool isOn = true;
    private void Awake()
    { 
@@ -31,6 +31,9 @@ public class ResolutionSetting : MonoBehaviour
         StartBtn.GetComponent<RectTransform>().anchoredPosition = new Vector3(
            StartBtn.GetComponent<RectTransform>().anchoredPosition.x,
            StartBtn.GetComponent<RectTransform>().anchoredPosition.y + difference * -1800, 0);
+        upUI.GetComponent<RectTransform>().anchoredPosition = new Vector3(
+           upUI.GetComponent<RectTransform>().anchoredPosition.x,
+           upUI.GetComponent<RectTransform>().anchoredPosition.y + difference * 1800, 0);
          //print(difference * -1800);
       }
    }

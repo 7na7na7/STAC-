@@ -29,7 +29,8 @@ public class GooglePlayManager : MonoBehaviour
       Social.localUser.Authenticate((bool success) =>
       {
          if (success)
-         { }
+         {
+         }
       });
    }
 
