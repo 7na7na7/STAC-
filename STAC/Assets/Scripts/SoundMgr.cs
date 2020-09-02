@@ -40,6 +40,7 @@ public class SoundMgr : MonoBehaviour
     
     public void bgmValue(float v)
     {
+        FindObjectOfType<BGM>().GetComponent<AudioSource>().volume = v;
         savedBgm = v;
         PlayerPrefs.SetFloat(bgmKey,savedBgm);
     }

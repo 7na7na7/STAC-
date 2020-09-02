@@ -14970,7 +14970,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6885763691734771524}
   - component: {fileID: 6885763691734771527}
-  - component: {fileID: 6885763691734771525}
   - component: {fileID: 379198185}
   - component: {fileID: 379198188}
   m_Layer: 0
@@ -14989,7 +14988,7 @@ Transform:
   m_GameObject: {fileID: 6885763691734771526}
   m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 135303015}
   - {fileID: 5707508266899193445}
@@ -15052,27 +15051,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6885763691734771525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6885763691734771526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef0b8b1dfd352845acba930974a1c39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartRot: 30
-  isRight: 1
-  isTriangle: 1
-  delay: 0.001
-  value: 30
-  rotateParticles:
-  - {fileID: 1231422108}
-  - {fileID: 933276817}
-  - {fileID: 912489963}
 --- !u!50 &379198185
 Rigidbody2D:
   serializedVersion: 4
@@ -15106,6 +15084,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 870eb4d0682442a48b1358386f2b1629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles:
+  - {fileID: 1231422108}
+  - {fileID: 933276817}
+  - {fileID: 912489963}
   DieParticle: {fileID: 7885151814575444280, guid: 54270a9cb6ab64d45a199af6e62bb7d2,
     type: 3}
 --- !u!1 &7030556994850647116

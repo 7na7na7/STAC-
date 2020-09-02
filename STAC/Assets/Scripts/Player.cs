@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public ParticleSystem[] particles;
     public GameObject DieParticle;
     public static Player instance;
   
@@ -21,10 +22,14 @@ public class Player : MonoBehaviour
         if (GoldSpawner.instance.player == null)
             GoldSpawner.instance.player = this.transform;
         StartCoroutine(LiveScoreUp());
+        FindObjectOfType<Rotate>().rotateParticles[0] = particles[0];
+        FindObjectOfType<Rotate>().rotateParticles[1] = particles[1];
+        FindObjectOfType<Rotate>().rotateParticles[2] = particles[2];
     }
 
     public void Die()
     {
+        Flash.instance.flash();
         CameraManager.instance.SetSavedOrthographic();
         Instantiate(DieParticle, transform.position, Quaternion.identity);
         CameraManager.instance.GameOver();

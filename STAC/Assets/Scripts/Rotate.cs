@@ -19,7 +19,7 @@ public class Rotate : MonoBehaviour
     private void Start()
     {
         isRight = BulletData.instance.isRight == 1 ? true : false;
-        transform.eulerAngles=new Vector3(0,0,StartRot);
+        Player.instance.transform.eulerAngles=new Vector3(0,0,StartRot);
        bpm = BulletData.instance.BPMs[BulletData.instance.currentColorIndex];
     }
 
@@ -29,10 +29,11 @@ public class Rotate : MonoBehaviour
 
         if (currentTime >= 60d / bpm)
         {
-            if (isTriangle)
+            //if (isTriangle)
+            if(Player.instance!=null) 
                 StartCoroutine(RotateCor(isRight));
-            else
-                StartCoroutine(RotateCor2(isRight));
+            //else
+                //StartCoroutine(RotateCor2(isRight));
             currentTime -= 60d / bpm;
         }
     }
@@ -46,10 +47,10 @@ public class Rotate : MonoBehaviour
             {
                 for(int i=0;i<120/value;i++)
                 {
-                    if(transform.eulerAngles.z+value>=361)
-                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
+                    if(Player.instance.transform.eulerAngles.z+value>=361)
+                        Player.instance.transform.eulerAngles = new Vector3(Player.instance.transform.eulerAngles.x, Player.instance.transform.eulerAngles.y, Player.instance.transform.eulerAngles.z + value);
                     else
-                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
+                        Player.instance.transform.eulerAngles = new Vector3(Player.instance.transform.eulerAngles.x, Player.instance.transform.eulerAngles.y, Player.instance.transform.eulerAngles.z - value);
                     yield return new WaitForSeconds(delay);
                 }
             }
@@ -57,45 +58,45 @@ public class Rotate : MonoBehaviour
             {
                 for(int i=0;i<120/value;i++)
                 {
-                    if(transform.eulerAngles.z+value>=361)
-                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
+                    if(Player.instance.transform.eulerAngles.z+value>=361)
+                        Player.instance.transform.eulerAngles = new Vector3(Player.instance.transform.eulerAngles.x, Player.instance.transform.eulerAngles.y, Player.instance.transform.eulerAngles.z - value);
                     else
-                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
+                        Player.instance.transform.eulerAngles = new Vector3(Player.instance.transform.eulerAngles.x, Player.instance.transform.eulerAngles.y, Player.instance.transform.eulerAngles.z + value);
                     yield return new WaitForSeconds(delay);
                 }
-                transform.eulerAngles=new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,Mathf.CeilToInt(transform.eulerAngles.z*10)/10);
+                Player.instance.transform.eulerAngles=new Vector3(Player.instance.transform.eulerAngles.x,Player.instance.transform.eulerAngles.y,Mathf.CeilToInt(Player.instance.transform.eulerAngles.z*10)/10);
             }
             RotateSound();
             Emission();
     }
-    IEnumerator RotateCor2(bool isR)
-    {
-        if (isR)
-        {
-            for(int i=0;i<90/value;i++)
-            {
-                if(transform.eulerAngles.z+value>=410)
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
-                else
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
-                yield return new WaitForSeconds(delay);
-            }
-        }
-        else
-        {
-            for(int i=0;i<90/value;i++)
-            {
-                if(transform.eulerAngles.z+value>=410)
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
-                else
-                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
-                yield return new WaitForSeconds(delay);
-            }
-            transform.eulerAngles=new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,Mathf.CeilToInt(transform.eulerAngles.z*10)/10);
-        }
-        RotateSound();
-        Emission();
-    }
+//    IEnumerator RotateCor2(bool isR)
+//    {
+//        if (isR)
+//        {
+//            for(int i=0;i<90/value;i++)
+//            {
+//                if(transform.eulerAngles.z+value>=410)
+//                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
+//                else
+//                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
+//                yield return new WaitForSeconds(delay);
+//            }
+//        }
+//        else
+//        {
+//            for(int i=0;i<90/value;i++)
+//            {
+//                if(transform.eulerAngles.z+value>=410)
+//                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z - value);
+//                else
+//                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + value);
+//                yield return new WaitForSeconds(delay);
+//            }
+//            transform.eulerAngles=new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,Mathf.CeilToInt(transform.eulerAngles.z*10)/10);
+//        }
+//        RotateSound();
+//        Emission();
+//    }
 //    public void ChangeRotate()
 //    {
 //        rotate.localScale=new Vector3(rotate.localScale.x*-1,rotate.localScale.y,rotate.localScale.z);
