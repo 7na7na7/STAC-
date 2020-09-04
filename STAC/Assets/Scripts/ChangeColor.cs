@@ -39,7 +39,10 @@ public class ChangeColor : MonoBehaviour
         {
             Price.SetActive(false);
             lockImg.SetActive(false);
-            rect.eulerAngles=new Vector3(rect.eulerAngles.x,rect.eulerAngles.y,rect.eulerAngles.z+Time.deltaTime*speed);
+            if(BulletData.instance.currentColorIndex == ColorIndex) 
+                rect.eulerAngles=new Vector3(rect.eulerAngles.x,rect.eulerAngles.y,rect.eulerAngles.z+Time.deltaTime*speed*3);
+            else
+                rect.eulerAngles=new Vector3(rect.eulerAngles.x,rect.eulerAngles.y,rect.eulerAngles.z+Time.deltaTime*speed/2f);
         }
     }
 

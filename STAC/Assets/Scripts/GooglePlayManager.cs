@@ -30,6 +30,11 @@ public class GooglePlayManager : MonoBehaviour
       {
          if (success)
          {
+            GameObject.Find("qq").GetComponent<Text>().text = "예아";
+         }
+         else
+         {
+            GameObject.Find("qq").GetComponent<Text>().text = "좆됐다!";
          }
       });
    }
@@ -45,7 +50,13 @@ public class GooglePlayManager : MonoBehaviour
          Social.localUser.Authenticate((bool success) =>
          {
             if (success)
-            { }
+            {
+               GameObject.Find("qq").GetComponent<Text>().text = "예아";
+            }
+            else
+            {
+               GameObject.Find("qq").GetComponent<Text>().text = "좆됐다!";
+            }
          });
       }
    }
@@ -66,4 +77,5 @@ public class GooglePlayManager : MonoBehaviour
    {
       Social.ShowAchievementsUI();
    }
+
 }

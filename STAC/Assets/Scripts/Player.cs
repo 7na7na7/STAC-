@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
             Spawner.instance.player = this.transform;
         if (GoldSpawner.instance.player == null)
             GoldSpawner.instance.player = this.transform;
-        StartCoroutine(LiveScoreUp());
         FindObjectOfType<Rotate>().rotateParticles[0] = particles[0];
         FindObjectOfType<Rotate>().rotateParticles[1] = particles[1];
         FindObjectOfType<Rotate>().rotateParticles[2] = particles[2];
@@ -37,13 +36,5 @@ public class Player : MonoBehaviour
         Vibrate.instance.Vibe(750);
         Destroy(gameObject);
     }
-
-    IEnumerator LiveScoreUp()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(1);
-            ScoreMgr.instance.scoreUp(0,GameManager.instance.liveScoreUpValue,false,false);
-        }
-    }
+    
 }

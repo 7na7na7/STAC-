@@ -65,7 +65,8 @@ public class Rotate : MonoBehaviour
                     yield return new WaitForSeconds(delay);
                 }
                 Player.instance.transform.eulerAngles=new Vector3(Player.instance.transform.eulerAngles.x,Player.instance.transform.eulerAngles.y,Mathf.CeilToInt(Player.instance.transform.eulerAngles.z*10)/10);
-            }
+            } 
+        ScoreMgr.instance.scoreUp(0,GameManager.instance.liveScoreUpValue,false,false);
             RotateSound();
             Emission();
     }
